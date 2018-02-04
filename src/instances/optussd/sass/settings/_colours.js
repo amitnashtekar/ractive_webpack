@@ -1,4 +1,4 @@
 module.exports = {
-	'grey0': '#f1f4f6'
+	'grey0': 'red'
 
 }

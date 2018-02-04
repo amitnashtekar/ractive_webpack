@@ -1,7 +1,7 @@
 import Ractive from 'ractive';
 
 import mock from './ux-store-details-mock.js';
-//import './ux-store-details.scss';
+import './ux-store-details.scss';
 import template from './ux-store-details.html';
 export default Ractive.extend({ // jshint ignore:line
   template,
