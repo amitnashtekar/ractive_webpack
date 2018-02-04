@@ -1,0 +1,1 @@
+export  {default as ux_store_details}  from '../components/ux-store-details/ux-store-details.js';
