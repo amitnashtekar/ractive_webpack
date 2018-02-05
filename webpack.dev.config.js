@@ -3,6 +3,7 @@
 /**
  * Development-only webpack settings.
  */
+const path = require('path');
 const webpack = require('webpack');
 const config = require('./webpack.config');
 
