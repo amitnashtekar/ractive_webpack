@@ -1,7 +1,9 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+var querystring = require('querystring')
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
+
 
 module.exports = {
   entry: [
@@ -12,21 +14,47 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
-      
-      {
+
+        rules: [
+        {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ['babel-loader'],
       },
-      { test: /\.scss/,
-        
-         loader: ExtractTextPlugin.extract('css-loader!sass-loader') },
-      
-      { test: /\.json/, loader: 'json-loader' },
-      { test: /\.html/, loader: 'ractive-loader' }
+            { test: /\.json/, loader: 'json-loader' },
+      { test: /\.html/, loader: 'ractive-loader' },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+                loader: 'css-loader',
+                options: {                  
+                    sourceMap: true
+                }
+            }, 
+            {
+                loader: 'sass-loader',
+                options: {
+                    sourceMap: true
+              }
+            },
+                   {
+          loader: 'sass-resources-loader',
+          query: {
+                resources: [
+                  path.resolve(__dirname, './src/instances/optussd/sass/settings/_colours.scss')
+                  
+                ],
+              }
+        }
+          ]
+        })
+      }
     ]
-  },   
+  },
+    
   plugins: [ 
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
@@ -47,7 +75,7 @@ module.exports = {
   resolve: {
     alias: {
       pubsub: 'aurelia-event-aggregator',
-      Ractive: 'ractive'
-    }
+      Ractive: 'ractive'      
+    }     
   }
 };
