@@ -6,7 +6,9 @@
   "scripts": {
     "dist": "webpack -p",
     "lint": "eslint src; exit 0",
-    "start": "webpack-dashboard -- node app.js"
+    "start": "webpack-dashboard -- node app.js",
+    "build1": "SET NODE_ENV=production && webpack --config webpack/prod.config.js",
+    "start1": "SET NODE_ENV=development && webpack-dev-server --config webpack/dev.config.js"
   },
   "dependencies": {
     "config": "^1.8.1",
@@ -49,6 +51,8 @@
     "webpack": "^2.3.3",
     "webpack-dashboard": "^0.4.0",
     "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.1"
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.12.1",
+    "webpack-merge": "^4.1.1"
   }
 }
