@@ -3,8 +3,14 @@ import Ractive from 'ractive';
 import mock from './ux-store-details-mock.js';
 import './ux-store-details.scss';
 import template from './ux-store-details.html';
-export default Ractive.extend({ // jshint ignore:line
+//import {uxHeader} from '../../components/index.js';
+import uxHeader from '../ux-header/ux-header.js';
+export default Ractive.extend({
+   components: {
+        'ux-header':uxHeader
+    },
   template,
+ 
   data() {
     return {
       message: 'This is the home page.',
