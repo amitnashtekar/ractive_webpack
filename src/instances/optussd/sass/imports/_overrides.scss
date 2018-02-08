@@ -1,0 +1,116 @@
+.sd-mapblaster-optus {
+	.gm-style-cc {
+		a {
+			line-height: 14px;
+		}
+	}
+	.mapblaster-footer div.white p {
+		color: $white;
+	}
+	//@import "../../../../node_modules/foundation-sites/scss/foundation/components/joyride";
+	// //stash.optusnet.com.au/projects/STYLEGUIDES/repos/style-guide/browse/source/assets/css/modules/_joyride.scss
+	.joyride-tip-guide {
+		background-color: $white;
+		border: 2px solid $teal;
+		border-radius: emCalc(7px);
+		color: $black;
+
+		h1, h2, h3, h4, h5, h6 {
+			color: $black;
+			text-transform: uppercase;
+		}
+		p {
+			padding-top: emCalc(7px);
+			padding-bottom: emCalc(7px);
+		}
+		.joyride-close-tip {
+			color: $teal !important;
+		}
+		.button {
+			border-radius: emCalc(7px);
+		}
+		.joyride-content-wrapper {
+			&:before, &:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+		}
+		.joyride-nub {
+			color: $teal;
+
+			&.top {
+				border-bottom-color: $teal !important;
+				&:after {
+					position: absolute;
+					content: '';
+					background: transparent;
+					border: 11px solid transparent;
+					border-bottom-color: $white;
+					top: -8px;
+					left: -11px;
+				}
+			}
+			&.bottom {
+				border-top-color: $teal !important;
+				&:after {
+					position: absolute;
+					content: '';
+					background: transparent;
+					border: 11px solid transparent;
+					border-top-color: $white;
+					bottom: -8px;
+					left: -11px;
+				}
+			}
+			&.left {
+				border-right-color: $teal !important;
+				&:after {
+					position: absolute;
+					content: '';
+					background: transparent;
+					border: 11px solid transparent;
+					border-right-color: $white;
+					bottom: -11px;
+					left: -8px;
+				}
+				/* hack to fix when both .left and .top appear at the same time */
+				&.top {
+					border-bottom-color: transparent !important;
+					&:after {
+						left: -8px;
+						top: -11px;
+					}
+				}
+			}
+			&.right {
+				border-left-color: $teal !important;
+				&:after {
+					position: absolute;
+					content: '';
+					background: transparent;
+					border: 11px solid transparent;
+					border-left-color: $white;
+					bottom: -11px;
+					left: -14px;
+				}
+			}
+		}
+		@media #{$smallscreenonly} {
+			.joyride-content-wrapper {
+				padding: 8px;
+			}
+			h4 {
+				font-size: 18px;
+			}
+			h6 {
+				font-size: 16px;
+			}
+			p {
+				font-size: 12px;
+				margin-bottom: 0;
+			}
+		}
+
+	}
+}

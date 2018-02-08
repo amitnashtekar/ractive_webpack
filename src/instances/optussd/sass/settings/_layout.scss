@@ -1,0 +1,43 @@
+//FOR A 12 column wide layout
+.layout-full-width--form-element{
+  @include grid-column(12);
+	padding-left:0;
+	padding-right:0;
+
+  @media only screen and (min-width: $small-screen) {
+    @include grid-column(7);
+      padding-left:0;
+      padding-right:0;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    @include grid-column(6);
+	  padding-left:0;
+	  padding-right:0;
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    @include grid-column(4);
+	  padding-left:0;
+	  padding-right:0;
+  }
+}
+
+
+//For when there large width breakpoint has a side bar so the main content is 7 columns wide
+.layout-main-section--form-element{
+  @include grid-column(12);
+
+  @media only screen and (min-width: $small-screen) {
+    @include grid-column(7);
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    @include grid-column(6);
+  }
+
+  @media only screen and (min-width: $large-screen) {
+    @include grid-column(8);
+  }
+}
+

@@ -1,0 +1,14 @@
+.luxDocsWidget{
+  .content-container {
+      margin-top: $largeSpace;
+  }
+}
+
+
+//LUX specific style - where should this live
+.deprecated {
+  * {
+    color: red !important;
+    text-decoration: line-through;
+  }
+}

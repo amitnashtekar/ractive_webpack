@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "lux-icons";
+  src: url('instances/optussd/assets/fonts/lux-icons.eot');
+  src: url('instances/optussd/assets/fonts/lux-icons.eot?#iefix') format('eot'),
+  url('instances/optussd/assets/fonts/lux-icons.woff') format('woff'),
+  url('instances/optussd/assets/fonts/lux-icons.ttf') format('truetype'),
+  url('instances/optussd/assets/fonts/lux-icons.svg#lux-icons') format('svg');
+}
+
+@mixin icon-styles {
+  font-family: "lux-icons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+  &:after{
+    content:none !important;//this is only necessary whilst we are using Optus old and spring digital icons together
+  }
+}
+
+%icon {
+  @include icon-styles;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+@if $filename == alert-circular {
+$char: "\E001";
+}
+@if $filename == block {
+$char: "\E002";
+}
+@if $filename == calendar {
+$char: "\E003";
+}
+@if $filename == check-mark {
+$char: "\E004";
+}
+@if $filename == cross-fat {
+$char: "\E005";
+}
+@if $filename == cross-thin {
+$char: "\E006";
+}
+@if $filename == cross {
+$char: "\E007";
+}
+@if $filename == data4gb {
+$char: "\E008";
+}
+@if $filename == down-arrow {
+$char: "\E009";
+}
+@if $filename == exclamation {
+$char: "\E00A";
+}
+@if $filename == eye {
+$char: "\E00B";
+}
+@if $filename == important {
+$char: "\E00C";
+}
+@if $filename == info {
+$char: "\E00D";
+}
+@if $filename == left-arrow {
+$char: "\E00E";
+}
+@if $filename == logged-in {
+$char: "\E00F";
+}
+@if $filename == logged-out {
+$char: "\E010";
+}
+@if $filename == minus {
+$char: "\E011";
+}
+@if $filename == phoneservice {
+$char: "\E012";
+}
+@if $filename == plus {
+$char: "\E013";
+}
+@if $filename == reply {
+$char: "\E014";
+}
+@if $filename == right-arrow {
+$char: "\E015";
+}
+@if $filename == search {
+$char: "\E016";
+}
+@if $filename == sim-card {
+$char: "\E017";
+}
+@if $filename == star-half {
+$char: "\E018";
+}
+@if $filename == star {
+$char: "\E019";
+}
+@if $filename == success-circular {
+$char: "\E01A";
+}
+@if $filename == success {
+$char: "\E01B";
+}
+@if $filename == up-arrow {
+$char: "\E01C";
+}
+@if $filename == user {
+$char: "\E01D";
+}
+@if $filename == warning-circular {
+$char: "\E01E";
+}
+@if $filename == warning {
+$char: "\E01F";
+}
+
+@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+  &:#{$insert} {
+    @if $extend {
+      @extend %icon;
+    } @else {
+      @include icon-styles;
+    }
+    content: icon-char($filename);
+    vertical-align:top;
+  }
+}
+
+.ico-alert-circular {
+  @include icon(alert-circular);
+}
+.ico-block {
+  @include icon(block);
+}
+.ico-calendar {
+  @include icon(calendar);
+}
+.ico-check-mark {
+  @include icon(check-mark);
+}
+.ico-cross-fat {
+  @include icon(cross-fat);
+}
+.ico-cross-thin {
+  @include icon(cross-thin);
+}
+.ico-cross {
+  @include icon(cross);
+}
+.ico-data4gb {
+  @include icon(data4gb);
+}
+.ico-down-arrow {
+  @include icon(down-arrow);
+}
+.ico-exclamation {
+  @include icon(exclamation);
+}
+.ico-eye {
+  @include icon(eye);
+}
+.ico-important {
+  @include icon(important);
+}
+.ico-info {
+  @include icon(info);
+}
+.ico-left-arrow {
+  @include icon(left-arrow);
+}
+.ico-logged-in {
+  @include icon(logged-in);
+}
+.ico-logged-out {
+  @include icon(logged-out);
+}
+.ico-minus {
+  @include icon(minus);
+}
+.ico-phoneservice {
+  @include icon(phoneservice);
+}
+.ico-plus {
+  @include icon(plus);
+}
+.ico-reply {
+  @include icon(reply);
+}
+.ico-right-arrow {
+  @include icon(right-arrow);
+}
+.ico-search {
+  @include icon(search);
+}
+.ico-sim-card {
+  @include icon(sim-card);
+}
+.ico-star-half {
+  @include icon(star-half);
+}
+.ico-star {
+  @include icon(star);
+}
+.ico-success-circular {
+  @include icon(success-circular);
+}
+.ico-success {
+  @include icon(success);
+}
+.ico-up-arrow {
+  @include icon(up-arrow);
+}
+.ico-user {
+  @include icon(user);
+}
+.ico-warning-circular {
+  @include icon(warning-circular);
+}
+.ico-warning {
+  @include icon(warning);
+}

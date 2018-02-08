@@ -1,0 +1,25 @@
+// Behold, here are all the Foundation v5 components.
+// Note each component will load "global", which will also load "functions" etc.
+// See ../../../../node_modules/foundation-sites/scss/foundation.scss
+
+$include-xl-html-grid-classes: true;
+$row-width:rem-calc(1200px);
+// Media Query Ranges
+$small-breakpoint:  em-calc(492px);
+$medium-breakpoint: em-calc(852px);
+$large-breakpoint:  em-calc(1020px);
+$xlarge-breakpoint: em-calc(1200px);
+
+$column-gutter: rem-calc(30);
+
+//// We use this % to control how much we darken things on hover
+$panel-border-color: $light-grey;
+$panel-bg: $white;
+// We use these to set default inner padding and bottom margin
+$panel-margin-bottom: em-calc(20px);
+$panel-padding: em-calc($mediumSpace) em-calc(20px);
+
+// We use these to set default font colors
+$panel-font-color: $shade;
+
+

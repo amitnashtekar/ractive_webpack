@@ -1,0 +1,61 @@
+.grid-demo {
+	background: white;
+	.columns {
+		background: rgba(0, 0, 0, .2);
+		min-height: 100vh;
+		padding-left: 15px;
+		padding-right: 15px;
+		position: relative;
+		&:nth-child(even) {
+			background: rgba(0, 0, 0, .5);
+		}
+		&:after {
+			background: #000;
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 15px;
+			right: 15px;
+			bottom: 0;
+		}
+	}
+
+	TABLE {
+		margin-bottom: 30px;
+		border: 1px solid grey;
+	}
+
+	TH {
+		background: rgba(0, 0, 0, .4);
+		text-align: left;
+		border: 1px solid black;
+		color: #000;
+		text-transform: capitalize;
+		padding: 10px;
+	}
+	TD {
+		border: 1px solid grey;
+		padding-left: 10px;
+	}
+	.table-items {
+		padding: 0 15px;
+	}
+
+	P {
+		display: inline-block;
+	}
+
+	.colour {
+		display: inline-block;
+		width: 40px;
+		height: 10px;
+		background: rgba(0, 0, 0, .2);
+		&.alt2 {
+			background: rgba(0, 0, 0, .5);
+		}
+		&.alt {
+			background: #000;
+		}
+	}
+}

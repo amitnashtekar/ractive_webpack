@@ -1,0 +1,47 @@
+.all-components {
+  .use-case {
+    padding: 20px;
+    margin: 20px 0;
+    color: #999;
+    background: #DDDDDD;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .component-example {
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+  }
+
+  .component-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .ref_id{
+    color: $black;
+  }
+  .reference{
+    &:after{
+      content: ','
+    }
+    &:last-child{
+      &:after{
+        content: '';
+      }
+    }
+  }
+
+}
+
+.page {
+    .page__content {
+        h1 {
+            &:first-of-type {
+                margin-top: rem-calc(30px);
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+{{! The reason this change has been introduced is to avoid executing click handler when it's not needed.
+This allows us to execute href links without the delay of JS. If we are going to fix this, we need to refactor the same
+work around in ux_anchor and ux_icon. }}
+
+{{! Inline style for custom color changes for anchor }}
+
+{{#if type === 'target'}}
+  <div id="{{id}}" class="hiddenTarget"></div>
+{{else}}
+{{#if textColor}}
+  <style>
+    #{{guid}}.ux-anchor {
+      {{#if textColor.color}}
+        color: {{textColor.color}} !important;
+      {{/if}}
+    }
+    #{{guid}}.ux-anchor:hover{
+      {{#if textColor.hoverColor}}
+        color: {{textColor.hoverColor}} !important;
+      {{/if}}
+    }
+  </style>
+{{/if}}
+{{/if}}
+{{#if backgroundColor}}
+  <style>
+    {{#if backgroundColor.color}}
+      #{{guid}}.ux-anchor {
+        background-color: {{backgroundColor.color}} !important;
+
+      }
+    {{/if}}
+    {{#if backgroundColor.hoverColor}}
+      #{{guid}}.ux-anchor:hover{
+        background-color: {{backgroundColor.hoverColor}} !important;
+      }
+    {{/if}}
+  </style>
+{{/if}}
+{{#if borderColor}}
+  <style>
+    {{#if borderColor.color}}
+      #{{guid}}.ux-anchor:after {
+        border-color: {{borderColor.color}};
+      }
+    {{/if}}
+  </style>
+{{/if}}
+{{#if ontap}}
+  <a id="{{guid}}"
+    {{#if href}}href="{{href}}"{{/if}}
+    {{#if id && type === 'anchor'}}href="{{anchorUrl}}"{{/if}}
+     {{#if type === 'target'}}role= "{{role ? role : 'presentation' }}"{{else}}role= "{{role ? role : 'link' }}"{{/if}}
+    {{#if ariaLabel}}aria-label="{{ariaLabel}}"{{/if}}
+    {{#if type === 'target'}}aria-hidden="true"{{/if}}
+    {{#if target}}target="{{target}}"{{/if}}
+    {{#if title}}title="{{title}}"{{/if}}
+    {{#if tabindex !== null}}tabindex="{{tabindex || ((type === 'target' && !role) ? -1 : 0)}}"{{/if}}
+    {{#if expanded}}aria-expanded="{{expanded}}"{{/if}}
+    {{#if controls}}aria-controls="{{controls}}"{{/if}}
+    class="ux-anchor {{class}}"
+    on-tap="anchorClicked"
+    on-enter="anchorClicked"
+    on-mousedown="anchorMouseDwon"
+    on-mouseover="anchorMouseOver"
+  >
+      {{#if .isDataModel}}
+        {{{unescapeSymbol(content)}}}
+      {{else}}
+        {{yield}}
+      {{/if}}
+  </a>
+{{else}}
+  <a id="{{guid}}"
+    {{#if href}}href="{{href}}"{{/if}}
+    {{#if id && type === 'anchor'}}href="{{anchorUrl}}"{{/if}}
+    {{#if type === 'target'}}role= "{{role ? role : 'presentation' }}"{{else}}role= "{{role ? role : 'link' }}"{{/if}}
+    {{#if ariaLabel}}aria-label="{{ariaLabel}}"{{/if}}
+    {{#if type === 'target'}}aria-hidden="true"{{/if}}
+    {{#if target}}target="{{target}}"{{/if}}
+    {{#if title}}title="{{title}}"{{/if}}
+    {{#if tabindex !== null}}tabindex="{{tabindex || ((type === 'target' && !role) ? -1 : 0)}}"{{/if}}
+    {{#if expanded}}aria-expanded="{{expanded}}"{{/if}}
+    {{#if controls}}aria-controls="{{controls}}"{{/if}}
+    class="ux-anchor {{class}} {{borderColor ? 'button-border' : ''}}"
+    on-click="anchorClicked"
+    on-enter="anchorClicked"
+    on-mousedown="anchorMouseDwon"
+    on-mouseover="anchorMouseOver"
+    >
+      {{#if .isDataModel}}
+        {{{unescapeSymbol(content)}}}
+      {{else}}
+        {{yield}}
+      {{/if}}
+  </a>
+
+{{/if}}

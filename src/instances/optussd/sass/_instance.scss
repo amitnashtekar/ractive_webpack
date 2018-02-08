@@ -1,0 +1,150 @@
+/*
+	Define your component or widget variables here.
+	For site-wide variables, please definte them in sass/_config.scss
+*/
+
+$bundlebuilder-above-small-screen: $medium-and-above-screen;
+$bundlebuilder-bundle-total-border-left-colour: $grey2;
+$bundlebuilder-button-hover-background-colour: $yellow;
+$bundlebuilder-button-hover-text-colour: $black;
+$bundlebuilder-card-header-colour: $shade;
+$bundlebuilder-card-text-colour: $black;
+$bundlebuilder-currency-font-family: $markpro-heavy-font-family;
+$bundlebuilder-edit-colour: $blue;
+$bundlebuilder-gateway-text-colour: $dark-grey;
+$bundlebuilder-header-banner-background-colour: $grey7;
+$bundlebuilder-icon-colour: $storm;
+$bundlebuilder-main-icon-colour: $black;
+$bundlebuilder-max-order-other-ways-button-colour: $yellow;
+$bundlebuilder-modal-border-colour: $grey2;
+$bundlebuilder-module-header-border-colour: $grey2;
+$bundlebuilder-module-border-colour: $mercury;
+$bundlebuilder-module-header-font-family: $markpro-heavy-font-family;
+$bundlebuilder-module-shadow-colour: $grey;
+$bundlebuilder-nav-link-colour: $grey4;
+$bundlebuilder-sub-label-colour: $dark-grey;
+$bundlebuilder-sub-label-font-family: $markpro-regular-font-family;
+$bundlebuilder-summary-header-font-family: $markpro-bold-font-family;
+$bundlebuilder-summary-header-label-font-colour: $dark_grey;
+$bundlebuilder-summary-header-shadow-colour: $grey2;
+$bundlebuilder-tab-active-background-colour: $white;
+$bundlebuilder-tab-active-border-colour: $teal;
+$bundlebuilder-tab-background-colour: $grey6;
+$bundlebuilder-tab-border-colour: $grey2;
+$bundlebuilder-variant-font-family: $markpro-bold-font-family;
+$bundlebuilder-warning-background-colour: $red-10;
+$bundlebuilder-warning-border-colour: $red;
+$bundlebuilder-warning-background-colour-light: $white;
+$bundlebuilder-warning-border-colour-light: $teal;
+$bundlebuilder-warning-icon-colour-light: $teal;
+
+// OBB - Optus Bundle Builder Tool
+$obb-font-regular: $markpro-regular-font-family;
+$obb-font-bold: $markpro-bold-font-family;
+$obb-font-heavy: $markpro-heavy-font-family;
+$obb-border-color: $grey2;
+$obb-border-hover-color: $black;
+$ux-obb-plan-table-selected-plan-label-color: $teal;
+$ux-obb-plan-table-mtc-color: $dark_grey;
+$ux-obb-plan-table-description-color: $dark_grey;
+$ux-obb-plan-table-bullet-color: $grey4;
+$ux-obb-plan-table-nav-color: $grey4;
+$ux-obb-plan-table-selected-border-color: $teal;
+
+$epl-eligibility-cancel-border: $mercury;
+$epl-eligibility-cancel-icon: $teal;
+$epl-eligibility-check-button-bg-hover: $sunglow;
+$epl-eligibility-check-button-bg: $yellow;
+$epl-eligibility-check-text-accent: $black;
+$epl-eligibility-check-text-grey: $grey;
+$epl-eligibility-check-text-light-grey: $light-grey;
+$epl-eligibility-check-text-light: $white;
+$epl-eligibility-check-text-warning: $guava;
+$epl-eligibility-comfirm-bg: $smoke;
+$epl-eligibility-comfirm-border: $spacerBorder;
+$epl-eligibility-comfirm-text-accent: $black;
+$epl-eligibility-comfirm-text-grey: $grey;
+$epl-eligibility-comfirm-text-light-grey: $light-grey;
+$epl-eligibility-comfirm-text-light: $white;
+
+$epl-h4-font-family: $markpro-regular-font-family;
+$epl-heading-color: $shade;
+$epl-manage-icon-color: $teal;
+$epl-p-font-family: $markpro-regular-font-family;
+$epl-service-availability-button-colour: $grey;
+$epl-service-availability-button-text-colour: $black;
+$epl-service-green-color: $green;
+$epl-service-not-available-colour: $red;
+$epl-service-red-color: $red;
+$epl-service-yellow-color: $yellow;
+$epl-status-text-container-bg-color: $grey2;
+$epl-strong-color: $black;
+$epl-subscribe-border-color: $storm;
+$epl-vertical-rule-bg-color: $storm;
+$epl-vimond-manage-button-colour: $yellow;
+$epl-vimond-manage-text-warning: $guava;
+
+$ux-epl-footer-border-color: $dark_grey;
+$ux-epl-footer-label-color: $grey4;
+$ux-epl-footer-text-color: $grey2;
+$ux-epl-footer-text-hover-color: $yellow;
+$ux-epl-nav-text-darker-color: $grey2;
+$ux-epl-nav-text-hover-color: $yellow;
+
+$ux-product-list-header-font: $markpro-heavy-font-family;
+$ux-product-list-product-card-border-color: $grey2;
+$ux-product-list-title-font-color: $dark_grey;
+$ux-product-list-control-label-font: $markpro-medium-font-family;
+$ux-product-list-control-selectbox-color: $blue;
+
+$ux-product-summary-background-color: $dark-teal;
+$ux-product-summary-border-color: $grey;
+$ux-product-summary-rcs-background-color: $sunglow;
+
+$ux-quantity-icon-border-color: $dark_grey;
+$ux-quantity-input-border-color: $grey2;
+
+$ux-variant-picker-border-color-selceted: $teal;
+$ux-variant-picker-border-color: $grey3;
+$ux-variant-picker-text-color: $black;
+$ux-variant-picker-font-family: $markpro-bold-font-family;
+$ux-variant-picker-out-of-stock-colour: $red;
+
+// OBB
+$obb-border-color: $grey2;
+$obb-font-regular: $markpro-regular-font-family;
+$obb-font-bold: $markpro-bold-font-family;
+$obb-font-medium: $markpro-medium-font-family;
+$obb-font-heavy: $markpro-heavy-font-family;
+$ux-obb-device-detail-variant-border-color: $grey3;
+$ux-obb-device-detail-selected-variant-border-color: $teal;
+$ux-obb-device-detail-variant-background-color: $white;
+$ux-obb-device-detail-variant-text-color: $grey4;
+$ux-obb-plan-table-selected-plan-label-color: $teal;
+$ux-obb-plan-table-mtc-color: $dark_grey;
+$ux-obb-plan-table-description-color: $dark_grey;
+$ux-obb-plan-table-bullet-color: $grey4;
+$ux-obb-plan-table-nav-color: $grey4;
+$ux-obb-plan-table-selected-border-color: $teal;
+$ux-obb-module-options-description-color: $shade;
+$ux-obb-plan-table-highlight-color: $berry;
+$ux-obb-gateway-journey-bg-color: rgba($grey1, 0.2);
+$ux-obb-gateway-journey-text-color: $dark_grey;
+$obb-summary-header-label-font-colour: $dark_grey;
+$obb-summary-header-shadow-colour: $grey2;
+$ux-obb-device-list-button-hover-text-colour: $black;
+$ux-obb-device-list-button-hover-background-colour: $yellow;
+$ux-obb-device-list-control-selectbox-color: $blue;
+$ux-obb-tab-background-color: $grey6;
+$ux-obb-tab-border-color: $black-10;
+$ux-obb-tab-text-color: $dark-grey;
+$ux-obb-tab-active-border-color: $teal;
+$ux-obb-tab-active-background-color: $white;
+$ux-obb-tab-active-text-color: $black;
+$ux-obb-page-bundle-summary-total-border-color: $grey2;
+$ux-obb-page-bundle-summary-item-feature-color: $storm;
+
+// Promotional badge
+$ux-promo-badge-background-color: $berry;
+$ux-promo-badge-text-color:$white;
+$ux-promo-badge-height: rem-calc(40px);

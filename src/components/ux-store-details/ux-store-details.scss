@@ -1,4 +1,3 @@
-
 .ux-store-details {
   width: 100%;
 
@@ -6,5 +5,66 @@
     background: $grey0;
   }
 
-  
+  .shop-title{
+   // @include font-size($h4-font-sizes);
+    text-transform: uppercase;
+    padding:0 rem-calc(20px);
+    margin:0;
+  }
+
+  .description{
+    //font-family: $quaternary-font-family;
+  }
+
+  .product-detail-wrapper{
+    display: flex;
+    padding: 24px rem-calc(20px);
+    border-bottom: 1px solid $grey2;
+    .img-wrapper {
+      width: rem-calc(35px);
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+    }
+  }
+
+  .total{
+    //@include font-size($h2-font-sizes);
+    //font-family: $tertiary-font-family;
+   padding-right: 9px;
+  }
+
+  .title{
+   // padding-top: $spacing-half;
+    display: block;
+  }
+
+  .product-details {
+    display: flex;
+    align-items: center;
+    padding-left: 9px;
+  }
+
+  .shop-details{
+    padding:0 rem-calc(20px);
+  }
+
+  .opening-times{
+    li{
+      display: flex;
+      justify-content: space-between;
+      &.today{
+        font-family: MarkProBold;
+      }
+    }
+  }
+
+  .link-container {
+    border-top: 1px solid $grey2;
+    padding: 24px 0;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+ 
 }

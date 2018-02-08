@@ -1,0 +1,120 @@
+//Animation images starting position in left and right side
+$startY: 40px;
+$startX: -40px;
+
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeOut) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@include keyframes(fadeUp) {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@include keyframes(fadeDown) {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+@include keyframes(fadeInBottomToTop) {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, $startY, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@include keyframes(fadeInTopToBottom) {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, $startY, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+
+@include keyframes(fadeInLeft) {
+  0% {
+    opacity: 0;
+    transform: translate3d($startX, $startY, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@include keyframes(fadeInRight) {
+  0% {
+    opacity: 0;
+    transform: translate3d(-$startX, $startY, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@include keyframes (fadeInSpiralLeft) {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+    left: -100px;
+    transform: matrix3d(1, -0.1, 0, 0, 0.1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    bottom: 0;
+    left: -25px;
+    opacity: 1;
+    transform: matrix(1, 0.1, -0.1, 1, 0, 0);
+  }
+}
+
+@include keyframes (fadeInSpiralRight) {
+  0% {
+    opacity: 0;
+    bottom: -100px;
+    right: -100px;
+    transform: matrix3d(1, -0.26, 0, 0, 0.3, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    bottom: 0;
+    right: -25px;
+    opacity: 1;
+    transform: matrix(1, 0.1, -0.1, 1, 0, 0);
+  }
+}

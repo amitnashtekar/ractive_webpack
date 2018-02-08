@@ -1,0 +1,260 @@
+@mixin rem-fallback($property, $values...) {
+	$max: length($values);
+	$pxValues: '';
+	$remValues: '';
+
+	@for $i from 1 through $max {
+		@if (nth($values, $i) == 'auto' or nth($values, $i) == auto) {
+			$pxValues: $pxValues + "" + auto;
+		} @else {
+			$value: strip-unit(nth($values, $i));
+			$pxValues: #{$pxValues + $value*16}px;
+		}
+		@if $i < $max {
+			$pxValues: #{$pxValues + " "};
+		}
+	}
+
+	@for $i from 1 through $max {
+		@if (nth($values, $i) == 'auto' or nth($values, $i) == auto) {
+			$remValues: $remValues + "" + auto;
+		} @else {
+			$value: strip-unit(nth($values, $i));
+			$remValues: #{$remValues + $value}rem;
+		}
+		@if $i < $max {
+			$remValues: #{$remValues + " "};
+		}
+	}
+
+	#{$property}: $pxValues;
+	#{$property}: $remValues;
+}
+
+header {
+	/*
+		Duplicated in headerFooter in "headerFooter.scss";
+		If you change it here, remember to change it there
+	*/
+
+	position: relative;
+	background: $teal;
+	z-index: 9;
+
+	label {
+		color: $storm;
+	}
+
+	&.header-only {
+
+		@media #{$header-switch-breakpoint} {
+			@include rem-fallback(height, emCalc(195px));
+		}
+
+		.header {
+			@include rem-fallback(padding, emCalc(20px), 0, 0, 0);
+
+			@media #{$header-switch-breakpoint} {
+				@include rem-fallback(padding, emCalc(70px), emCalc(15px), emCalc(30px), emCalc(15px));
+			}
+		}
+	}
+}
+
+.ico-header.ico {
+	color: $turquoise;
+	.theme-business & {
+		color: $teal;
+	}
+	font-size: emReCalc(30px, 18px);
+	line-height: 1;
+	height: auto;
+	width: auto;
+	background: none;
+}
+
+.theme-business header,
+header.theme-business {
+	background: $teal;
+}
+
+.header {
+	position: relative;
+	width: 100%;
+	padding: 20px 0 25px 0;
+
+	@media #{$header-switch-breakpoint} {
+		margin-bottom: 0;
+		padding: 70px 15px 30px 15px;
+		background: transparent;
+		z-index: 10000;
+	}
+
+	.inline-list.right {
+		margin: 0 15px 0 0;
+		overflow: visible;
+
+		@media #{$nav-switch-breakpoint} {
+			margin-top: emCalc(22px);
+			margin-right: 0;
+		}
+
+		li {
+			margin: emCalc(-5px) 0 emCalc(-11px) emCalc(20px);
+
+			@media #{$nav-switch-breakpoint} {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			.autocomplete-suggestive-text li {
+				margin-left: 0;
+			}
+		}
+
+		.button {
+			&.text {
+				padding-top: emCalc(15px);
+			}
+
+			@media #{$nav-switch-breakpoint} {
+				&, &.text {
+					padding-top: emCalc(11px);
+				}
+			}
+		}
+
+		.ico {
+			text-indent: -9999em;
+			overflow: hidden;
+			margin-right: 0;
+
+			&.ico-service-my-account {
+				text-indent: 0;
+				background: none;
+				font-size: 18px;
+				line-height: 1;
+			}
+
+			@media #{$small} {
+				margin-right: emCalc(12px);
+			}
+
+			&.ico-search-large {
+				text-indent: 0;
+				font-size: emCalc(23px);
+				margin: 5px 5px 0 0;
+				padding: 0;
+				width: auto;
+				height: auto;
+
+				&.ico-search_focus {
+					width: auto;
+					height: auto;
+					background: none;
+					color: $teal;
+				}
+			}
+		}
+
+		.text {
+			color: $white;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+
+		.ico-cart {
+			margin-right: 0;
+			margin-left: emCalc(8px);
+		}
+		.ico-service-my-account {
+			margin-right: emCalc(5px);
+		}
+		.ico-arrow-down {
+			margin-left: emCalc(10px);
+			margin-right: emCalc(10px);
+		}
+
+		a:focus {
+			.ico-search {
+				@extend .ico-search_focused !optional;
+			}
+			.ico-cart {
+				@extend .ico-cart_focus !optional;
+			}
+			.ico-service-my-account {
+				@extend .ico-service-my-account_focus !optional;
+			}
+		}
+
+	}
+
+	.counter {
+		background: $yellow;
+		color: $black;
+		font-size: emCalc(12px);
+		@include radius(20px);
+		padding: emCalc(4px);
+		text-align: center;
+		display: block;
+		position: absolute;
+		top: emCalc(6px);
+		left: emCalc(-12px);
+	}
+}
+
+/*
+ * Logo ----------------------
+ */
+.logo {
+	position: relative;
+	width: 112px;
+	height: 31px;
+	text-indent: -9999em;
+	overflow: hidden;
+	display: inline-block;
+
+	@media #{$header-switch-breakpoint} {
+		width: 216px;
+		height: 52px;
+		margin-right: 34px;
+	}
+
+	span {
+		width: 112px;
+		height: 31px;
+		display: block;
+		background: url(../images/logo/logo_optus.png) 0 0 no-repeat;
+		background-size: 112px 31px;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@media #{$header-switch-breakpoint} {
+			width: 216px;
+			height: 52px;
+			background-size: 216px 52px;
+		}
+	}
+	&:focus {
+		outline: $white dotted 1px;
+	}
+}
+
+.heading-image {
+
+	display: block;
+	max-height: 245px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include rem-fallback(margin-top, 0);
+
+	@media #{$medium} {
+		margin-top: 90px;
+	}
+
+}

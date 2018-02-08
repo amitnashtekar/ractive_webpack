@@ -1,0 +1,65 @@
+$cca-message-panel-error-background-color: #fceeee !default;
+$cca-message-panel-error-shadow-color: #e54c2e !default;
+$cca-message-panel-error-icon-color: #e54c2e !default;
+
+$cca-message-panel-alert-background-color: #fef7e3 !default;
+$cca-message-panel-alert-shadow-color: #FDCC08 !default;
+$cca-message-panel-alert-icon-color: #FDCC08 !default;
+
+$cca-message-panel-success-background-color: #edf9ee !default;
+$cca-message-panel-success-shadow-color: #427d37 !default;
+$cca-message-panel-success-icon-color: #427d37 !default;
+
+.cca-message-panel {
+	@include verticallySeparated;
+	padding: 0.6rem;
+	padding-left: 1rem;
+
+	border: none;
+	border-bottom: 1px solid;
+
+	.cca-message-panel-heading {
+		font-size: rem-calc(16);
+	}
+
+	a {
+		font-size: inherit;
+	}
+
+	.icon {
+		font-size: rem-calc(16);
+		line-height: rem-calc(16);
+		padding: 0px;
+	}
+
+}
+
+.cca-message-panel-error {
+	background: $cca-message-panel-error-background-color;
+	border-color: $cca-message-panel-error-shadow-color;
+
+	.icon {
+		color: $cca-message-panel-error-icon-color;
+	}
+
+}
+
+.cca-message-panel-alert {
+	background: $cca-message-panel-alert-background-color;
+	border-color: $cca-message-panel-alert-shadow-color;
+
+	.icon {
+		color: $cca-message-panel-alert-icon-color;
+	}
+
+}
+
+.cca-message-panel-success {
+	background: $cca-message-panel-success-background-color;
+	border-color: $cca-message-panel-success-shadow-color;
+
+	.icon {
+		color: $cca-message-panel-success-icon-color;
+	}
+
+}

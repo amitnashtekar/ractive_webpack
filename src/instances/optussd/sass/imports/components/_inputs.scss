@@ -1,0 +1,146 @@
+.checkbox-wrapper {
+	%icon-checkbox-off-disabled-light {
+		background-image:  url('assets/images/forms/check-box-unselected-disabled.png');
+	}
+	%icon-checkbox-off-light {
+		background-image: url('assets/images/forms/check-box-unselected.png');
+	}
+
+	%icon-checkbox-on-disabled-light {
+		background-image: url('assets/images/forms/check-box-selected-disabled.png');
+	}
+	%icon-checkbox-on-light {
+		background-image: url('assets/images/forms/check-box-selected.png');//url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnPjxyZWN0IGZpbGw9IiNmZmYiIHg9IjIiIHk9IjIiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgcng9IjIiLz48cGF0aCBkPSJNMiAzLjk5NEMyIDIuODk0IDIuODk1IDIgMy45OTQgMmgxMi4wMTJDMTcuMTA2IDIgMTggMi44OTUgMTggMy45OTR2MTIuMDEyYzAgMS4xLS44OTUgMS45OTQtMS45OTQgMS45OTRIMy45OTRDMi44OTQgMTggMiAxNy4xMDUgMiAxNi4wMDZWMy45OTR6bTEgLjAxM0MzIDMuNDUgMy40NSAzIDQuMDA3IDNoMTEuOTg2QzE2LjU1IDMgMTcgMy40NSAxNyA0LjAwN3YxMS45ODZDMTcgMTYuNTUgMTYuNTUgMTcgMTUuOTkzIDE3SDQuMDA3QzMuNDUgMTcgMyAxNi41NSAzIDE1Ljk5M1Y0LjAwN3oiIG9wYWNpdHk9Ii40NjgiIGZpbGw9IiNEOEQ4RDgiLz48cGF0aCBkPSJNOCAxNWwtNC00LjE2NyAxLjYtMS42NjYgMi40IDIuNUwxNC40IDUgMTYgNi42NjcgOCAxNXoiIGZpbGw9IiMwMDY0OTYiLz48L2c+PC9nPjwvc3ZnPg==');
+	}
+
+	// Labels
+	input[type=checkbox] + label  {
+		color: $dark-grey;
+	}
+	input[type=checkbox]:checked + label {
+		color: $dark-grey;
+	}
+	input[type=checkbox]:disabled + label {
+		color: $light-grey;
+	}
+	input[type=checkbox]:checked:disabled + label {
+		color: $light-grey;
+	}
+
+	// Checkboxes & radiobuttons
+	// -------------------------
+	// Accessible solution, as found here: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms
+	input{
+		position: absolute;
+		left: rem-calc(-10000em); // Position offscreen
+
+		:lang(ar) & {
+			left: rem-calc(10000em);
+		}
+	}
+
+	input[type=checkbox] + label {
+		position: relative;
+		padding-left: rem-calc(20px);
+		margin:0;
+	}
+
+	input[type=checkbox] + label:before {
+		position: absolute;
+		left: 0;
+		top: rem-calc(15px);
+		display: inline-block;
+		content: "";
+		margin: 0 rem-calc(14px) 0 0;
+		width: rem-calc(16px);
+		height: rem-calc(16px);
+		background-repeat: no-repeat;
+		background-size: rem-calc(16px) rem-calc(16px);
+		background-position: 0 0;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+
+	input[type=checkbox] + label:before {
+		@extend %icon-checkbox-off-light;
+	}
+	input[type=checkbox]:checked + label:before {
+		@extend %icon-checkbox-on-light;
+	}
+	input[type=checkbox]:disabled + label:before {
+		@extend %icon-checkbox-off-disabled-light;
+		cursor: auto;
+	}
+	input[type=checkbox]:checked:disabled + label:before {
+		@extend %icon-checkbox-on-disabled-light;
+	}
+}
+
+.radio-wrapper {
+	%icon-radio-off-disabled-light {
+		background-image: url('assets/images/forms/radio-btn-off-disabled.png');
+	}
+	%icon-radio-off-light {
+		background-image: url('assets/images/forms/radio-btn-off.png');
+	}
+	%icon-radio-on-disabled-light {
+		background-image: url('assets/images/forms/radio-btn-on-disabled.png');
+	}
+	%icon-radio-on-light {
+		background-image: url('assets/images/forms/radio-btn-on.png'); //url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnPjxjaXJjbGUgZmlsbD0iIzAwNjQ5NiIgY3g9IjEwIiBjeT0iMTAiIHI9IjQiLz48cGF0aCBkPSJNMTAgMThjNC40MTggMCA4LTMuNTgyIDgtOHMtMy41ODItOC04LTgtOCAzLjU4Mi04IDggMy41ODIgOCA4IDh6bTAtMWMzLjg2NiAwIDctMy4xMzQgNy03cy0zLjEzNC03LTctNy03IDMuMTM0LTcgNyAzLjEzNCA3IDcgN3oiIGZpbGw9IiNEOEQ4RDgiLz48cGF0aCBkPSJNMTAgMThjNC40MTggMCA4LTMuNTgyIDgtOHMtMy41ODItOC04LTgtOCAzLjU4Mi04IDggMy41ODIgOCA4IDh6bTAtMWMzLjg2NiAwIDctMy4xMzQgNy03cy0zLjEzNC03LTctNy03IDMuMTM0LTcgNyAzLjEzNCA3IDcgN3oiIGZpbGw9IiNEOEQ4RDgiLz48L2c+PC9nPjwvc3ZnPg==');
+	}
+
+	// Checkboxes & radiobuttons
+	// -------------------------
+	// Accessible solution, as found here: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms
+	input[type=radio] {
+		position: absolute;
+		left: -1000em; // Position offscreen
+	}
+
+	LABEL{
+		position: relative;
+		padding-left: 2em;
+		margin: 0;
+		color: $dark-grey;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: rem-calc(15px);
+			display: inline-block;
+			content: "";
+			margin: 0 14px 0 0;
+			width: 16px;
+			height: 16px;
+			background-repeat: no-repeat;
+			background-size: 16px 16px;
+			background-position: 0 0;
+			vertical-align: middle;
+
+			cursor: pointer;
+			@extend %icon-radio-off-light;
+		}
+	}
+	input[type=radio]:checked + label:before {
+		@extend %icon-radio-on-light;
+	}
+
+	input[type=radio]:disabled + label:before {
+		@extend %icon-radio-off-disabled-light;
+		cursor: auto;
+	}
+	input[type=radio]:checked:disabled + label:before {
+		@extend %icon-radio-on-disabled-light;
+	}
+
+
+	input[type=radio]:checked + label {
+		color: $dark-grey;
+	}
+	input[type=radio]:disabled + label {
+		color: $light-grey;
+	}
+	input[type=radio]:checked:disabled + label {
+		color: $light-grey;
+	}
+}

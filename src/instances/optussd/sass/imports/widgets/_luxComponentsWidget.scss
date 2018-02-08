@@ -1,0 +1,38 @@
+.luxComponentsWidget {
+	.content-container {
+		margin-top: 40px;
+		.use-case-wrapper {
+			margin-top: 96px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		.use-case {
+			clear:both;
+		}
+	}
+	@media only screen and (min-width: $large-screen) {
+		.row {
+			&.no-right-margin {
+				margin-left: 20%;
+			}
+		}
+		.side-navigation {
+			padding-left: 0;
+			position: absolute;
+			left: 0;
+			width: 20%;
+			.search-container {
+				padding-bottom: 0;
+				.ux-sidenav-searchable {
+					.search-box {
+						padding-bottom: 0;
+						.validity-wrapper {
+							display:none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

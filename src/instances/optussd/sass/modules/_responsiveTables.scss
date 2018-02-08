@@ -1,0 +1,120 @@
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* Converted to SCSS by OSG PM team */
+
+table.responsive {
+	th, td {
+		min-width: rem-calc(150px);
+	}
+}
+
+div.table-wrapper {
+	position: relative;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 8px;
+	border-width: 1px;
+	border-color: $light-grey;
+	border-style: solid !important;
+
+	::-webkit-scrollbar {
+		height: 7px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: rem-calc(4.5px);
+		background: rgba(74, 74, 74, 0.5);
+	}
+
+	//	basic style for responsive table
+	table.responsive {
+		margin-bottom: 0;
+
+		td, th {
+			position: relative;
+			overflow: hidden;
+
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+	
+	div.scrollable {
+		margin-left: 35%;
+		overflow: scroll;
+		overflow-y: hidden;
+
+		@include mobileOnly {
+			position: relative;
+			z-index: 0;
+			margin-left: rem-calc(150px);
+		}
+
+		table {
+			border-width: 0 !important;
+		}
+
+		table, th, td {
+			border-left-width: 0 !important;
+		}
+
+		th, td {
+			&:not([spancol]) {
+				white-space: pre-wrap;
+			}
+
+			@include mobile {
+				width: calc(65%);
+			}
+
+			@include mediumOnly {
+				width: calc(65% / 3);
+			}
+		}
+		td {
+			vertical-align: top;
+		}
+	}
+
+	div.pinned {
+		position: absolute;
+		top: 0;
+		width: calc(35% + 0.6px);
+		min-width: rem-calc(151px);
+		overflow: hidden;
+		z-index: 9;
+		border-right-width: 1px;
+		border-right-color: $light-grey;
+		border-right-style: solid !important;
+
+		table {
+			width: 100%;
+			white-space: normal !important;
+			
+			border-width: 0 !important;
+
+			display: block;
+			padding-bottom: 15px;
+
+			tbody {
+				display: table;
+				width: calc(100% + 1px);
+			}
+		}
+
+		th, td {
+			display: none !important;
+			white-space: pre-wrap;
+
+			&:first-child {
+				display: table-cell !important;
+				white-space: normal !important;
+			}
+		}
+		td {
+			vertical-align: top;
+		}
+	}
+}

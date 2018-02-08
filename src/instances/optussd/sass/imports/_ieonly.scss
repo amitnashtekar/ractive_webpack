@@ -1,0 +1,141 @@
+/* IE10 and IE11 only */
+@media all and (-ms-high-contrast:none) {
+	/* IE11 only */
+
+	.ux-customer-address {
+		.all-results ul {
+			display: block !important;
+		}
+	}
+
+	.ux-accordion-sd {
+		&.title-description {
+			.wrapper {
+				.title-wrapper {
+					align-items: flex-start;
+				}
+			}
+		}
+	}
+
+	table {
+		img {
+			width: 100%;
+		}
+	}
+	*::-ms-backdrop, span.postfix {
+		margin-bottom: 5px;
+	}
+	*::-ms-backdrop, span.postfix:last-child {
+		margin-bottom: 0;
+	}
+
+	.ux-header-optus {
+		.mobile-search {
+			&.searchBoxWidget {
+				.btn-close.icon-cross  {
+					top: rem-calc(45px) !important;
+				}
+			}
+		}
+		.mobile-menu {
+			.searchBoxWidget {
+				.searchBoxHeaderView {
+					.search-form {
+						top: rem-calc(40px);
+					}
+				}
+			}
+		}
+	}
+
+	.ux-anchor {
+		&.animated {
+			&:after {
+				line-height: 1;
+				padding-top: rem-calc(2px);
+			}
+		}
+	}
+}
+
+@media #{$large-screen-breakpoint} and (-ms-high-contrast: none) {
+	*::-ms-backdrop, input.search-input {
+		width:  100%;
+	}
+	*::-ms-backdrop, .focused input.search-input {
+		width:  100%;
+	}
+	*::-ms-backdrop, .focused .ux-autocomplete {
+		width:  100%;
+	}
+	/*
+	*::-ms-backdrop, .focused .search-form {
+		margin-left: rem-calc(-108px);
+	}
+	*::-ms-backdrop, .focused .search-form:after {
+		left: rem-calc(-208px) !important;
+	}
+	*/
+	.ux-header-optus {
+		.primary-functions {
+			li {
+				width: auto !important;
+			}
+		}
+		.searchBoxWidget {
+			.searchBoxHeaderView {
+				.search-form {
+					&:after {
+						right: auto !important;
+						left: 0 !important;
+					}
+				}
+			}
+		}
+	}
+	.globalSearchWidget {
+		.ux-autocomplete {
+			input::-ms-clear {
+			  width : 0;
+			  height: 0;
+			}
+		}
+	}
+	.ux-article-overview {
+		.ux-image-srcset {
+			.media-wrapper {
+				A, PICTURE {
+					> SOURCE, IMG {
+						width : auto !important;
+					}
+					IMG {
+						width : auto !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $small-screen) and (-ms-high-contrast: none) {
+	.ux-modal {
+		.modal {
+			&.h-centered {
+				width: 264px;
+				right: 0 !important;
+				overflow: hidden;
+			}
+		}
+	}
+	.ux-radio-button {
+		.btn {
+			&.has-links {
+				label {
+					width: 100% !important;
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,81 @@
+
+
+#navigation {
+  padding-bottom: 20px;
+  //margin-bottom: 20px;
+
+
+  background: $dark-teal;
+
+
+  @media only screen and (min-width: $medium-screen) {
+    padding-bottom: 0px;
+  }
+
+  a {
+    display: block;
+    position: relative;
+
+    color: $white;
+    font-weight: normal;
+    //text-transform: uppercase;
+    text-decoration: none;
+
+    padding: rem-calc(15) rem-calc(5);
+    font-size: rem-calc(20);
+
+    @media only screen and (min-width: $medium-screen) {
+      &.active {
+        color: $white;//$theme-default_header-text-color;
+
+        &:after {
+          //@include carrotDown($teal);
+        }
+      }
+    }
+  }
+
+
+
+  li {
+    @include grid-column(12);
+
+    // override fv5's grid-column.
+    width: auto;
+    list-style: none;
+
+    //@media only screen and (min-width: $medium-screen) {
+      margin-right: 10px;
+      //width: auto;
+    //}
+
+    &.nav a {
+      //padding: 10px 0;
+
+      //@media only screen and (min-width: $medium-screen) {
+        //padding: 25px 20px;
+        //height: 85px;
+      //}
+    }
+
+
+
+    &.version {
+      float: right;
+      width: auto;
+      padding-left: 0;
+
+      a {
+        margin-bottom: 0;
+        color: $blue;
+        &:hover {
+          color: $black;
+        }
+      }
+
+      @media only screen and (min-width: $medium-screen) {
+        margin-top: 13px;
+      }
+    }
+  }
+}

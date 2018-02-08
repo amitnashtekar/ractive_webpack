@@ -1,0 +1,137 @@
+.progress-bar {
+	margin-bottom: emCalc(32px);
+
+	.step {
+		height: emCalc(64px);
+		display: block;
+		position: relative;
+		line-height: emCalc(64px);
+		padding: emCalc(0px);
+		padding-left: emCalc(24px);
+		border: 1px solid $black-10;
+		border-right: 1px solid $black-60;
+		border-left: 0;
+		float: right;
+		background: #fff;
+
+		> span {
+			display: block;
+			overflow: hidden;
+			height: 100%;
+		}
+		.ico {
+			font-size: emCalc(32px);;
+			line-height: normal;
+			position: relative;
+			top: 5px;
+		}
+		.step-number, .step-text {
+			font-size: emCalc(24px);
+			text-transform: uppercase;
+			color: $black-90;
+			font-family: $trade-gothic-pro-bold-condensed-font-family, $font-sans;
+		}
+		@media #{$smallormediumscreen}{
+			padding-left: emCalc(18px);
+
+			.ico {
+				font-size: emCalc(24px);
+			}
+			.step-number, .step-text {
+				font-size: emCalc(18px);
+				font-family: $trade-gothic-pro-roman-font-family, $font-sans;
+			}
+
+		}
+		@media #{$smallscreenonly} {
+			padding-left: emCalc(18px);
+			text-align: center;
+
+			.ico {
+				top: 8px;
+				font-size: emCalc(24px);
+				display: block;
+				position: relative;
+				left: -10px;
+			}
+			.step-number, .step-text {
+				font-size: emCalc(12px);
+				position: relative;
+				top: -12px;
+				left: -10px;
+			}
+			.step-number {
+				display: none;
+			}
+		}
+
+		.arrow {
+			position: absolute;
+			right: -25px;
+			top: 19px;
+			border: 12px solid transparent;
+			border-left-color: $black-60;
+			height: 0;
+			width: 0;
+			background: transparent;
+
+			&:after {
+				content: "";
+				display: table;
+				position: absolute;
+				top: -12px;
+				left: -13px;
+				height: 0;
+				width: 0;
+				border: 12px solid transparent;
+				border-left-color: $white;
+			}
+
+		}
+		&.step-first {
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			border-left: 1px solid $black-15;
+		}
+		&.step-last {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			border-right: 1px solid $black-10;
+
+			.arrow {
+				display: none;
+			}
+		}
+		&.step-done {
+			background: $grey-light;
+
+			.ico, .step-number, .step-text {
+				color: $black-20;
+			}
+
+			.arrow {
+				&:after {
+					border-left-color: $grey-light;
+				}
+			}
+		}
+		&.active {
+			background: $teal;
+			color: $white;
+			border: 1px solid $teal;
+			border-right: 1px solid $black-60;
+
+			.step-number, .step-text {
+				color: $white;
+			}
+			.arrow {
+				&:after {
+					border: 12px solid transparent;
+					border-left-color: $teal;
+					top: -12px;
+				}
+
+			}
+		}
+	}
+}

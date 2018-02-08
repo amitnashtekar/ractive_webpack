@@ -1,0 +1,47 @@
+// Came from OnlineStyleGuide/source/assets/css/mixins/_fonts.scss
+
+$optus-icons-font-family: 'optus-icons';
+$optus-icons-url: 'assets/fonts/optus-icons';
+
+@font-face {
+	font-family: $optus-icons-font-family;
+	src: url($optus-icons-url + '.eot');
+	src: url($optus-icons-url + '.eot?#iefix') format('embedded-opentype'),
+	url($optus-icons-url + '.ttf') format('truetype'),
+	url($optus-icons-url + '.woff') format('woff'),
+	url($optus-icons-url + '.svg#optus-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+// Mark Pro Regular
+$markpro-regular-font-family: 'MarkPro';
+$markpro-regular-url: 'assets/fonts/markpro';
+
+// Mark Pro Medium
+$markpro-medium-font-family: 'MarkProMedium';
+$markpro-medium-url: 'assets/fonts/markpro-medium';
+
+// Mark Pro Heavy
+$markpro-heavy-font-family: 'MarkProHeavy';
+$markpro-heavy-url: 'assets/fonts/markpro-heavy';
+
+// Mark Pro Thin (unused but here for reference)
+$markpro-thin-font-family: 'MarkProThin';
+$markpro-thin-url: 'assets/fonts/markpro-thin';
+
+// Mark Pro Bold
+$markpro-bold-font-family: 'MarkProBold';
+$markpro-bold-url: 'assets/fonts/markpro-bold';
+
+
+
+// Primary: 	Mark Pro Regular
+// Secondary: 	Mark Pro Medium
+// Tertiary: 	Mark Pro Heavy
+// Quaternary: 	Mark Pro Bold
+$primary-font-family: $markpro-regular-font-family;
+$secondary-font-family: $markpro-medium-font-family;
+$tertiary-font-family: $markpro-heavy-font-family;
+

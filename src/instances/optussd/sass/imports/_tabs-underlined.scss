@@ -1,0 +1,35 @@
+//@import "../config";
+
+.tabs-underlined {
+	.tabs-tablinks-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 3px;
+		.tab {
+			padding: 0;
+			a {
+				text-transform: uppercase;
+				text-decoration: none;
+				font-family: $secondary-font-family;
+				color: $black-40;
+				border-bottom: 4px solid $white;
+				padding-bottom: 0.1em;
+				font-size: 1.1em;
+			}
+			&.active {
+				a {
+					font-size: 1.1em;
+					color: $black;
+					border-bottom: 4px solid $teal;
+				}
+			}
+		}
+	}
+	.tabs-content-wrapper {
+		background: $black-15;
+		padding: 2em 0;
+	}
+}
+
+

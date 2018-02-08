@@ -1,11 +1,48 @@
 <div class="ux-store-details">
     <div class="v-p-normal shop-title-wrapper">
-    {{JSON.stringify(this)}}
+    
         <ux-header level="4" class="shop-title">hi{{{shop.name}}}</ux-header>
- 
-   
-    
     </div>
-    
+        <div class="product-detail-wrapper">
+        {{#product}}
+            <div class="img-wrapper">
+                <img src="{{image}}" alt="product image">
+            </div>
+            <div class="product-details">
+                <div class="stock-count">
+                    <span class="size6">
+                        <span class="total size2">{{total_in_stock}}</span>
+                    </span>
+                </div>
+                <div class="descriptions">
+                    {{#description}}
+                        <div class="description">{{description}}</div>
+                    {{/description}}
+                    <span class="size6 title">{{title}} in stock</span>
+                </div>
+            </div>
+        {{/product}}
+    </div>
+        <div class="shop-details">
+        {{#shop}}
+            <div class="v-normal">
+                <span class="size6">{{address}}</span>
+            </div>
+            <div class="v-normal">
+                <ux-anchor href="tel:{{telephone}}">{{telephone}}</ux-anchor>
+            </div>
+            <ul class="opening-times">
+                {{#opening_times:i}}
+                    <li class="{{isToday(i)}}">
+                        <span class="day">{{day}}</span>
+                        <span class="time">{{time}}</span>
+                    </li>
+                {{/opening_times}}
+            </ul>
+        {{/shop}}
+    </div>
+    <div class="link-container">
+        <ux-anchor>Get Directions</ux-anchor>
+    </div>
 </div>
 

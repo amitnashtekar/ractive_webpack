@@ -1,0 +1,26 @@
+.error,
+.valid {
+  input, textarea, span.select{
+    border-width: 2px;
+  }
+}
+
+.error {
+  input, textarea, span.select {
+    border-color: $red;
+  }
+  label {
+    color: $steel;
+  }
+}
+
+.valid {
+  input, textarea, span.select {
+    border-color: $dark-teal;
+  }
+}
+
+.mandatory {
+  color: $mandatory-colour-checkbox;
+  padding-left: 2px;
+}

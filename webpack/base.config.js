@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const path = require('path');
-
+console.log('mypath',path.resolve(__dirname, '../node_modules/foundation-sites/scss/foundation/components'));
 module.exports = {
     entry: [
         path.resolve(__dirname, '../src/main')
@@ -38,7 +38,17 @@ module.exports = {
                             loader: 'sass-resources-loader',
                             query: {
                                 resources: [
-                                    path.resolve(__dirname, '../src/instances/optussd/sass/settings/_colours.scss')
+                                	
+                                   // path.resolve(__dirname, '../node_modules/foundation-sites/scss/foundation/components/*.scss'),
+                                  //  path.resolve(__dirname, '../src/instances/optussd/sass/settings/_fonts.scss'),
+                                  path.resolve(__dirname, '../node_modules/foundation-sites/scss/normalize.scss'),
+                                   
+                                    path.resolve(__dirname, '../src/instances/optussd/sass/settings/_colours.scss'),
+                                   // path.resolve(__dirname, '../src/instances/optussd/sass/settings/_base.scss')
+
+
+                                     //path.resolve(__dirname, '../src/instances/optussd/sass/*.scss')
+                                    
 
                                 ],
                             }

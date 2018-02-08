@@ -1,0 +1,12 @@
+/*
+	Only define site-wide variables in this file.
+	For component or widget-specific variables, define them in sass/_instance.scss
+*/
+// Core
+$browserDefaultFontSize: 16;
+
+// Media Queries
+$desktopBreakpoint:852px;
+$mobileBreakpoint: 492px;
+
+$table-even-row-bg: $grey0;

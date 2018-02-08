@@ -1,0 +1,22 @@
+.side-nav {
+  background: $smoke;
+  padding: $smallSpace;
+  li {
+    margin-bottom: 0;
+    list-style: none;
+    &.heading {
+      color: $black;
+      text-transform: none;
+      padding: rem-calc(8) 0 rem-calc(4) 0;
+    }
+    a:not(.button) {
+      padding: rem-calc(4) rem-calc(8);
+      color: $blue;
+      font-size: rem-calc(14);
+      &:hover {
+          background: transparent;
+          color: $primary-color;
+      }
+    }
+  }
+}

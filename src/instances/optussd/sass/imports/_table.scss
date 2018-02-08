@@ -1,0 +1,571 @@
+@mixin table {
+	background: $table-bg;
+	border: $table-border-style $table-border-size $mercury;
+	table-layout: $table-layout;
+	border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+
+	caption {
+		padding: rem-calc($smallSpace) 0;
+		text-align: inherit;
+		background: transparent;
+		color: $storm;
+		font: {
+			size: $table-row-font-size;
+			weight: normal;
+		}
+
+		p {
+			color: inherit;
+			font-size: inherit;
+			line-height: inherit;
+			padding: 0 !important;
+			margin: 0;
+		}
+	}
+
+	tr {
+		border-color: $light-grey;
+		th {
+			background: $table-head-bg;
+			color: $storm;
+			font-size:  rem-calc(18px);
+			line-height:  rem-calc(24px);
+			padding: $table-row-padding;
+			font-weight: bold;
+			@media only screen and (max-width: $small-screen) {
+				white-space: pre;
+				font-size: rem-calc(16px);
+			}
+			font: {
+				family: $primary-font-family;
+			}
+
+			p, h1, h2, h3, h4, h5, h6 {
+				color: inherit;
+				font-size: inherit;
+				line-height: inherit;
+				font-weight: inherit;
+				padding: 0;
+				margin: 0;
+			}
+		}
+
+		%li-common {
+			@extend .size7;
+			p {
+				color: inherit;
+				font-size: inherit;
+				line-height: inherit;
+				padding: 0;
+				margin: 0;
+			}
+			font: {
+				family: $primary-font-family;
+			}
+		}
+
+		td, th {
+			@each $current-colour in $colours-list {
+			$i: index($colours-list, $current-colour);
+				&.#{$current-colour}-bg {
+					background-color: nth($colours-settings-list, $i);
+				}
+			}
+		}
+
+		td {
+			color: $storm;
+			font-size: $table-row-font-size;
+			padding: $table-row-padding;
+			text-align: $default-float;
+			border-color: $light-grey;
+			@include rte-bullet-list;
+			@include rte-unordered-list;
+
+			ul, ol {
+				& > li {
+					@extend %li-common;
+				}
+			}
+			@each $current-colour in $colours-list {
+				$i: index($colours-list, $current-colour);
+				span.icon-bg-type-transparent {
+					position: relative;
+					&.icon-bg-#{$current-colour}:after {
+						color: transparent !important;
+					}
+					&.icon-#{$current-colour}:before {
+						color: nth($colours-settings-list, $i);
+						position: inherit;
+						top: 0;
+						left: 0;
+					  	transform: translate(0, 0);
+					}
+					&.icon-bg-#{$current-colour} {
+						background-color: transparent !important;
+					}
+				}
+				span.icon-bg-type-fill {
+					position: relative;
+					&.icon-bg-#{$current-colour}:after {
+						color: nth($colours-settings-list, $i);
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						z-index: 1;
+					}
+					&.icon-bg-#{$current-colour} {
+						background-color: transparent !important;
+					}
+				}
+				span.icon-bg-type-circle {
+					position: relative;
+					&.icon-bg-#{$current-colour}:after {
+						color: transparent !important;
+					}
+					&.icon-bg-#{$current-colour} {
+						@include radius(50%);
+						background-color: nth($colours-settings-list, $i) !important;
+					}
+				}
+				span.icon-bg-type-square {
+					position: relative;
+					&.icon-bg-#{$current-colour}:after {
+						color: transparent !important;
+					}
+					&.icon-bg-#{$current-colour} {
+						@include radius(5px);
+						background-color: nth($colours-settings-list, $i) !important;
+					}
+				}
+				span.icon-#{$current-colour}:before {
+					color: nth($colours-settings-list, $i);
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 2;
+				}
+			}
+			// these reflect ths sizes used in ux-icon.scss
+			span.icon-default {
+				width: rem-calc(24px);
+				height: rem-calc(24px);
+				text-align: center;
+				vertical-align: middle;
+				font-size: rem-calc(16px);
+				&:before, &:after {
+					font-size: rem-calc(16px);
+				}
+			}
+			span.icon-xsmall {
+				width: rem-calc(20px);
+				height: rem-calc(20px);
+				text-align: center;
+				vertical-align: middle;
+				font-size: rem-calc(12px);
+				&:before, &:after {
+					font-size: rem-calc(12px);
+				}
+			}
+			span.icon-small {
+				width: rem-calc(24px);
+				height: rem-calc(24px);
+				text-align: center;
+				vertical-align: middle;
+				font-size: rem-calc(16px);
+				&:before, &:after {
+					font-size: rem-calc(16px);
+				}
+			}
+			span.icon-medium {
+				width: rem-calc(34px);
+				height: rem-calc(34px);
+				text-align: center;
+				vertical-align: middle;
+				font-size: rem-calc(20px);
+				&:before, &:after {
+					font-size: rem-calc(20px);
+				}
+			}
+			span.icon-large {
+				width: rem-calc(48px);
+				height: rem-calc(48px);
+				text-align: center;
+				vertical-align: middle;
+				font-size: rem-calc(30px);
+				&:before, &:after {
+					font-size: rem-calc(30px);
+				}
+			}
+			span.icon-xlarge {
+				width: rem-calc(64px);
+				height: rem-calc(64px);
+				text-align: center;
+				vertical-align: middle;
+				font-size: rem-calc(40px);
+				&:before, &:after {
+					font-size: rem-calc(40px);
+				}
+			}
+			p {
+				color: inherit;
+				font-size: inherit;
+				line-height: inherit;
+				margin: 0;
+				padding: 0 !important;
+			}
+		}
+	}
+
+	thead tr th, tfoot tr th, tfoot tr td, tbody tr th, tbody tr td, tr td {
+		display: $table-display;
+	}
+
+	p {
+		color: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		padding: 0 !important;
+		margin: 0;
+	}
+}
+
+//The "exports" prevents duplication of styles if the given file is called via @import elsewhere. The is particularly neat because it allows SASS files to declare their own dependencies.
+//Referance: http://4waisenkinder.de/blog/2014/03/06/import-once-in-sass-the-foundation-way/
+
+@include exports("table") {
+	table.table-candy-striped-text-left {
+		@include table;
+		tr {
+			&.even, &.alt, &:nth-of-type(even) {
+				background: $table-even-row-bg;
+			}
+		}
+	}
+
+	table.table-plain-no-border {
+		@include table;
+		border-collapse: collapse;
+    	border-spacing: 0;
+    	border-width: 0;
+
+    	tr {
+    		border-bottom: 0;
+			td {
+				border-left: 0;
+			}
+		}
+	}
+
+	table.table-plain-text-left	{
+		@include table;
+		border-collapse: collapse;
+    	border-spacing: 0;
+
+    	tr {
+    		border-bottom: $table-border-style $table-border-size $table-border-color;
+			td {
+				border-left: $table-border-style $table-border-size $table-border-color;
+			}
+		}
+	}
+
+	table.table-optus-text-left {
+		@include table;
+		border-collapse: collapse;
+    	border-spacing: 0;
+    	border-width: 0px;
+
+    	caption {
+			color: $storm;
+			padding: 0 0 rem-calc($smallSpace) 0;
+		}
+
+    	tr {
+    		border-bottom: $table-border-style $table-border-size $table-border-color;
+    		th {
+				color: $white;
+				background-color: $tiber;
+			}
+
+			th:first-child {
+			    border-radius: rem-calc(5px) 0 0 0;
+			}
+
+			th:last-child {
+			    border-radius: 0 rem-calc(5px) 0 0;
+			}
+
+			td {
+				color: $storm;
+				border-left: $table-border-style $table-border-size $table-border-color;
+			}
+			td:first-child{
+				border-left-width: 0;
+			}
+			td:last-child {
+				border-right-width: 0;
+			}
+		}
+	}
+
+	table.table-default-no-border {
+		tr {
+			th {
+				text-align: left;
+			}
+		}
+	}
+
+	div.table-wrapper {
+		padding-bottom: 0px !important;
+		div.scrollable {
+			overflow: auto !important;
+			overflow-y: hidden;			
+			table {
+				caption {
+					visibility: hidden;
+					width:calc(49.8% + .6px); // align rows in one line
+				}
+			}
+		}
+		div.pinned {
+			table {
+				caption {
+					display: block;
+				}
+			}
+		}
+	}
+
+	%common-alignment {
+		tr {
+			th, td {
+				text-align: center;
+			}
+		}
+	}
+
+	table.table-optus-text-center {
+		@extend .table-optus-text-left;
+		@extend %common-alignment;
+
+	}
+
+	table.table-optus-text-firstleft-restcenter {
+		@extend .table-optus-text-left;
+		@extend %common-alignment;
+
+    	tr {
+			td:first-child {
+				text-align: left;
+				padding-left: 0;
+			}
+		}
+	}
+
+	///////////////////////////////////////////////
+	////	NEW STYLING		///////////////////////
+	///////////////////////////////////////////////
+
+	@mixin baseFont {
+		color: inherit;
+	}
+
+	@mixin fontDefault {
+		@include baseFont();
+		font-size: rem-calc(14px);
+		line-height: rem-calc(18px);
+		font-weight: normal;
+		font-family: $primary-font-family;
+	}
+
+	@mixin spanFont {
+		span:not([class]) {
+			@include fontDefault();
+			@content;
+		}
+	}
+
+	@mixin fontHeader {
+		@include baseFont();
+		font-size: rem-calc(16px);
+		font-family: $quaternary-font-family;
+		
+		@include spanFont();
+	}
+
+	@mixin fontHuge {
+		@include baseFont();
+		font-size: rem-calc(24px) !important;
+		line-height: rem-calc(28px);
+		font-family: $tertiary-font-family;
+		@include spanFont();
+	}
+
+	@mixin fatTables {
+		@include table;
+		@include fontDefault;
+		color: $dark-shade;
+		border-collapse: collapse;
+    	border-spacing: 0;
+		text-align: left;
+
+		tr {
+			th {
+				@include fontHeader;
+
+				&.normal-text {
+					@include fontDefault;
+				}
+			}
+			
+			td, th {
+				padding: rem-calc(24px 20px);
+
+				a {
+					font-family: inherit;
+					font-size: inherit;
+				}
+				
+				b {
+					@include fontHeader;
+				}
+
+				&.huge-text {
+					@include fontHuge;
+				}
+			}
+			td {
+				color: $dark-shade;			
+				p, span, b, &.huge-text, a {
+					color: $dark-shade;
+				}
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	@mixin tableHeader ($textColor, $bgColor) {
+		tr th {
+			color: $textColor !important;
+			background-color: $bgColor;
+		}
+	}
+
+	@mixin tableCandyStripes {
+		tr {
+			&.even, &.alt, &:nth-of-type(even) {
+				background: $table-even-row-bg;
+			}
+		}
+	}
+
+	@mixin tableBorder {
+		tr {
+			th, td {
+				border-left-width: 0 !important;
+				border-top-width: 0 !important;
+
+				&:last-child {
+					border-right-width: 0 !important;
+				}
+			}
+
+			td {
+				border-bottom: $table-border-style $table-border-size $mercury;
+				border-right: $table-border-style $table-border-size $mercury; 
+			}
+
+			&:last-child {
+				th, td {
+					border-bottom-width: 0 !important;
+				}
+			}
+			
+			&:first-of-type {
+				th {
+					border-right-width: 0 !important;
+				}
+			}
+		}
+	}
+
+	@mixin tableNoBorder {
+		td, th {
+			border-width: 0 !important;
+		}
+	}
+
+	//	theme group as follows
+	//	"name" $background_color $font_color
+	//
+	//  "name" = the theme name
+	//	$background_colour = header cell background
+	//	$font_colour = header cell text colour
+	$themeColors: (
+		"berry" $berry $white,
+		"teal" $teal $white,
+		"yellow" $yellow $body-font-color,
+		"default" $grey0 $body-font-color
+	);
+
+	$themeCandyStripes: true, false;
+	$themeBorders: true, false;
+	
+	@each $useCandy in $themeCandyStripes {
+		@each $useBorder in $themeBorders {
+			@each $themeColor in $themeColors {
+
+				$className: "table-#{nth($themeColor, 1)}";
+				@if $useCandy {
+					$className: $className + "-candy-stripe";
+				}
+
+				@if $useBorder {
+					$className: $className + "-border";
+				} @else {
+					$className: $className + "-no-border";
+				}
+				
+				table.#{$className} {
+					@include fatTables();
+
+					@include tableHeader(nth($themeColor, 3), nth($themeColor, 2));
+
+					@if $useBorder {
+						@include tableBorder();
+					} @else {
+						@include tableNoBorder();
+					}
+					
+					@if $useCandy {
+						@include tableCandyStripes();
+					}
+				}
+			}
+		}
+	}
+}
+
+@each $current-colour in $colours-list {
+	$i: index($colours-list, $current-colour);
+	table.table-#{$current-colour} {
+		background-color: nth($colours-settings-list, $i) !important;
+	}
+}
+table{
+	tr{
+		td{
+			p{
+				max-width:inherit;
+			}
+		}
+	}
+}

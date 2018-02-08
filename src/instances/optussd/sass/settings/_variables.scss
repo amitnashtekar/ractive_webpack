@@ -1,0 +1,161 @@
+$slim-screen: 375px;
+$small-screen: 492px;
+$above-small-screen: 493px;
+$over-small-screen: 600px;
+$under-medium-screen: 851px;
+$medium-screen: 852px;
+$under-large-screen: 1019px;
+$large-screen: 1020px;
+$full-screen: 1200px;
+$xxxlarge-screen: 1280px;
+$extra-small-screen: 320px;
+
+// Additions. ALL breakpoint vars will need
+// to be reassessed for a small-screen-up solution.
+// Switch to foundation defaults (em values) advised.
+$xsmall-screen: 480px;
+$xlarge-screen: 1100px;
+
+$breakpoints: (
+    large : $medium-screen,
+    medium: $small-screen
+);
+
+$slimscreenonly: "only screen and (max-width: #{$slim-screen})" !default;
+$smallscreenonly: "only screen and (max-width: #{$small-screen})" !default;
+$mediumscreenonly: "only screen and (min-width: #{$small-screen}) and (max-width: #{$under-medium-screen})" !default;
+$nav-switch-breakpoint: "only screen and (min-width: #{$medium-screen})";
+$header-switch-breakpoint: "only screen and (min-width: #{$medium-screen})";
+$footer-switch-breakpoint: "only screen and (min-width: #{$small-screen})";
+$fullscreen: "only screen and (min-width:#{$full-screen})";
+$small-screen-breakpoint: "only screen and (min-width:#{$small-screen})";
+$medium-screen-breakpoint: "only screen and (min-width:#{$medium-screen})";
+$large-screen-breakpoint: "only screen and (min-width:#{$large-screen})";
+$small-medium-screens-only: "only screen and (max-width: #{$medium-screen})";
+
+$small-and-medium-screen: "only screen and (max-width: #{$under-medium-screen})";
+$medium-only-screen: "only screen and (min-width: #{$medium-screen}) and (max-width: #{$under-large-screen})";
+$medium-and-above-screen: "only screen and (min-width: #{$above-small-screen})";
+$above-small-below-large: "only screen and (min-width: #{$above-small-screen}) and (max-width: #{$under-large-screen})";
+
+$spacerBorder: 1px solid $grey2;
+$spacerBorderSD: 1px solid $grey2;
+$spacerLargerBorder: 2px solid $grey2;
+$spacerLargerBorderSD: 2px solid $grey2;
+$focusBorder: $focus-blue solid 2px;
+
+$spacerLargerDarkerBorder: 2px solid $dark-grey;
+
+$smallSpace: 12px;
+$mediumSpace: 24px;
+$largeSpace: 48px;
+$xLargeSpace: 96px;
+$xxLargeSpace: 120px;
+
+// These are purposely configured without "px". If you require the "px",
+// use the list at the top of the file.
+$browserDefaultFontSize: 16;
+$desktopBreakpoint: 1020;
+$mobileBreakpoint: 492;
+$tabletBreakpoint: 852;
+
+$marginMediumLine2: ($mediumSpace - 2px);
+$marginMediumLine3: ($mediumSpace - 3px);
+$marginMediumLine4: ($mediumSpace - 4px);
+$marginMediumLine8: ($mediumSpace - 8px); //just for stacked paragraphs
+
+$column-gutter: 15px;
+$minButtonWidth: 260px;
+//start added rebranding changes
+$imageColumn: 70px;
+$minButtonWidth: 260px;
+@mixin box-shadow-above(){
+	box-shadow: 0 -7px 14px -8px rgba(0, 0, 0, 0.75);
+}
+
+@mixin box-shadow-below(){
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+}
+// End  rebranding changes
+%box-shadow-above {
+	box-shadow: 0 -7px 14px -8px rgba(0, 0, 0, 0.75);
+}
+
+%box-shadow-below {
+	box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.30);
+}
+
+@mixin box-shadow(){
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+$colours-list: "white" "black" "teal" "yellow" "sunglow" "orange" "tangerine" "scarlet" "plum" "wine" "deep-bronze" "pearl-aqua" "turquoise" "dark-teal" "mist" "slate" "indigo" "tiber" "capri" "cobalt" "cloud" "heather" "smoke" "light-grey" "mercury" "grey" "storm" "dark-grey" "shade" "purple" "navy" "berry" "blue" "pink" "red" "grey1" "grey2" "grey3" "grey4" "dark_grey";
+$colours-settings-list: $white $black $teal $yellow
+$sunglow $orange $tangerine $scarlet $plum $wine $deep-bronze $pearl-aqua $turquoise $dark-teal $mist $slate
+$indigo $tiber $capri $cobalt $cloud $heather
+$smoke $light-grey $mercury $grey $storm $dark-grey $shade
+$purple $navy $berry $blue $pink $red
+$grey1 $grey2 $grey3 $grey4 $dark-grey;
+
+
+//Font sizes
+$h1-large-font-sizes: (
+    null  : (40px, 40px),
+    large : (84px, 84px)
+);
+
+$h1-font-sizes: (
+    null  : (40px, 40px),
+    large : (64px, 60px)
+);
+
+$h2-font-sizes: (
+    null  : (32px, 36px),
+    large : (48px, 48px)
+);
+
+$h3-font-sizes: (
+    null  : (28px, 32px),
+    large : (32px, 36px)
+);
+
+$h4-font-sizes: (
+    null  : (24px, 28px)
+);
+
+$h5-font-sizes: (
+    null  : (20px, 24px)
+);
+
+$h6-font-sizes: (
+    null  : (16px, 20px)
+);
+
+$p-font-sizes: (
+    null  : (16px, 24px)
+);
+
+$p-large-font-sizes: (
+    null  : (24px, 30px)
+);
+
+$p-small-font-sizes: (
+    null  : (14px, 18px)
+);
+
+$p-tiny-font-sizes: (
+    null: (12px, 16px)
+);
+
+//Animation
+$initialScale: 1.2;
+$animationSpeed: 0.8s;
+$animationDelayCTA: 1.2s;
+$animationDelayTitle: 0.1s;
+$animationDelaySubTitle: 0.5s;
+$animationDelayDescription: 0.8s;
+$animationDelayCuratore: 1s;
+
+//adjusted for line height
+$smallSpaceAdjusted: 7px;
+$mediumSpaceAdjusted: 18px;

@@ -1,0 +1,3716 @@
+
+
+@font-face {
+	font-family: "lux-icons";
+	src: url('assets/fonts/lux-icons.eot');
+	src: url('assets/fonts/lux-icons.eot?#iefix') format('eot'),
+	url('assets/fonts/lux-icons.woff') format('woff'),
+	url('assets/fonts/lux-icons.ttf') format('truetype'),
+	url('assets/fonts/lux-icons.svg#lux-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "lux-icons";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+%icon-background {
+	position: absolute;
+	color: $yellow;
+	display: block;
+	top: 0;
+	left:0;
+	z-index: 1;
+}
+
+%icon-background-base {
+	text-indent: 0;
+	color: $black;
+	position: relative;
+
+	&:before {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+@function icon-char($filename) {
+	$char: "";
+	
+	@if $filename == 3-g-4-g {
+		$char: "\E001";
+	}
+	@if $filename == 4-gplus {
+		$char: "\E002";
+	}
+	@if $filename == 4g-plus-stacked {
+		$char: "\E003";
+	}
+	@if $filename == 4g {
+		$char: "\E004";
+	}
+	@if $filename == accelerate {
+		$char: "\E005";
+	}
+	@if $filename == accessory {
+		$char: "\E006";
+	}
+	@if $filename == accounts-myaccount {
+		$char: "\E007";
+	}
+	@if $filename == activate-service {
+		$char: "\E008";
+	}
+	@if $filename == activate-sim {
+		$char: "\E009";
+	}
+	@if $filename == add-a-second-plan-bg {
+		$char: "\E00A";
+	}
+	@if $filename == add-a-second-plan {
+		$char: "\E00B";
+	}
+	@if $filename == add {
+		$char: "\E00C";
+	}
+	@if $filename == addons-purchases {
+		$char: "\E00D";
+	}
+	@if $filename == address-book {
+		$char: "\E00E";
+	}
+	@if $filename == advice {
+		$char: "\E00F";
+	}
+	@if $filename == aeroplane {
+		$char: "\E010";
+	}
+	@if $filename == alert-circular {
+		$char: "\E011";
+	}
+	@if $filename == android {
+		$char: "\E012";
+	}
+	@if $filename == app {
+		$char: "\E013";
+	}
+	@if $filename == apple {
+		$char: "\E014";
+	}
+	@if $filename == arrow-down-right-organic-small-bg {
+		$char: "\E015";
+	}
+	@if $filename == arrow-down-right-organic-small {
+		$char: "\E016";
+	}
+	@if $filename == arrow-down {
+		$char: "\E017";
+	}
+	@if $filename == arrow-left-organic {
+		$char: "\E018";
+	}
+	@if $filename == arrow-left {
+		$char: "\E019";
+	}
+	@if $filename == arrow-right-organic {
+		$char: "\E01A";
+	}
+	@if $filename == arrow-right {
+		$char: "\E01B";
+	}
+	@if $filename == arrow-up-left-organic-small-bg {
+		$char: "\E01C";
+	}
+	@if $filename == arrow-up-left-organic-small {
+		$char: "\E01D";
+	}
+	@if $filename == arrow-up {
+		$char: "\E01E";
+	}
+	@if $filename == australia-map-outline {
+		$char: "\E01F";
+	}
+	@if $filename == backup-storage {
+		$char: "\E020";
+	}
+	@if $filename == banking-finance {
+		$char: "\E021";
+	}
+	@if $filename == battery-empty-bg {
+		$char: "\E022";
+	}
+	@if $filename == battery-empty {
+		$char: "\E023";
+	}
+	@if $filename == battery-full-bg {
+		$char: "\E024";
+	}
+	@if $filename == battery-full {
+		$char: "\E025";
+	}
+	@if $filename == bell-bg {
+		$char: "\E026";
+	}
+	@if $filename == bell {
+		$char: "\E027";
+	}
+	@if $filename == bill-settings {
+		$char: "\E028";
+	}
+	@if $filename == billing-services-tailored-services-bg {
+		$char: "\E029";
+	}
+	@if $filename == billing-services-tailored-services {
+		$char: "\E02A";
+	}
+	@if $filename == billing {
+		$char: "\E02B";
+	}
+	@if $filename == block {
+		$char: "\E02C";
+	}
+	@if $filename == broadband-service {
+		$char: "\E02D";
+	}
+	@if $filename == broadband {
+		$char: "\E02E";
+	}
+	@if $filename == building {
+		$char: "\E02F";
+	}
+	@if $filename == bundles-bg {
+		$char: "\E030";
+	}
+	@if $filename == bundles {
+		$char: "\E031";
+	}
+	@if $filename == business_enterprise {
+		$char: "\E032";
+	}
+	@if $filename == business_smallbusiness {
+		$char: "\E033";
+	}
+	@if $filename == business_wholesale {
+		$char: "\E034";
+	}
+	@if $filename == business-builder {
+		$char: "\E035";
+	}
+	@if $filename == business-portal-blk {
+		$char: "\E036";
+	}
+	@if $filename == business-portal {
+		$char: "\E037";
+	}
+	@if $filename == business-profile {
+		$char: "\E038";
+	}
+	@if $filename == business-reports {
+		$char: "\E039";
+	}
+	@if $filename == business-sharing-bg {
+		$char: "\E03A";
+	}
+	@if $filename == business-sharing {
+		$char: "\E03B";
+	}
+	@if $filename == business-solutions {
+		$char: "\E03C";
+	}
+	@if $filename == business-think-tank {
+		$char: "\E03D";
+	}
+	@if $filename == calendar {
+		$char: "\E03E";
+	}
+	@if $filename == camera {
+		$char: "\E03F";
+	}
+	@if $filename == cart {
+		$char: "\E040";
+	}
+	@if $filename == case-studies {
+		$char: "\E041";
+	}
+	@if $filename == category-billing {
+		$char: "\E042";
+	}
+	@if $filename == category-internet {
+		$char: "\E043";
+	}
+	@if $filename == category-mobile {
+		$char: "\E044";
+	}
+	@if $filename == category-phone {
+		$char: "\E045";
+	}
+	@if $filename == category-tablet {
+		$char: "\E046";
+	}
+	@if $filename == category-tv {
+		$char: "\E047";
+	}
+	@if $filename == chat-bg {
+		$char: "\E048";
+	}
+	@if $filename == chat-bubble {
+		$char: "\E049";
+	}
+	@if $filename == chat {
+		$char: "\E04A";
+	}
+	@if $filename == cheap-value {
+		$char: "\E04B";
+	}
+	@if $filename == check-mark {
+		$char: "\E04C";
+	}
+	@if $filename == checkout {
+		$char: "\E04D";
+	}
+	@if $filename == chevron-right {
+		$char: "\E04E";
+	}
+	@if $filename == claim-credit {
+		$char: "\E04F";
+	}
+	@if $filename == clever-plans {
+		$char: "\E050";
+	}
+	@if $filename == clock {
+		$char: "\E051";
+	}
+	@if $filename == close-line {
+		$char: "\E052";
+	}
+	@if $filename == close {
+		$char: "\E053";
+	}
+	@if $filename == cloud-data {
+		$char: "\E054";
+	}
+	@if $filename == cloud-download {
+		$char: "\E055";
+	}
+	@if $filename == cloudanddata {
+		$char: "\E056";
+	}
+	@if $filename == colocation {
+		$char: "\E057";
+	}
+	@if $filename == community-people {
+		$char: "\E058";
+	}
+	@if $filename == community {
+		$char: "\E059";
+	}
+	@if $filename == concierge {
+		$char: "\E05A";
+	}
+	@if $filename == conferencing {
+		$char: "\E05B";
+	}
+	@if $filename == confirm-tick {
+		$char: "\E05C";
+	}
+	@if $filename == contact-us {
+		$char: "\E05D";
+	}
+	@if $filename == convenient-returns {
+		$char: "\E05E";
+	}
+	@if $filename == copyright {
+		$char: "\E05F";
+	}
+	@if $filename == coverage-maps {
+		$char: "\E060";
+	}
+	@if $filename == coverage {
+		$char: "\E061";
+	}
+	@if $filename == coveragemaps {
+		$char: "\E062";
+	}
+	@if $filename == credit-card {
+		$char: "\E063";
+	}
+	@if $filename == credit-transfer {
+		$char: "\E064";
+	}
+	@if $filename == cross-fat {
+		$char: "\E065";
+	}
+	@if $filename == cross-thin {
+		$char: "\E066";
+	}
+	@if $filename == cross {
+		$char: "\E067";
+	}
+	@if $filename == customer-support {
+		$char: "\E068";
+	}
+	@if $filename == dashboard {
+		$char: "\E069";
+	}
+	@if $filename == data4gb {
+		$char: "\E06A";
+	}
+	@if $filename == dedicatedfibreconnectivity {
+		$char: "\E06B";
+	}
+	@if $filename == delivery-bg {
+		$char: "\E06C";
+	}
+	@if $filename == delivery {
+		$char: "\E06D";
+	}
+	@if $filename == desktop-computer {
+		$char: "\E06E";
+	}
+	@if $filename == direct-fiber-bg {
+		$char: "\E06F";
+	}
+	@if $filename == direct-fiber {
+		$char: "\E070";
+	}
+	@if $filename == disasterrecovery {
+		$char: "\E071";
+	}
+	@if $filename == dollar-magnify {
+		$char: "\E072";
+	}
+	@if $filename == dollar {
+		$char: "\E073";
+	}
+	@if $filename == dollarsign-magnify-glass-bg {
+		$char: "\E074";
+	}
+	@if $filename == dollarsign-magnify-glass {
+		$char: "\E075";
+	}
+	@if $filename == down-arrow {
+		$char: "\E076";
+	}
+	@if $filename == download-pdf {
+		$char: "\E077";
+	}
+	@if $filename == download {
+		$char: "\E078";
+	}
+	@if $filename == dropdown {
+		$char: "\E079";
+	}
+	@if $filename == edit {
+		$char: "\E07A";
+	}
+	@if $filename == education {
+		$char: "\E07B";
+	}
+	@if $filename == eligible {
+		$char: "\E07C";
+	}
+	@if $filename == email {
+		$char: "\E07D";
+	}
+	@if $filename == enjoy-free-delivery {
+		$char: "\E07E";
+	}
+	@if $filename == enterprise-govt {
+		$char: "\E07F";
+	}
+	@if $filename == equals {
+		$char: "\E080";
+	}
+	@if $filename == error-alert {
+		$char: "\E081";
+	}
+	@if $filename == error {
+		$char: "\E082";
+	}
+	@if $filename == exclamation {
+		$char: "\E083";
+	}
+	@if $filename == expert-advice {
+		$char: "\E084";
+	}
+	@if $filename == external-link {
+		$char: "\E085";
+	}
+	@if $filename == extras {
+		$char: "\E086";
+	}
+	@if $filename == eye {
+		$char: "\E087";
+	}
+	@if $filename == facebook-alt {
+		$char: "\E088";
+	}
+	@if $filename == facebook-bg {
+		$char: "\E089";
+	}
+	@if $filename == facebook {
+		$char: "\E08A";
+	}
+	@if $filename == family-sharing-bg {
+		$char: "\E08B";
+	}
+	@if $filename == family-sharing {
+		$char: "\E08C";
+	}
+	@if $filename == faq {
+		$char: "\E08D";
+	}
+	@if $filename == fibre-connectivity {
+		$char: "\E08E";
+	}
+	@if $filename == filtering {
+		$char: "\E08F";
+	}
+	@if $filename == fixed-line-bg {
+		$char: "\E090";
+	}
+	@if $filename == fixed-line {
+		$char: "\E091";
+	}
+	@if $filename == form-error {
+		$char: "\E092";
+	}
+	@if $filename == form-success {
+		$char: "\E093";
+	}
+	@if $filename == future-bus-reports {
+		$char: "\E094";
+	}
+	@if $filename == games {
+		$char: "\E095";
+	}
+	@if $filename == global-international {
+		$char: "\E096";
+	}
+	@if $filename == global-satelite-data-connectivity {
+		$char: "\E097";
+	}
+	@if $filename == googleplus-bg {
+		$char: "\E098";
+	}
+	@if $filename == googleplus {
+		$char: "\E099";
+	}
+	@if $filename == handshake-bg {
+		$char: "\E09A";
+	}
+	@if $filename == handshake {
+		$char: "\E09B";
+	}
+	@if $filename == happy-face {
+		$char: "\E09C";
+	}
+	@if $filename == hash {
+		$char: "\E09D";
+	}
+	@if $filename == header-question-mark {
+		$char: "\E09E";
+	}
+	@if $filename == headphones {
+		$char: "\E09F";
+	}
+	@if $filename == healthcare {
+		$char: "\E0A0";
+	}
+	@if $filename == help-and-chat {
+		$char: "\E0A1";
+	}
+	@if $filename == help-support {
+		$char: "\E0A2";
+	}
+	@if $filename == home-wireless-broadband {
+		$char: "\E0A3";
+	}
+	@if $filename == home {
+		$char: "\E0A4";
+	}
+	@if $filename == homephone {
+		$char: "\E0A5";
+	}
+	@if $filename == hosting-bg {
+		$char: "\E0A6";
+	}
+	@if $filename == hosting {
+		$char: "\E0A7";
+	}
+	@if $filename == hourglass {
+		$char: "\E0A8";
+	}
+	@if $filename == house-my-medium-team-bg {
+		$char: "\E0A9";
+	}
+	@if $filename == house-my-medium-team {
+		$char: "\E0AA";
+	}
+	@if $filename == hybrid {
+		$char: "\E0AB";
+	}
+	@if $filename == important {
+		$char: "\E0AC";
+	}
+	@if $filename == inbound {
+		$char: "\E0AD";
+	}
+	@if $filename == inboundcallsolutions {
+		$char: "\E0AE";
+	}
+	@if $filename == indent-arrow {
+		$char: "\E0AF";
+	}
+	@if $filename == industry-insights {
+		$char: "\E0B0";
+	}
+	@if $filename == infinity {
+		$char: "\E0B1";
+	}
+	@if $filename == info {
+		$char: "\E0B2";
+	}
+	@if $filename == instagram-bg {
+		$char: "\E0B3";
+	}
+	@if $filename == instagram {
+		$char: "\E0B4";
+	}
+	@if $filename == instore-appointment-bg {
+		$char: "\E0B5";
+	}
+	@if $filename == instore-appointment {
+		$char: "\E0B6";
+	}
+	@if $filename == international-minutes {
+		$char: "\E0B7";
+	}
+	@if $filename == international {
+		$char: "\E0B8";
+	}
+	@if $filename == internet-bg {
+		$char: "\E0B9";
+	}
+	@if $filename == internet-data {
+		$char: "\E0BA";
+	}
+	@if $filename == internet {
+		$char: "\E0BB";
+	}
+	@if $filename == internetdata {
+		$char: "\E0BC";
+	}
+	@if $filename == ip-phonepremier {
+		$char: "\E0BD";
+	}
+	@if $filename == ipphone {
+		$char: "\E0BE";
+	}
+	@if $filename == laptop {
+		$char: "\E0BF";
+	}
+	@if $filename == latest-tech {
+		$char: "\E0C0";
+	}
+	@if $filename == left-arrow {
+		$char: "\E0C1";
+	}
+	@if $filename == link-service {
+		$char: "\E0C2";
+	}
+	@if $filename == linkedin-alt {
+		$char: "\E0C3";
+	}
+	@if $filename == linkedin-bg {
+		$char: "\E0C4";
+	}
+	@if $filename == linkedin {
+		$char: "\E0C5";
+	}
+	@if $filename == liquid-sky {
+		$char: "\E0C6";
+	}
+	@if $filename == loading {
+		$char: "\E0C7";
+	}
+	@if $filename == log-in {
+		$char: "\E0C8";
+	}
+	@if $filename == log-out {
+		$char: "\E0C9";
+	}
+	@if $filename == logged-in {
+		$char: "\E0CA";
+	}
+	@if $filename == logged-out {
+		$char: "\E0CB";
+	}
+	@if $filename == login-business-reports {
+		$char: "\E0CC";
+	}
+	@if $filename == login {
+		$char: "\E0CD";
+	}
+	@if $filename == logout {
+		$char: "\E0CE";
+	}
+	@if $filename == machine-to-machine {
+		$char: "\E0CF";
+	}
+	@if $filename == machinetomachine {
+		$char: "\E0D0";
+	}
+	@if $filename == managed-router-services {
+		$char: "\E0D1";
+	}
+	@if $filename == managed-services {
+		$char: "\E0D2";
+	}
+	@if $filename == managedrouterservices {
+		$char: "\E0D3";
+	}
+	@if $filename == member-services {
+		$char: "\E0D4";
+	}
+	@if $filename == menu {
+		$char: "\E0D5";
+	}
+	@if $filename == micro-sim {
+		$char: "\E0D6";
+	}
+	@if $filename == minus {
+		$char: "\E0D7";
+	}
+	@if $filename == mobile-and-sim {
+		$char: "\E0D8";
+	}
+	@if $filename == mobile-anddevices {
+		$char: "\E0D9";
+	}
+	@if $filename == mobile-arrow-top-left {
+		$char: "\E0DA";
+	}
+	@if $filename == mobile-bg {
+		$char: "\E0DB";
+	}
+	@if $filename == mobile-broadband-arrow-top-left {
+		$char: "\E0DC";
+	}
+	@if $filename == mobile-broadband {
+		$char: "\E0DD";
+	}
+	@if $filename == mobile-devices {
+		$char: "\E0DE";
+	}
+	@if $filename == mobile-email-bg {
+		$char: "\E0DF";
+	}
+	@if $filename == mobile-email {
+		$char: "\E0E0";
+	}
+	@if $filename == mobile-plans-mobilechoice-bg {
+		$char: "\E0E1";
+	}
+	@if $filename == mobile-plans-mobilechoice {
+		$char: "\E0E2";
+	}
+	@if $filename == mobile-plans-mobilecosts-bg {
+		$char: "\E0E3";
+	}
+	@if $filename == mobile-plans-mobilecosts {
+		$char: "\E0E4";
+	}
+	@if $filename == mobile-plans-shareddata-bg {
+		$char: "\E0E5";
+	}
+	@if $filename == mobile-plans-shareddata {
+		$char: "\E0E6";
+	}
+	@if $filename == mobile-plans-timeless-fleet {
+		$char: "\E0E7";
+	}
+	@if $filename == mobile-plans {
+		$char: "\E0E8";
+	}
+	@if $filename == mobile-service {
+		$char: "\E0E9";
+	}
+	@if $filename == mobile-share-bg {
+		$char: "\E0EA";
+	}
+	@if $filename == mobile-share {
+		$char: "\E0EB";
+	}
+	@if $filename == mobile-tablet-app {
+		$char: "\E0EC";
+	}
+	@if $filename == mobile-tablet-devices {
+		$char: "\E0ED";
+	}
+	@if $filename == mobile {
+		$char: "\E0EE";
+	}
+	@if $filename == modem-bg {
+		$char: "\E0EF";
+	}
+	@if $filename == modem {
+		$char: "\E0F0";
+	}
+	@if $filename == monitoring {
+		$char: "\E0F1";
+	}
+	@if $filename == mouse {
+		$char: "\E0F2";
+	}
+	@if $filename == movie-ticket {
+		$char: "\E0F3";
+	}
+	@if $filename == music {
+		$char: "\E0F4";
+	}
+	@if $filename == mute {
+		$char: "\E0F5";
+	}
+	@if $filename == my-account-blk {
+		$char: "\E0F6";
+	}
+	@if $filename == my-account {
+		$char: "\E0F7";
+	}
+	@if $filename == my-community {
+		$char: "\E0F8";
+	}
+	@if $filename == my-optus-community {
+		$char: "\E0F9";
+	}
+	@if $filename == my-plan-plus {
+		$char: "\E0FA";
+	}
+	@if $filename == nano-sim {
+		$char: "\E0FB";
+	}
+	@if $filename == nbn-port-1 {
+		$char: "\E0FC";
+	}
+	@if $filename == nbn-port-2 {
+		$char: "\E0FD";
+	}
+	@if $filename == nbn-port-3 {
+		$char: "\E0FE";
+	}
+	@if $filename == nbn-port-4 {
+		$char: "\E0FF";
+	}
+	@if $filename == nbn-port-tick {
+		$char: "\E100";
+	}
+	@if $filename == nbn-port {
+		$char: "\E101";
+	}
+	@if $filename == nbn-step-one {
+		$char: "\E102";
+	}
+	@if $filename == nbn-step-three {
+		$char: "\E103";
+	}
+	@if $filename == nbn-step-two {
+		$char: "\E104";
+	}
+	@if $filename == network {
+		$char: "\E105";
+	}
+	@if $filename == news-weather {
+		$char: "\E106";
+	}
+	@if $filename == no-sneaky-surprises {
+		$char: "\E107";
+	}
+	@if $filename == notifications {
+		$char: "\E108";
+	}
+	@if $filename == officeapps {
+		$char: "\E109";
+	}
+	@if $filename == online-payment {
+		$char: "\E10A";
+	}
+	@if $filename == optus-logo {
+		$char: "\E10B";
+	}
+	@if $filename == other-bg {
+		$char: "\E10C";
+	}
+	@if $filename == other {
+		$char: "\E10D";
+	}
+	@if $filename == outbound {
+		$char: "\E10E";
+	}
+	@if $filename == outboundcallsolutions {
+		$char: "\E10F";
+	}
+	@if $filename == paperless-bills {
+		$char: "\E110";
+	}
+	@if $filename == paperless {
+		$char: "\E111";
+	}
+	@if $filename == pause {
+		$char: "\E112";
+	}
+	@if $filename == pay-bill {
+		$char: "\E113";
+	}
+	@if $filename == pdf {
+		$char: "\E114";
+	}
+	@if $filename == pencil-edit {
+		$char: "\E115";
+	}
+	@if $filename == personal_bundles {
+		$char: "\E116";
+	}
+	@if $filename == personal_home-phone {
+		$char: "\E117";
+	}
+	@if $filename == personal_internet {
+		$char: "\E118";
+	}
+	@if $filename == personal_member-services {
+		$char: "\E119";
+	}
+	@if $filename == personal_mobile {
+		$char: "\E11A";
+	}
+	@if $filename == personal_optus-community {
+		$char: "\E11B";
+	}
+	@if $filename == personal_orders {
+		$char: "\E11C";
+	}
+	@if $filename == personal_profile {
+		$char: "\E11D";
+	}
+	@if $filename == personal_rewards {
+		$char: "\E11E";
+	}
+	@if $filename == personal_support {
+		$char: "\E11F";
+	}
+	@if $filename == personal_tablet {
+		$char: "\E120";
+	}
+	@if $filename == personal_tv {
+		$char: "\E121";
+	}
+	@if $filename == personal_webmail {
+		$char: "\E122";
+	}
+	@if $filename == phone-satchel {
+		$char: "\E123";
+	}
+	@if $filename == phone-search {
+		$char: "\E124";
+	}
+	@if $filename == phone-service {
+		$char: "\E125";
+	}
+	@if $filename == phone-vintage {
+		$char: "\E126";
+	}
+	@if $filename == phoneservice {
+		$char: "\E127";
+	}
+	@if $filename == pinterest-bg {
+		$char: "\E128";
+	}
+	@if $filename == pinterest {
+		$char: "\E129";
+	}
+	@if $filename == plane {
+		$char: "\E12A";
+	}
+	@if $filename == plans-pricing {
+		$char: "\E12B";
+	}
+	@if $filename == play-video {
+		$char: "\E12C";
+	}
+	@if $filename == play {
+		$char: "\E12D";
+	}
+	@if $filename == plug {
+		$char: "\E12E";
+	}
+	@if $filename == plus {
+		$char: "\E12F";
+	}
+	@if $filename == premium-services {
+		$char: "\E130";
+	}
+	@if $filename == prepaid-broadband {
+		$char: "\E131";
+	}
+	@if $filename == prepaid {
+		$char: "\E132";
+	}
+	@if $filename == prepay-broadband {
+		$char: "\E133";
+	}
+	@if $filename == prepay-mobile {
+		$char: "\E134";
+	}
+	@if $filename == print {
+		$char: "\E135";
+	}
+	@if $filename == profile-bg {
+		$char: "\E136";
+	}
+	@if $filename == profile {
+		$char: "\E137";
+	}
+	@if $filename == question-mark {
+		$char: "\E138";
+	}
+	@if $filename == quick-forward {
+		$char: "\E139";
+	}
+	@if $filename == recharge {
+		$char: "\E13A";
+	}
+	@if $filename == refresh {
+		$char: "\E13B";
+	}
+	@if $filename == reliable-network-bg {
+		$char: "\E13C";
+	}
+	@if $filename == reliable-network {
+		$char: "\E13D";
+	}
+	@if $filename == reliablenetwork-bg {
+		$char: "\E13E";
+	}
+	@if $filename == reliablenetwork {
+		$char: "\E13F";
+	}
+	@if $filename == reply {
+		$char: "\E140";
+	}
+	@if $filename == reports {
+		$char: "\E141";
+	}
+	@if $filename == returns {
+		$char: "\E142";
+	}
+	@if $filename == rewards {
+		$char: "\E143";
+	}
+	@if $filename == right-arrow {
+		$char: "\E144";
+	}
+	@if $filename == roaming {
+		$char: "\E145";
+	}
+	@if $filename == roll-over {
+		$char: "\E146";
+	}
+	@if $filename == router-bg {
+		$char: "\E147";
+	}
+	@if $filename == router {
+		$char: "\E148";
+	}
+	@if $filename == ruler {
+		$char: "\E149";
+	}
+	@if $filename == safe-secure {
+		$char: "\E14A";
+	}
+	@if $filename == satellite {
+		$char: "\E14B";
+	}
+	@if $filename == satisfaction {
+		$char: "\E14C";
+	}
+	@if $filename == search-large {
+		$char: "\E14D";
+	}
+	@if $filename == search-small {
+		$char: "\E14E";
+	}
+	@if $filename == search {
+		$char: "\E14F";
+	}
+	@if $filename == secure-payments {
+		$char: "\E150";
+	}
+	@if $filename == security {
+		$char: "\E151";
+	}
+	@if $filename == service-my-account {
+		$char: "\E152";
+	}
+	@if $filename == services-other {
+		$char: "\E153";
+	}
+	@if $filename == settings {
+		$char: "\E154";
+	}
+	@if $filename == seven-bg {
+		$char: "\E155";
+	}
+	@if $filename == seven-svg {
+		$char: "\E156";
+	}
+	@if $filename == seven {
+		$char: "\E157";
+	}
+	@if $filename == share-services {
+		$char: "\E158";
+	}
+	@if $filename == shared-data {
+		$char: "\E159";
+	}
+	@if $filename == shared-services {
+		$char: "\E15A";
+	}
+	@if $filename == sim-arrow-top-left {
+		$char: "\E15B";
+	}
+	@if $filename == sim-card-service {
+		$char: "\E15C";
+	}
+	@if $filename == sim-card {
+		$char: "\E15D";
+	}
+	@if $filename == small-medium-business {
+		$char: "\E15E";
+	}
+	@if $filename == sms-text {
+		$char: "\E15F";
+	}
+	@if $filename == solutions {
+		$char: "\E160";
+	}
+	@if $filename == sound-1 {
+		$char: "\E161";
+	}
+	@if $filename == sound-3 {
+		$char: "\E162";
+	}
+	@if $filename == sound-level-1 {
+		$char: "\E163";
+	}
+	@if $filename == sound-level-3 {
+		$char: "\E164";
+	}
+	@if $filename == sound-mute {
+		$char: "\E165";
+	}
+	@if $filename == sound {
+		$char: "\E166";
+	}
+	@if $filename == speech-bubble {
+		$char: "\E167";
+	}
+	@if $filename == speed-bg {
+		$char: "\E168";
+	}
+	@if $filename == speed {
+		$char: "\E169";
+	}
+	@if $filename == star-half {
+		$char: "\E16A";
+	}
+	@if $filename == star {
+		$char: "\E16B";
+	}
+	@if $filename == stop {
+		$char: "\E16C";
+	}
+	@if $filename == store-locator {
+		$char: "\E16D";
+	}
+	@if $filename == straya {
+		$char: "\E16E";
+	}
+	@if $filename == subscribe-1 {
+		$char: "\E16F";
+	}
+	@if $filename == subscribe {
+		$char: "\E170";
+	}
+	@if $filename == success-circular {
+		$char: "\E171";
+	}
+	@if $filename == success-inverse {
+		$char: "\E172";
+	}
+	@if $filename == success {
+		$char: "\E173";
+	}
+	@if $filename == summary-bg {
+		$char: "\E174";
+	}
+	@if $filename == summary {
+		$char: "\E175";
+	}
+	@if $filename == support {
+		$char: "\E176";
+	}
+	@if $filename == tablet-bg {
+		$char: "\E177";
+	}
+	@if $filename == tablet-usb-bg {
+		$char: "\E178";
+	}
+	@if $filename == tablet-usb {
+		$char: "\E179";
+	}
+	@if $filename == tablet {
+		$char: "\E17A";
+	}
+	@if $filename == tailor {
+		$char: "\E17B";
+	}
+	@if $filename == television-service {
+		$char: "\E17C";
+	}
+	@if $filename == tick {
+		$char: "\E17D";
+	}
+	@if $filename == tools-2 {
+		$char: "\E17E";
+	}
+	@if $filename == tools {
+		$char: "\E17F";
+	}
+	@if $filename == tooltip-question-mark {
+		$char: "\E180";
+	}
+	@if $filename == track-order {
+		$char: "\E181";
+	}
+	@if $filename == tradein {
+		$char: "\E182";
+	}
+	@if $filename == tree {
+		$char: "\E183";
+	}
+	@if $filename == tv-bg {
+		$char: "\E184";
+	}
+	@if $filename == tv-service {
+		$char: "\E185";
+	}
+	@if $filename == tv-vintage {
+		$char: "\E186";
+	}
+	@if $filename == tv {
+		$char: "\E187";
+	}
+	@if $filename == twitter-alt {
+		$char: "\E188";
+	}
+	@if $filename == twitter-bg {
+		$char: "\E189";
+	}
+	@if $filename == twitter {
+		$char: "\E18A";
+	}
+	@if $filename == up-arrow {
+		$char: "\E18B";
+	}
+	@if $filename == update {
+		$char: "\E18C";
+	}
+	@if $filename == upgrade-your-contract-bg {
+		$char: "\E18D";
+	}
+	@if $filename == upgrade-your-contract {
+		$char: "\E18E";
+	}
+	@if $filename == upload {
+		$char: "\E18F";
+	}
+	@if $filename == usage {
+		$char: "\E190";
+	}
+	@if $filename == usb {
+		$char: "\E191";
+	}
+	@if $filename == user {
+		$char: "\E192";
+	}
+	@if $filename == valid-2-bg {
+		$char: "\E193";
+	}
+	@if $filename == valid-2 {
+		$char: "\E194";
+	}
+	@if $filename == valid {
+		$char: "\E195";
+	}
+	@if $filename == view-bill {
+		$char: "\E196";
+	}
+	@if $filename == view-my-bill {
+		$char: "\E197";
+	}
+	@if $filename == voice {
+		$char: "\E198";
+	}
+	@if $filename == wan {
+		$char: "\E199";
+	}
+	@if $filename == warning-circular {
+		$char: "\E19A";
+	}
+	@if $filename == warning {
+		$char: "\E19B";
+	}
+	@if $filename == wave-and-go {
+		$char: "\E19C";
+	}
+	@if $filename == webmail {
+		$char: "\E19D";
+	}
+	@if $filename == wholesale {
+		$char: "\E19E";
+	}
+	@if $filename == wifi-1 {
+		$char: "\E19F";
+	}
+	@if $filename == wifi {
+		$char: "\E1A0";
+	}
+	@if $filename == wishlist {
+		$char: "\E1A1";
+	}
+	@if $filename == world-globe {
+		$char: "\E1A2";
+	}
+	@if $filename == youtube-bg {
+		$char: "\E1A3";
+	}
+	@if $filename == youtube {
+		$char: "\E1A4";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true, $background: false) {
+	&:#{$insert} {
+		@if $extend {
+		  @extend %icon;
+		} @else {
+		  @include icon-styles;
+		}
+
+		@if $background {
+			@extend %icon-background;
+		}
+
+		content: icon-char($filename);
+	}
+
+	@if $background {
+		@extend %icon-background-base;
+	}
+}
+
+
+
+
+.icon-3-g-4-g {
+	display: inline-block;
+	@include icon(3-g-4-g);
+}
+
+
+.icon-4-gplus {
+	display: inline-block;
+	@include icon(4-gplus);
+}
+
+
+.icon-4g-plus-stacked {
+	display: inline-block;
+	@include icon(4g-plus-stacked);
+}
+
+
+.icon-4g {
+	display: inline-block;
+	@include icon(4g);
+}
+
+
+.icon-accelerate {
+	display: inline-block;
+	@include icon(accelerate);
+}
+
+
+.icon-accessory {
+	display: inline-block;
+	@include icon(accessory);
+}
+
+
+.icon-accounts-myaccount {
+	display: inline-block;
+	@include icon(accounts-myaccount);
+}
+
+
+.icon-activate-service {
+	display: inline-block;
+	@include icon(activate-service);
+}
+
+
+.icon-activate-sim {
+	display: inline-block;
+	@include icon(activate-sim);
+}
+
+
+.icon-add-a-second-plan {
+	display: inline-block;
+	@include icon(add-a-second-plan);
+}
+
+.icon-add-a-second-plan-bg {
+	@include icon(add-a-second-plan-bg, after, true, true);
+} 
+
+.icon-add {
+	display: inline-block;
+	@include icon(add);
+}
+
+
+.icon-addons-purchases {
+	display: inline-block;
+	@include icon(addons-purchases);
+}
+
+
+.icon-address-book {
+	display: inline-block;
+	@include icon(address-book);
+}
+
+
+.icon-advice {
+	display: inline-block;
+	@include icon(advice);
+}
+
+
+.icon-aeroplane {
+	display: inline-block;
+	@include icon(aeroplane);
+}
+
+
+.icon-alert-circular {
+	display: inline-block;
+	@include icon(alert-circular);
+}
+
+
+.icon-android {
+	display: inline-block;
+	@include icon(android);
+}
+
+
+.icon-app {
+	display: inline-block;
+	@include icon(app);
+}
+
+
+.icon-apple {
+	display: inline-block;
+	@include icon(apple);
+}
+
+
+.icon-arrow-down-right-organic-small {
+	display: inline-block;
+	@include icon(arrow-down-right-organic-small);
+}
+
+.icon-arrow-down-right-organic-small-bg {
+	@include icon(arrow-down-right-organic-small-bg, after, true, true);
+} 
+
+.icon-arrow-down {
+	display: inline-block;
+	@include icon(arrow-down);
+}
+
+
+.icon-arrow-left-organic {
+	display: inline-block;
+	@include icon(arrow-left-organic);
+}
+
+
+.icon-arrow-left {
+	display: inline-block;
+	@include icon(arrow-left);
+}
+
+
+.icon-arrow-right-organic {
+	display: inline-block;
+	@include icon(arrow-right-organic);
+}
+
+
+.icon-arrow-right {
+	display: inline-block;
+	@include icon(arrow-right);
+}
+
+
+.icon-arrow-up-left-organic-small {
+	display: inline-block;
+	@include icon(arrow-up-left-organic-small);
+}
+
+.icon-arrow-up-left-organic-small-bg {
+	@include icon(arrow-up-left-organic-small-bg, after, true, true);
+} 
+
+.icon-arrow-up {
+	display: inline-block;
+	@include icon(arrow-up);
+}
+
+
+.icon-australia-map-outline {
+	display: inline-block;
+	@include icon(australia-map-outline);
+}
+
+
+.icon-backup-storage {
+	display: inline-block;
+	@include icon(backup-storage);
+}
+
+
+.icon-banking-finance {
+	display: inline-block;
+	@include icon(banking-finance);
+}
+
+
+.icon-battery-empty {
+	display: inline-block;
+	@include icon(battery-empty);
+}
+
+.icon-battery-empty-bg {
+	@include icon(battery-empty-bg, after, true, true);
+} 
+
+.icon-battery-full {
+	display: inline-block;
+	@include icon(battery-full);
+}
+
+.icon-battery-full-bg {
+	@include icon(battery-full-bg, after, true, true);
+} 
+
+.icon-bell {
+	display: inline-block;
+	@include icon(bell);
+}
+
+.icon-bell-bg {
+	@include icon(bell-bg, after, true, true);
+} 
+
+.icon-bill-settings {
+	display: inline-block;
+	@include icon(bill-settings);
+}
+
+
+.icon-billing-services-tailored-services {
+	display: inline-block;
+	@include icon(billing-services-tailored-services);
+}
+
+.icon-billing-services-tailored-services-bg {
+	@include icon(billing-services-tailored-services-bg, after, true, true);
+} 
+
+.icon-billing {
+	display: inline-block;
+	@include icon(billing);
+}
+
+
+.icon-block {
+	display: inline-block;
+	@include icon(block);
+}
+
+
+.icon-broadband-service {
+	display: inline-block;
+	@include icon(broadband-service);
+}
+
+
+.icon-broadband {
+	display: inline-block;
+	@include icon(broadband);
+}
+
+
+.icon-building {
+	display: inline-block;
+	@include icon(building);
+}
+
+
+.icon-bundles {
+	display: inline-block;
+	@include icon(bundles);
+}
+
+.icon-bundles-bg {
+	@include icon(bundles-bg, after, true, true);
+} 
+
+.icon-business_enterprise {
+	display: inline-block;
+	@include icon(business_enterprise);
+}
+
+
+.icon-business_smallbusiness {
+	display: inline-block;
+	@include icon(business_smallbusiness);
+}
+
+
+.icon-business_wholesale {
+	display: inline-block;
+	@include icon(business_wholesale);
+}
+
+
+.icon-business-builder {
+	display: inline-block;
+	@include icon(business-builder);
+}
+
+
+.icon-business-portal-blk {
+	display: inline-block;
+	@include icon(business-portal-blk);
+}
+
+
+.icon-business-portal {
+	display: inline-block;
+	@include icon(business-portal);
+}
+
+
+.icon-business-profile {
+	display: inline-block;
+	@include icon(business-profile);
+}
+
+
+.icon-business-reports {
+	display: inline-block;
+	@include icon(business-reports);
+}
+
+
+.icon-business-sharing {
+	display: inline-block;
+	@include icon(business-sharing);
+}
+
+.icon-business-sharing-bg {
+	@include icon(business-sharing-bg, after, true, true);
+} 
+
+.icon-business-solutions {
+	display: inline-block;
+	@include icon(business-solutions);
+}
+
+
+.icon-business-think-tank {
+	display: inline-block;
+	@include icon(business-think-tank);
+}
+
+
+.icon-calendar {
+	display: inline-block;
+	@include icon(calendar);
+}
+
+
+.icon-camera {
+	display: inline-block;
+	@include icon(camera);
+}
+
+
+.icon-cart {
+	display: inline-block;
+	@include icon(cart);
+}
+
+
+.icon-case-studies {
+	display: inline-block;
+	@include icon(case-studies);
+}
+
+
+.icon-category-billing {
+	display: inline-block;
+	@include icon(category-billing);
+}
+
+
+.icon-category-internet {
+	display: inline-block;
+	@include icon(category-internet);
+}
+
+
+.icon-category-mobile {
+	display: inline-block;
+	@include icon(category-mobile);
+}
+
+
+.icon-category-phone {
+	display: inline-block;
+	@include icon(category-phone);
+}
+
+
+.icon-category-tablet {
+	display: inline-block;
+	@include icon(category-tablet);
+}
+
+
+.icon-category-tv {
+	display: inline-block;
+	@include icon(category-tv);
+}
+
+
+.icon-chat-bubble {
+	display: inline-block;
+	@include icon(chat-bubble);
+}
+
+
+.icon-chat {
+	display: inline-block;
+	@include icon(chat);
+}
+
+.icon-chat-bg {
+	@include icon(chat-bg, after, true, true);
+} 
+
+.icon-cheap-value {
+	display: inline-block;
+	@include icon(cheap-value);
+}
+
+
+.icon-check-mark {
+	display: inline-block;
+	@include icon(check-mark);
+}
+
+
+.icon-checkout {
+	display: inline-block;
+	@include icon(checkout);
+}
+
+
+.icon-chevron-right {
+	display: inline-block;
+	@include icon(chevron-right);
+}
+
+
+.icon-claim-credit {
+	display: inline-block;
+	@include icon(claim-credit);
+}
+
+
+.icon-clever-plans {
+	display: inline-block;
+	@include icon(clever-plans);
+}
+
+
+.icon-clock {
+	display: inline-block;
+	@include icon(clock);
+}
+
+
+.icon-close-line {
+	display: inline-block;
+	@include icon(close-line);
+}
+
+
+.icon-close {
+	display: inline-block;
+	@include icon(close);
+}
+
+
+.icon-cloud-data {
+	display: inline-block;
+	@include icon(cloud-data);
+}
+
+
+.icon-cloud-download {
+	display: inline-block;
+	@include icon(cloud-download);
+}
+
+
+.icon-cloudanddata {
+	display: inline-block;
+	@include icon(cloudanddata);
+}
+
+
+.icon-colocation {
+	display: inline-block;
+	@include icon(colocation);
+}
+
+
+.icon-community-people {
+	display: inline-block;
+	@include icon(community-people);
+}
+
+
+.icon-community {
+	display: inline-block;
+	@include icon(community);
+}
+
+
+.icon-concierge {
+	display: inline-block;
+	@include icon(concierge);
+}
+
+
+.icon-conferencing {
+	display: inline-block;
+	@include icon(conferencing);
+}
+
+
+.icon-confirm-tick {
+	display: inline-block;
+	@include icon(confirm-tick);
+}
+
+
+.icon-contact-us {
+	display: inline-block;
+	@include icon(contact-us);
+}
+
+
+.icon-convenient-returns {
+	display: inline-block;
+	@include icon(convenient-returns);
+}
+
+
+.icon-copyright {
+	display: inline-block;
+	@include icon(copyright);
+}
+
+
+.icon-coverage-maps {
+	display: inline-block;
+	@include icon(coverage-maps);
+}
+
+
+.icon-coverage {
+	display: inline-block;
+	@include icon(coverage);
+}
+
+
+.icon-coveragemaps {
+	display: inline-block;
+	@include icon(coveragemaps);
+}
+
+
+.icon-credit-card {
+	display: inline-block;
+	@include icon(credit-card);
+}
+
+
+.icon-credit-transfer {
+	display: inline-block;
+	@include icon(credit-transfer);
+}
+
+
+.icon-cross-fat {
+	display: inline-block;
+	@include icon(cross-fat);
+}
+
+
+.icon-cross-thin {
+	display: inline-block;
+	@include icon(cross-thin);
+}
+
+
+.icon-cross {
+	display: inline-block;
+	@include icon(cross);
+}
+
+
+.icon-customer-support {
+	display: inline-block;
+	@include icon(customer-support);
+}
+
+
+.icon-dashboard {
+	display: inline-block;
+	@include icon(dashboard);
+}
+
+
+.icon-data4gb {
+	display: inline-block;
+	@include icon(data4gb);
+}
+
+
+.icon-dedicatedfibreconnectivity {
+	display: inline-block;
+	@include icon(dedicatedfibreconnectivity);
+}
+
+
+.icon-delivery {
+	display: inline-block;
+	@include icon(delivery);
+}
+
+.icon-delivery-bg {
+	@include icon(delivery-bg, after, true, true);
+} 
+
+.icon-desktop-computer {
+	display: inline-block;
+	@include icon(desktop-computer);
+}
+
+
+.icon-direct-fiber {
+	display: inline-block;
+	@include icon(direct-fiber);
+}
+
+.icon-direct-fiber-bg {
+	@include icon(direct-fiber-bg, after, true, true);
+} 
+
+.icon-disasterrecovery {
+	display: inline-block;
+	@include icon(disasterrecovery);
+}
+
+
+.icon-dollar-magnify {
+	display: inline-block;
+	@include icon(dollar-magnify);
+}
+
+
+.icon-dollar {
+	display: inline-block;
+	@include icon(dollar);
+}
+
+
+.icon-dollarsign-magnify-glass {
+	display: inline-block;
+	@include icon(dollarsign-magnify-glass);
+}
+
+.icon-dollarsign-magnify-glass-bg {
+	@include icon(dollarsign-magnify-glass-bg, after, true, true);
+} 
+
+.icon-down-arrow {
+	display: inline-block;
+	@include icon(down-arrow);
+}
+
+
+.icon-download-pdf {
+	display: inline-block;
+	@include icon(download-pdf);
+}
+
+
+.icon-download {
+	display: inline-block;
+	@include icon(download);
+}
+
+
+.icon-dropdown {
+	display: inline-block;
+	@include icon(dropdown);
+}
+
+
+.icon-edit {
+	display: inline-block;
+	@include icon(edit);
+}
+
+
+.icon-education {
+	display: inline-block;
+	@include icon(education);
+}
+
+
+.icon-eligible {
+	display: inline-block;
+	@include icon(eligible);
+}
+
+
+.icon-email {
+	display: inline-block;
+	@include icon(email);
+}
+
+
+.icon-enjoy-free-delivery {
+	display: inline-block;
+	@include icon(enjoy-free-delivery);
+}
+
+
+.icon-enterprise-govt {
+	display: inline-block;
+	@include icon(enterprise-govt);
+}
+
+
+.icon-equals {
+	display: inline-block;
+	@include icon(equals);
+}
+
+
+.icon-error-alert {
+	display: inline-block;
+	@include icon(error-alert);
+}
+
+
+.icon-error {
+	display: inline-block;
+	@include icon(error);
+}
+
+
+.icon-exclamation {
+	display: inline-block;
+	@include icon(exclamation);
+}
+
+
+.icon-expert-advice {
+	display: inline-block;
+	@include icon(expert-advice);
+}
+
+
+.icon-external-link {
+	display: inline-block;
+	@include icon(external-link);
+}
+
+
+.icon-extras {
+	display: inline-block;
+	@include icon(extras);
+}
+
+
+.icon-eye {
+	display: inline-block;
+	@include icon(eye);
+}
+
+
+.icon-facebook-alt {
+	display: inline-block;
+	@include icon(facebook-alt);
+}
+
+
+.icon-facebook {
+	display: inline-block;
+	@include icon(facebook);
+}
+
+.icon-facebook-bg {
+	@include icon(facebook-bg, after, true, true);
+} 
+
+.icon-family-sharing {
+	display: inline-block;
+	@include icon(family-sharing);
+}
+
+.icon-family-sharing-bg {
+	@include icon(family-sharing-bg, after, true, true);
+} 
+
+.icon-faq {
+	display: inline-block;
+	@include icon(faq);
+}
+
+
+.icon-fibre-connectivity {
+	display: inline-block;
+	@include icon(fibre-connectivity);
+}
+
+
+.icon-filtering {
+	display: inline-block;
+	@include icon(filtering);
+}
+
+
+.icon-fixed-line {
+	display: inline-block;
+	@include icon(fixed-line);
+}
+
+.icon-fixed-line-bg {
+	@include icon(fixed-line-bg, after, true, true);
+} 
+
+.icon-form-error {
+	display: inline-block;
+	@include icon(form-error);
+}
+
+
+.icon-form-success {
+	display: inline-block;
+	@include icon(form-success);
+}
+
+
+.icon-future-bus-reports {
+	display: inline-block;
+	@include icon(future-bus-reports);
+}
+
+
+.icon-games {
+	display: inline-block;
+	@include icon(games);
+}
+
+
+.icon-global-international {
+	display: inline-block;
+	@include icon(global-international);
+}
+
+
+.icon-global-satelite-data-connectivity {
+	display: inline-block;
+	@include icon(global-satelite-data-connectivity);
+}
+
+
+.icon-googleplus {
+	display: inline-block;
+	@include icon(googleplus);
+}
+
+.icon-googleplus-bg {
+	@include icon(googleplus-bg, after, true, true);
+} 
+
+.icon-handshake {
+	display: inline-block;
+	@include icon(handshake);
+}
+
+.icon-handshake-bg {
+	@include icon(handshake-bg, after, true, true);
+} 
+
+.icon-happy-face {
+	display: inline-block;
+	@include icon(happy-face);
+}
+
+
+.icon-hash {
+	display: inline-block;
+	@include icon(hash);
+}
+
+
+.icon-header-question-mark {
+	display: inline-block;
+	@include icon(header-question-mark);
+}
+
+
+.icon-headphones {
+	display: inline-block;
+	@include icon(headphones);
+}
+
+
+.icon-healthcare {
+	display: inline-block;
+	@include icon(healthcare);
+}
+
+
+.icon-help-and-chat {
+	display: inline-block;
+	@include icon(help-and-chat);
+}
+
+
+.icon-help-support {
+	display: inline-block;
+	@include icon(help-support);
+}
+
+
+.icon-home-wireless-broadband {
+	display: inline-block;
+	@include icon(home-wireless-broadband);
+}
+
+
+.icon-home {
+	display: inline-block;
+	@include icon(home);
+}
+
+
+.icon-homephone {
+	display: inline-block;
+	@include icon(homephone);
+}
+
+
+.icon-hosting {
+	display: inline-block;
+	@include icon(hosting);
+}
+
+.icon-hosting-bg {
+	@include icon(hosting-bg, after, true, true);
+} 
+
+.icon-hourglass {
+	display: inline-block;
+	@include icon(hourglass);
+}
+
+
+.icon-house-my-medium-team {
+	display: inline-block;
+	@include icon(house-my-medium-team);
+}
+
+.icon-house-my-medium-team-bg {
+	@include icon(house-my-medium-team-bg, after, true, true);
+} 
+
+.icon-hybrid {
+	display: inline-block;
+	@include icon(hybrid);
+}
+
+
+.icon-important {
+	display: inline-block;
+	@include icon(important);
+}
+
+
+.icon-inbound {
+	display: inline-block;
+	@include icon(inbound);
+}
+
+
+.icon-inboundcallsolutions {
+	display: inline-block;
+	@include icon(inboundcallsolutions);
+}
+
+
+.icon-indent-arrow {
+	display: inline-block;
+	@include icon(indent-arrow);
+}
+
+
+.icon-industry-insights {
+	display: inline-block;
+	@include icon(industry-insights);
+}
+
+
+.icon-infinity {
+	display: inline-block;
+	@include icon(infinity);
+}
+
+
+.icon-info {
+	display: inline-block;
+	@include icon(info);
+}
+
+
+.icon-instagram {
+	display: inline-block;
+	@include icon(instagram);
+}
+
+.icon-instagram-bg {
+	@include icon(instagram-bg, after, true, true);
+} 
+
+.icon-instore-appointment {
+	display: inline-block;
+	@include icon(instore-appointment);
+}
+
+.icon-instore-appointment-bg {
+	@include icon(instore-appointment-bg, after, true, true);
+} 
+
+.icon-international-minutes {
+	display: inline-block;
+	@include icon(international-minutes);
+}
+
+
+.icon-international {
+	display: inline-block;
+	@include icon(international);
+}
+
+
+.icon-internet-data {
+	display: inline-block;
+	@include icon(internet-data);
+}
+
+
+.icon-internet {
+	display: inline-block;
+	@include icon(internet);
+}
+
+.icon-internet-bg {
+	@include icon(internet-bg, after, true, true);
+} 
+
+.icon-internetdata {
+	display: inline-block;
+	@include icon(internetdata);
+}
+
+
+.icon-ip-phonepremier {
+	display: inline-block;
+	@include icon(ip-phonepremier);
+}
+
+
+.icon-ipphone {
+	display: inline-block;
+	@include icon(ipphone);
+}
+
+
+.icon-laptop {
+	display: inline-block;
+	@include icon(laptop);
+}
+
+
+.icon-latest-tech {
+	display: inline-block;
+	@include icon(latest-tech);
+}
+
+
+.icon-left-arrow {
+	display: inline-block;
+	@include icon(left-arrow);
+}
+
+
+.icon-link-service {
+	display: inline-block;
+	@include icon(link-service);
+}
+
+
+.icon-linkedin-alt {
+	display: inline-block;
+	@include icon(linkedin-alt);
+}
+
+
+.icon-linkedin {
+	display: inline-block;
+	@include icon(linkedin);
+}
+
+.icon-linkedin-bg {
+	@include icon(linkedin-bg, after, true, true);
+} 
+
+.icon-liquid-sky {
+	display: inline-block;
+	@include icon(liquid-sky);
+}
+
+
+.icon-loading {
+	display: inline-block;
+	@include icon(loading);
+}
+
+
+.icon-log-in {
+	display: inline-block;
+	@include icon(log-in);
+}
+
+
+.icon-log-out {
+	display: inline-block;
+	@include icon(log-out);
+}
+
+
+.icon-logged-in {
+	display: inline-block;
+	@include icon(logged-in);
+}
+
+
+.icon-logged-out {
+	display: inline-block;
+	@include icon(logged-out);
+}
+
+
+.icon-login-business-reports {
+	display: inline-block;
+	@include icon(login-business-reports);
+}
+
+
+.icon-login {
+	display: inline-block;
+	@include icon(login);
+}
+
+
+.icon-logout {
+	display: inline-block;
+	@include icon(logout);
+}
+
+
+.icon-machine-to-machine {
+	display: inline-block;
+	@include icon(machine-to-machine);
+}
+
+
+.icon-machinetomachine {
+	display: inline-block;
+	@include icon(machinetomachine);
+}
+
+
+.icon-managed-router-services {
+	display: inline-block;
+	@include icon(managed-router-services);
+}
+
+
+.icon-managed-services {
+	display: inline-block;
+	@include icon(managed-services);
+}
+
+
+.icon-managedrouterservices {
+	display: inline-block;
+	@include icon(managedrouterservices);
+}
+
+
+.icon-member-services {
+	display: inline-block;
+	@include icon(member-services);
+}
+
+
+.icon-menu {
+	display: inline-block;
+	@include icon(menu);
+}
+
+
+.icon-micro-sim {
+	display: inline-block;
+	@include icon(micro-sim);
+}
+
+
+.icon-minus {
+	display: inline-block;
+	@include icon(minus);
+}
+
+
+.icon-mobile-and-sim {
+	display: inline-block;
+	@include icon(mobile-and-sim);
+}
+
+
+.icon-mobile-anddevices {
+	display: inline-block;
+	@include icon(mobile-anddevices);
+}
+
+
+.icon-mobile-arrow-top-left {
+	display: inline-block;
+	@include icon(mobile-arrow-top-left);
+}
+
+
+.icon-mobile-broadband-arrow-top-left {
+	display: inline-block;
+	@include icon(mobile-broadband-arrow-top-left);
+}
+
+
+.icon-mobile-broadband {
+	display: inline-block;
+	@include icon(mobile-broadband);
+}
+
+
+.icon-mobile-devices {
+	display: inline-block;
+	@include icon(mobile-devices);
+}
+
+
+.icon-mobile-email {
+	display: inline-block;
+	@include icon(mobile-email);
+}
+
+.icon-mobile-email-bg {
+	@include icon(mobile-email-bg, after, true, true);
+} 
+
+.icon-mobile-plans-mobilechoice {
+	display: inline-block;
+	@include icon(mobile-plans-mobilechoice);
+}
+
+.icon-mobile-plans-mobilechoice-bg {
+	@include icon(mobile-plans-mobilechoice-bg, after, true, true);
+} 
+
+.icon-mobile-plans-mobilecosts {
+	display: inline-block;
+	@include icon(mobile-plans-mobilecosts);
+}
+
+.icon-mobile-plans-mobilecosts-bg {
+	@include icon(mobile-plans-mobilecosts-bg, after, true, true);
+} 
+
+.icon-mobile-plans-shareddata {
+	display: inline-block;
+	@include icon(mobile-plans-shareddata);
+}
+
+.icon-mobile-plans-shareddata-bg {
+	@include icon(mobile-plans-shareddata-bg, after, true, true);
+} 
+
+.icon-mobile-plans-timeless-fleet {
+	display: inline-block;
+	@include icon(mobile-plans-timeless-fleet);
+}
+
+
+.icon-mobile-plans {
+	display: inline-block;
+	@include icon(mobile-plans);
+}
+
+
+.icon-mobile-service {
+	display: inline-block;
+	@include icon(mobile-service);
+}
+
+
+.icon-mobile-share {
+	display: inline-block;
+	@include icon(mobile-share);
+}
+
+.icon-mobile-share-bg {
+	@include icon(mobile-share-bg, after, true, true);
+} 
+
+.icon-mobile-tablet-app {
+	display: inline-block;
+	@include icon(mobile-tablet-app);
+}
+
+
+.icon-mobile-tablet-devices {
+	display: inline-block;
+	@include icon(mobile-tablet-devices);
+}
+
+
+.icon-mobile {
+	display: inline-block;
+	@include icon(mobile);
+}
+
+.icon-mobile-bg {
+	@include icon(mobile-bg, after, true, true);
+} 
+
+.icon-modem {
+	display: inline-block;
+	@include icon(modem);
+}
+
+.icon-modem-bg {
+	@include icon(modem-bg, after, true, true);
+} 
+
+.icon-monitoring {
+	display: inline-block;
+	@include icon(monitoring);
+}
+
+
+.icon-mouse {
+	display: inline-block;
+	@include icon(mouse);
+}
+
+
+.icon-movie-ticket {
+	display: inline-block;
+	@include icon(movie-ticket);
+}
+
+
+.icon-music {
+	display: inline-block;
+	@include icon(music);
+}
+
+
+.icon-mute {
+	display: inline-block;
+	@include icon(mute);
+}
+
+
+.icon-my-account-blk {
+	display: inline-block;
+	@include icon(my-account-blk);
+}
+
+
+.icon-my-account {
+	display: inline-block;
+	@include icon(my-account);
+}
+
+
+.icon-my-community {
+	display: inline-block;
+	@include icon(my-community);
+}
+
+
+.icon-my-optus-community {
+	display: inline-block;
+	@include icon(my-optus-community);
+}
+
+
+.icon-my-plan-plus {
+	display: inline-block;
+	@include icon(my-plan-plus);
+}
+
+
+.icon-nano-sim {
+	display: inline-block;
+	@include icon(nano-sim);
+}
+
+
+.icon-nbn-port-1 {
+	display: inline-block;
+	@include icon(nbn-port-1);
+}
+
+
+.icon-nbn-port-2 {
+	display: inline-block;
+	@include icon(nbn-port-2);
+}
+
+
+.icon-nbn-port-3 {
+	display: inline-block;
+	@include icon(nbn-port-3);
+}
+
+
+.icon-nbn-port-4 {
+	display: inline-block;
+	@include icon(nbn-port-4);
+}
+
+
+.icon-nbn-port-tick {
+	display: inline-block;
+	@include icon(nbn-port-tick);
+}
+
+
+.icon-nbn-port {
+	display: inline-block;
+	@include icon(nbn-port);
+}
+
+
+.icon-nbn-step-one {
+	display: inline-block;
+	@include icon(nbn-step-one);
+}
+
+
+.icon-nbn-step-three {
+	display: inline-block;
+	@include icon(nbn-step-three);
+}
+
+
+.icon-nbn-step-two {
+	display: inline-block;
+	@include icon(nbn-step-two);
+}
+
+
+.icon-network {
+	display: inline-block;
+	@include icon(network);
+}
+
+
+.icon-news-weather {
+	display: inline-block;
+	@include icon(news-weather);
+}
+
+
+.icon-no-sneaky-surprises {
+	display: inline-block;
+	@include icon(no-sneaky-surprises);
+}
+
+
+.icon-notifications {
+	display: inline-block;
+	@include icon(notifications);
+}
+
+
+.icon-officeapps {
+	display: inline-block;
+	@include icon(officeapps);
+}
+
+
+.icon-online-payment {
+	display: inline-block;
+	@include icon(online-payment);
+}
+
+
+.icon-optus-logo {
+	display: inline-block;
+	@include icon(optus-logo);
+}
+
+
+.icon-other {
+	display: inline-block;
+	@include icon(other);
+}
+
+.icon-other-bg {
+	@include icon(other-bg, after, true, true);
+} 
+
+.icon-outbound {
+	display: inline-block;
+	@include icon(outbound);
+}
+
+
+.icon-outboundcallsolutions {
+	display: inline-block;
+	@include icon(outboundcallsolutions);
+}
+
+
+.icon-paperless-bills {
+	display: inline-block;
+	@include icon(paperless-bills);
+}
+
+
+.icon-paperless {
+	display: inline-block;
+	@include icon(paperless);
+}
+
+
+.icon-pause {
+	display: inline-block;
+	@include icon(pause);
+}
+
+
+.icon-pay-bill {
+	display: inline-block;
+	@include icon(pay-bill);
+}
+
+
+.icon-pdf {
+	display: inline-block;
+	@include icon(pdf);
+}
+
+
+.icon-pencil-edit {
+	display: inline-block;
+	@include icon(pencil-edit);
+}
+
+
+.icon-personal_bundles {
+	display: inline-block;
+	@include icon(personal_bundles);
+}
+
+
+.icon-personal_home-phone {
+	display: inline-block;
+	@include icon(personal_home-phone);
+}
+
+
+.icon-personal_internet {
+	display: inline-block;
+	@include icon(personal_internet);
+}
+
+
+.icon-personal_member-services {
+	display: inline-block;
+	@include icon(personal_member-services);
+}
+
+
+.icon-personal_mobile {
+	display: inline-block;
+	@include icon(personal_mobile);
+}
+
+
+.icon-personal_optus-community {
+	display: inline-block;
+	@include icon(personal_optus-community);
+}
+
+
+.icon-personal_orders {
+	display: inline-block;
+	@include icon(personal_orders);
+}
+
+
+.icon-personal_profile {
+	display: inline-block;
+	@include icon(personal_profile);
+}
+
+
+.icon-personal_rewards {
+	display: inline-block;
+	@include icon(personal_rewards);
+}
+
+
+.icon-personal_support {
+	display: inline-block;
+	@include icon(personal_support);
+}
+
+
+.icon-personal_tablet {
+	display: inline-block;
+	@include icon(personal_tablet);
+}
+
+
+.icon-personal_tv {
+	display: inline-block;
+	@include icon(personal_tv);
+}
+
+
+.icon-personal_webmail {
+	display: inline-block;
+	@include icon(personal_webmail);
+}
+
+
+.icon-phone-satchel {
+	display: inline-block;
+	@include icon(phone-satchel);
+}
+
+
+.icon-phone-search {
+	display: inline-block;
+	@include icon(phone-search);
+}
+
+
+.icon-phone-service {
+	display: inline-block;
+	@include icon(phone-service);
+}
+
+
+.icon-phone-vintage {
+	display: inline-block;
+	@include icon(phone-vintage);
+}
+
+
+.icon-phoneservice {
+	display: inline-block;
+	@include icon(phoneservice);
+}
+
+
+.icon-pinterest {
+	display: inline-block;
+	@include icon(pinterest);
+}
+
+.icon-pinterest-bg {
+	@include icon(pinterest-bg, after, true, true);
+} 
+
+.icon-plane {
+	display: inline-block;
+	@include icon(plane);
+}
+
+
+.icon-plans-pricing {
+	display: inline-block;
+	@include icon(plans-pricing);
+}
+
+
+.icon-play-video {
+	display: inline-block;
+	@include icon(play-video);
+}
+
+
+.icon-play {
+	display: inline-block;
+	@include icon(play);
+}
+
+
+.icon-plug {
+	display: inline-block;
+	@include icon(plug);
+}
+
+
+.icon-plus {
+	display: inline-block;
+	@include icon(plus);
+}
+
+
+.icon-premium-services {
+	display: inline-block;
+	@include icon(premium-services);
+}
+
+
+.icon-prepaid-broadband {
+	display: inline-block;
+	@include icon(prepaid-broadband);
+}
+
+
+.icon-prepaid {
+	display: inline-block;
+	@include icon(prepaid);
+}
+
+
+.icon-prepay-broadband {
+	display: inline-block;
+	@include icon(prepay-broadband);
+}
+
+
+.icon-prepay-mobile {
+	display: inline-block;
+	@include icon(prepay-mobile);
+}
+
+
+.icon-print {
+	display: inline-block;
+	@include icon(print);
+}
+
+
+.icon-profile {
+	display: inline-block;
+	@include icon(profile);
+}
+
+.icon-profile-bg {
+	@include icon(profile-bg, after, true, true);
+} 
+
+.icon-question-mark {
+	display: inline-block;
+	@include icon(question-mark);
+}
+
+
+.icon-quick-forward {
+	display: inline-block;
+	@include icon(quick-forward);
+}
+
+
+.icon-recharge {
+	display: inline-block;
+	@include icon(recharge);
+}
+
+
+.icon-refresh {
+	display: inline-block;
+	@include icon(refresh);
+}
+
+
+.icon-reliable-network {
+	display: inline-block;
+	@include icon(reliable-network);
+}
+
+.icon-reliable-network-bg {
+	@include icon(reliable-network-bg, after, true, true);
+} 
+
+.icon-reliablenetwork {
+	display: inline-block;
+	@include icon(reliablenetwork);
+}
+
+.icon-reliablenetwork-bg {
+	@include icon(reliablenetwork-bg, after, true, true);
+} 
+
+.icon-reply {
+	display: inline-block;
+	@include icon(reply);
+}
+
+
+.icon-reports {
+	display: inline-block;
+	@include icon(reports);
+}
+
+
+.icon-returns {
+	display: inline-block;
+	@include icon(returns);
+}
+
+
+.icon-rewards {
+	display: inline-block;
+	@include icon(rewards);
+}
+
+
+.icon-right-arrow {
+	display: inline-block;
+	@include icon(right-arrow);
+}
+
+
+.icon-roaming {
+	display: inline-block;
+	@include icon(roaming);
+}
+
+
+.icon-roll-over {
+	display: inline-block;
+	@include icon(roll-over);
+}
+
+
+.icon-router {
+	display: inline-block;
+	@include icon(router);
+}
+
+.icon-router-bg {
+	@include icon(router-bg, after, true, true);
+} 
+
+.icon-ruler {
+	display: inline-block;
+	@include icon(ruler);
+}
+
+
+.icon-safe-secure {
+	display: inline-block;
+	@include icon(safe-secure);
+}
+
+
+.icon-satellite {
+	display: inline-block;
+	@include icon(satellite);
+}
+
+
+.icon-satisfaction {
+	display: inline-block;
+	@include icon(satisfaction);
+}
+
+
+.icon-search-large {
+	display: inline-block;
+	@include icon(search-large);
+}
+
+
+.icon-search-small {
+	display: inline-block;
+	@include icon(search-small);
+}
+
+
+.icon-search {
+	display: inline-block;
+	@include icon(search);
+}
+
+
+.icon-secure-payments {
+	display: inline-block;
+	@include icon(secure-payments);
+}
+
+
+.icon-security {
+	display: inline-block;
+	@include icon(security);
+}
+
+
+.icon-service-my-account {
+	display: inline-block;
+	@include icon(service-my-account);
+}
+
+
+.icon-services-other {
+	display: inline-block;
+	@include icon(services-other);
+}
+
+
+.icon-settings {
+	display: inline-block;
+	@include icon(settings);
+}
+
+
+.icon-seven-svg {
+	display: inline-block;
+	@include icon(seven-svg);
+}
+
+
+.icon-seven {
+	display: inline-block;
+	@include icon(seven);
+}
+
+.icon-seven-bg {
+	@include icon(seven-bg, after, true, true);
+} 
+
+.icon-share-services {
+	display: inline-block;
+	@include icon(share-services);
+}
+
+
+.icon-shared-data {
+	display: inline-block;
+	@include icon(shared-data);
+}
+
+
+.icon-shared-services {
+	display: inline-block;
+	@include icon(shared-services);
+}
+
+
+.icon-sim-arrow-top-left {
+	display: inline-block;
+	@include icon(sim-arrow-top-left);
+}
+
+
+.icon-sim-card-service {
+	display: inline-block;
+	@include icon(sim-card-service);
+}
+
+
+.icon-sim-card {
+	display: inline-block;
+	@include icon(sim-card);
+}
+
+
+.icon-small-medium-business {
+	display: inline-block;
+	@include icon(small-medium-business);
+}
+
+
+.icon-sms-text {
+	display: inline-block;
+	@include icon(sms-text);
+}
+
+
+.icon-solutions {
+	display: inline-block;
+	@include icon(solutions);
+}
+
+
+.icon-sound-1 {
+	display: inline-block;
+	@include icon(sound-1);
+}
+
+
+.icon-sound-3 {
+	display: inline-block;
+	@include icon(sound-3);
+}
+
+
+.icon-sound-level-1 {
+	display: inline-block;
+	@include icon(sound-level-1);
+}
+
+
+.icon-sound-level-3 {
+	display: inline-block;
+	@include icon(sound-level-3);
+}
+
+
+.icon-sound-mute {
+	display: inline-block;
+	@include icon(sound-mute);
+}
+
+
+.icon-sound {
+	display: inline-block;
+	@include icon(sound);
+}
+
+
+.icon-speech-bubble {
+	display: inline-block;
+	@include icon(speech-bubble);
+}
+
+
+.icon-speed {
+	display: inline-block;
+	@include icon(speed);
+}
+
+.icon-speed-bg {
+	@include icon(speed-bg, after, true, true);
+} 
+
+.icon-star-half {
+	display: inline-block;
+	@include icon(star-half);
+}
+
+
+.icon-star {
+	display: inline-block;
+	@include icon(star);
+}
+
+
+.icon-stop {
+	display: inline-block;
+	@include icon(stop);
+}
+
+
+.icon-store-locator {
+	display: inline-block;
+	@include icon(store-locator);
+}
+
+
+.icon-straya {
+	display: inline-block;
+	@include icon(straya);
+}
+
+
+.icon-subscribe-1 {
+	display: inline-block;
+	@include icon(subscribe-1);
+}
+
+
+.icon-subscribe {
+	display: inline-block;
+	@include icon(subscribe);
+}
+
+
+.icon-success-circular {
+	display: inline-block;
+	@include icon(success-circular);
+}
+
+
+.icon-success-inverse {
+	display: inline-block;
+	@include icon(success-inverse);
+}
+
+
+.icon-success {
+	display: inline-block;
+	@include icon(success);
+}
+
+
+.icon-summary {
+	display: inline-block;
+	@include icon(summary);
+}
+
+.icon-summary-bg {
+	@include icon(summary-bg, after, true, true);
+} 
+
+.icon-support {
+	display: inline-block;
+	@include icon(support);
+}
+
+
+.icon-tablet-usb {
+	display: inline-block;
+	@include icon(tablet-usb);
+}
+
+.icon-tablet-usb-bg {
+	@include icon(tablet-usb-bg, after, true, true);
+} 
+
+.icon-tablet {
+	display: inline-block;
+	@include icon(tablet);
+}
+
+.icon-tablet-bg {
+	@include icon(tablet-bg, after, true, true);
+} 
+
+.icon-tailor {
+	display: inline-block;
+	@include icon(tailor);
+}
+
+
+.icon-television-service {
+	display: inline-block;
+	@include icon(television-service);
+}
+
+
+.icon-tick {
+	display: inline-block;
+	@include icon(tick);
+}
+
+
+.icon-tools-2 {
+	display: inline-block;
+	@include icon(tools-2);
+}
+
+
+.icon-tools {
+	display: inline-block;
+	@include icon(tools);
+}
+
+
+.icon-tooltip-question-mark {
+	display: inline-block;
+	@include icon(tooltip-question-mark);
+}
+
+
+.icon-track-order {
+	display: inline-block;
+	@include icon(track-order);
+}
+
+
+.icon-tradein {
+	display: inline-block;
+	@include icon(tradein);
+}
+
+
+.icon-tree {
+	display: inline-block;
+	@include icon(tree);
+}
+
+
+.icon-tv-service {
+	display: inline-block;
+	@include icon(tv-service);
+}
+
+
+.icon-tv-vintage {
+	display: inline-block;
+	@include icon(tv-vintage);
+}
+
+
+.icon-tv {
+	display: inline-block;
+	@include icon(tv);
+}
+
+.icon-tv-bg {
+	@include icon(tv-bg, after, true, true);
+} 
+
+.icon-twitter-alt {
+	display: inline-block;
+	@include icon(twitter-alt);
+}
+
+
+.icon-twitter {
+	display: inline-block;
+	@include icon(twitter);
+}
+
+.icon-twitter-bg {
+	@include icon(twitter-bg, after, true, true);
+} 
+
+.icon-up-arrow {
+	display: inline-block;
+	@include icon(up-arrow);
+}
+
+
+.icon-update {
+	display: inline-block;
+	@include icon(update);
+}
+
+
+.icon-upgrade-your-contract {
+	display: inline-block;
+	@include icon(upgrade-your-contract);
+}
+
+.icon-upgrade-your-contract-bg {
+	@include icon(upgrade-your-contract-bg, after, true, true);
+} 
+
+.icon-upload {
+	display: inline-block;
+	@include icon(upload);
+}
+
+
+.icon-usage {
+	display: inline-block;
+	@include icon(usage);
+}
+
+
+.icon-usb {
+	display: inline-block;
+	@include icon(usb);
+}
+
+
+.icon-user {
+	display: inline-block;
+	@include icon(user);
+}
+
+
+.icon-valid-2 {
+	display: inline-block;
+	@include icon(valid-2);
+}
+
+.icon-valid-2-bg {
+	@include icon(valid-2-bg, after, true, true);
+} 
+
+.icon-valid {
+	display: inline-block;
+	@include icon(valid);
+}
+
+
+.icon-view-bill {
+	display: inline-block;
+	@include icon(view-bill);
+}
+
+
+.icon-view-my-bill {
+	display: inline-block;
+	@include icon(view-my-bill);
+}
+
+
+.icon-voice {
+	display: inline-block;
+	@include icon(voice);
+}
+
+
+.icon-wan {
+	display: inline-block;
+	@include icon(wan);
+}
+
+
+.icon-warning-circular {
+	display: inline-block;
+	@include icon(warning-circular);
+}
+
+
+.icon-warning {
+	display: inline-block;
+	@include icon(warning);
+}
+
+
+.icon-wave-and-go {
+	display: inline-block;
+	@include icon(wave-and-go);
+}
+
+
+.icon-webmail {
+	display: inline-block;
+	@include icon(webmail);
+}
+
+
+.icon-wholesale {
+	display: inline-block;
+	@include icon(wholesale);
+}
+
+
+.icon-wifi-1 {
+	display: inline-block;
+	@include icon(wifi-1);
+}
+
+
+.icon-wifi {
+	display: inline-block;
+	@include icon(wifi);
+}
+
+
+.icon-wishlist {
+	display: inline-block;
+	@include icon(wishlist);
+}
+
+
+.icon-world-globe {
+	display: inline-block;
+	@include icon(world-globe);
+}
+
+
+.icon-youtube {
+	display: inline-block;
+	@include icon(youtube);
+}
+
+.icon-youtube-bg {
+	@include icon(youtube-bg, after, true, true);
+} 
+

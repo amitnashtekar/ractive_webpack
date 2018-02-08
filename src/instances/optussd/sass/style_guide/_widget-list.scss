@@ -1,0 +1,43 @@
+.widget-list{
+  TABLE{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+  .seperator{
+    background: black;
+  }
+  TH{
+    text-align: left;
+    padding: $smallSpace;
+  }
+  TR{
+    border: $spacerBorder;
+    TD{
+      &:first-child {
+        //white-space: nowrap;
+      }
+      text-align: left;
+
+      padding: $smallSpace;
+
+
+      A{
+        font-size: 14px;
+      }
+       .inline-example {
+          color: $black;
+          font-size: pxToRem(16);
+        }
+        &._blank-example{
+          //width: 40%;
+
+        }
+        &.json-link{
+          //width: 10%;
+          //text-align: right;
+        }
+    }
+  }
+}

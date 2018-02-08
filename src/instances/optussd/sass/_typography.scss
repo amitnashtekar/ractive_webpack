@@ -1,0 +1,372 @@
+BODY{
+	//default
+	font-family: $primary-font-family;
+  	color: $primary-text-colour;
+	line-height: 1;
+}
+
+H1,H2,H3,H4,H5,H6,P{
+	margin:0;
+	color: $default-heading-colour;
+
+	.highlight{
+		color:$turquoise;
+	}
+}
+
+
+.size1{
+	font-size: rem-calc(72px);
+	line-height: 72px;
+}
+
+.size2 {
+	font-size: rem-calc(40px);
+	line-height: 40px;
+}
+
+.size3{
+	font-size: rem-calc(32px);
+	line-height: 36px;
+}
+
+.size4{
+	font-size: rem-calc(24px);
+	line-height: 30px;
+}
+
+.size5{
+	font-size: rem-calc(24px);
+	line-height: 30px;
+}
+
+.size6{
+	font-size: rem-calc(16px);
+	line-height: 24px;
+}
+
+.size7{
+	font-size: rem-calc(14px);
+	line-height: 18px;
+}
+
+
+
+$breakpoints: (
+        large : $medium-screen
+);
+
+$h1-large-font-sizes: (
+        null  : (40px, 40px),
+        large : (84px, 84px)
+);
+
+$h1-font-sizes: (
+        null  : (40px, 40px),
+        large : (64px, 60px)
+);
+
+$h2-font-sizes: (
+        null  : (32px, 36px),
+        large : (48px, 48px)
+);
+
+$h3-font-sizes: (
+        null  : (28px, 32px),
+        large : (32px, 36px)
+);
+
+$h4-font-sizes: (
+        null  : (24px, 28px)
+);
+
+$h5-font-sizes: (
+        null  : (20px, 24px)
+);
+
+$h6-font-sizes: (
+        null  : (16px, 20px)
+);
+
+$p-font-sizes: (
+        null  : (16px, 24px)
+);
+
+$p-large-font-sizes: (
+        null  : (24px, 30px)
+);
+
+$p-small-font-sizes: (
+        null  : (14px, 18px)
+);
+
+$p-tiny-font-sizes: (
+  null: (12px, 16px)
+);
+
+H1, H2, H3, H4, H5 {
+  font-family: $tertiary-font-family;
+}
+
+H6 {
+  font-family: $quaternary-font-family;
+}
+
+@mixin size1{
+	font-size: rem-calc(72px);
+	line-height: 72px;
+}
+
+@mixin size2 {
+	font-size: rem-calc(40px);
+	line-height: 40px;
+}
+
+@mixin size3{
+	font-size: rem-calc(32px);
+	line-height: 36px;
+}
+
+@mixin size4{
+	font-size: rem-calc(24px);
+	line-height: 30px;
+}
+
+@mixin size5{
+	font-size: rem-calc(24px);
+	line-height: 30px;
+}
+
+@mixin size6{
+	font-size: rem-calc(16px);
+	line-height: 24px;
+}
+
+@mixin size7{
+	font-size: rem-calc(14px);
+	line-height: 18px;
+}
+
+@mixin paragraphMaxWidth($value: 650px) {
+	max-width: rem-calc($value);
+}
+
+H1{
+	@include font-size($h1-font-sizes);
+	margin: 0 0 $largeSpace;
+
+	&.large {
+		@extend .size1;
+		margin: $largeSpace 0 ($largeSpace - 3px);//by default it will be followed by large body text
+	}
+}
+
+H2{
+	@include font-size($h2-font-sizes);
+	margin: 0 0 $marginMediumLine2;
+}
+
+H3{
+	@include font-size($h3-font-sizes);
+	margin: 0 0 $marginMediumLine3;
+}
+
+H4{
+	@include font-size($h4-font-sizes);
+	margin: 0 0 $marginMediumLine3;
+}
+
+H5{
+	@include font-size($h5-font-sizes);
+	margin: 0 0 $marginMediumLine3;
+}
+
+H6{
+  	@include font-size($h6-font-sizes);
+	text-transform: uppercase;
+	margin: 0 0 $marginMediumLine4;
+  	font-family: $markpro-bold-font-family;
+}
+
+P {
+	$paragraphMargin: 0 0 $marginMediumLine8; //by default paragraphs are normally stacked
+	@include font-size($p-font-sizes);
+	margin: $paragraphMargin;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	B,
+	STRONG,
+	&.strong{
+		font-family: $tertiary-font-family;
+	}
+	&.large{
+		@extend .size4;
+		margin: $paragraphMargin;
+	}
+	&.small{
+		@extend .size7;
+		margin: $paragraphMargin;
+	}
+}
+
+li {
+	color: $black;
+	B,
+	STRONG,
+	&.strong{
+		font-family: $tertiary-font-family;
+	}
+}
+
+table {
+    B,
+	STRONG,
+	&.strong {
+		font-family: $tertiary-font-family;
+	}
+}
+
+A {
+	@include font-size($p-font-sizes);
+	color: $blue;
+	font-family: $quaternary-font-family;
+	text-decoration: none;
+	&:hover {
+		color: $blue;
+		text-decoration: underline;
+	}
+	&.small {
+		@include font-size($p-small-font-sizes);
+	}
+	&:focus {
+		color: $blue;
+		text-decoration: underline;
+	}
+}
+
+.radio-label,
+LABEL {
+  @include font-size($p-small-font-sizes);
+  font-family: $primary-font-family;
+  margin-bottom: 8px;
+}
+
+CAPTION,
+FIGCAPTION,
+.caption {
+  @include font-size($p-small-font-sizes);
+  font-family: $primary-font-family;
+  &.strong{
+    font-family: $quaternary-font-family;
+  }
+}
+
+.price{
+  //normally 24 medium (default)
+  //sometimes 16 medium (list style)
+  font-family: $secondary-font-family;
+  color: $primary-text-colour;
+}
+
+
+SMALL{
+	@extend .size7;
+}
+
+@media only screen and (min-width: $medium-screen) {
+
+	.size1.responsive {
+		font-size: 84px;
+		line-height: 78px;
+	}
+	.size2.responsive {
+		font-size: 64px;
+		line-height: 60px;
+	}
+	.size3.responsive {
+		font-size: 48px;
+		line-height: 48px;
+	}
+	.size4.responsive {
+		font-size: 32px;
+		line-height: 36px;
+	}
+
+
+	H1 {
+		font-size: 64px;
+		line-height: 60px;
+		margin: 0 0 $marginMediumLine2;
+		&.large {
+			font-size: 84px;
+			line-height: 78px;
+			margin: 0 0 $marginMediumLine3;
+		}
+	}
+
+	H2 {
+		font-size: 48px;
+		line-height: 48px;
+		margin: 0 0 $mediumSpace;
+	}
+
+	H3 {
+		font-size: 32px;
+		line-height: 36px;
+		margin: 0 0 $marginMediumLine2;
+	}
+
+	H4 {
+		font-size: 32px;
+		line-height: 36px;
+		margin: 0 0 $marginMediumLine2;
+	}
+
+}
+
+//This is for generalize curator text use in all components
+%curator {
+	font-family: $primary-font-family;
+	text-rendering: optimizeLegibility;
+	@include paragraphMaxWidth;
+	color: $dark-grey;
+}
+.curator-small {
+	@extend %curator;
+	@include font-size($p-small-font-sizes);
+}
+.curator-large {
+	@extend %curator;
+	@include font-size($p-large-font-sizes);
+}
+
+//This is for disclaimer text use in all components
+.disclaimer-text {
+	@extend %curator;
+	font-size: rem-calc(14) !important;
+	line-height: rem-calc(18) !important;
+	> A {
+		color: $blue;
+		font-size: inherit;
+		font-family: inherit;
+		line-height: inherit;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+}
+
+//Authoring Fonts needed in AEM Dialogs
+.strikeThroughText {
+	text-decoration: line-through;
+	&:before {
+		content: "Strikethrough:";
+		@include hideInViewport;
+	}
+	&:after {
+		content: "(End of strikethrough.)";
+		@include hideInViewport;
+	}
+}

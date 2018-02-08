@@ -1,0 +1,236 @@
+.p-normal {
+	padding: $mediumSpace 15px;
+}
+
+.p-small {
+	padding: $smallSpace 15px;
+}
+
+.h-p-normal {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.h-p-normal-left {
+  padding-left: 15px;
+}
+
+.h-p-normal-right {
+  padding-right: 15px;
+}
+
+.h-normal {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.v-zero {
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+}
+
+.v-zero-top {
+	margin-top: 0 !important;
+}
+
+.v-zero-bottom {
+	margin-bottom: 0 !important;
+}
+
+.v-small {
+	margin-bottom: $smallSpace !important;
+	margin-top: $smallSpace !important;
+}
+
+.v-p-small {
+	padding-bottom: $smallSpace !important;
+	padding-top: $smallSpace !important;
+}
+
+.v-no-top {
+	margin-top: 0 !important;
+}
+
+.v-small-top {
+	margin-top: $smallSpace !important;
+}
+
+.v-p-small-top {
+	padding-top: $smallSpace !important;
+}
+
+.v-no-bottom {
+	margin-bottom: 0 !important;
+}
+
+.v-small-bottom {
+	margin-bottom: $smallSpace !important;
+}
+
+.v-p-small-bottom {
+	padding-bottom: $smallSpace !important;
+}
+
+.v-no {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.v-normal {
+	margin-top: $mediumSpace !important;
+	margin-bottom: $mediumSpace !important;
+}
+
+.v-p-normal {
+	padding-top: $mediumSpace !important;
+	padding-bottom: $mediumSpace !important;
+}
+
+.v-normal-top {
+	margin-top: $mediumSpace !important;
+}
+
+.v-normal-bottom {
+	margin-bottom: $mediumSpace !important;
+}
+
+.v-p-normal-top {
+	padding-top: $mediumSpace !important;
+}
+
+.v-p-normal-bottom {
+	padding-bottom: $mediumSpace !important;
+}
+
+.v-large {
+	margin-bottom: $largeSpace !important;
+	margin-top: $largeSpace !important;
+}
+
+.v-p-large {
+	padding-top: $largeSpace;
+	padding-bottom: $largeSpace;
+}
+
+.v-large-top {
+	margin-top: $largeSpace !important;
+}
+
+.v-large-bottom {
+	margin-bottom: $largeSpace !important;
+}
+
+.v-p-large-top {
+	padding-top: $largeSpace !important;
+}
+
+.v-p-large-bottom {
+	padding-bottom: $largeSpace !important;
+}
+
+.v-xlarge {
+	margin-bottom: $xLargeSpace !important;
+	margin-top: $xLargeSpace !important;
+}
+
+.v-xlarge-top {
+	margin-top: $xLargeSpace !important;
+}
+
+.v-xlarge-bottom {
+	margin-bottom: $xLargeSpace !important;
+}
+
+.v-p-xlarge {
+	padding-top: $xLargeSpace !important;
+	padding-bottom: $xLargeSpace !important;
+}
+
+.v-p-xlarge-top {
+	padding-top: $xLargeSpace !important;
+}
+
+.v-p-xlarge-bottom {
+	padding-bottom: $xLargeSpace !important;
+}
+
+.v-p-xxLargeSpace {
+    padding-bottom: $xxLargeSpace !important;
+}
+
+//Daniel Cannavo : Added these in for when there is space between text and an element below.  Not commonly used, but in some
+//circumstances (list items and table cells notably) it is worth adjusting
+.v-p-normal-adjusted{
+  padding-top: $mediumSpaceAdjusted !important;
+  padding-bottom: $mediumSpaceAdjusted !important;
+}
+.v-p-small-adjusted{
+  padding-top: $smallSpaceAdjusted !important;
+  padding-bottom: $smallSpaceAdjusted !important;
+}
+
+//BORDERED - to be applied to rows only
+
+%bordered {
+	height: 1px;
+	width: 100%;
+	margin: 0 16px;
+}
+
+.border-bottom {
+	border-bottom: $spacerBorder !important;
+}
+
+.border-top {
+	border-top: $spacerBorder !important;
+}
+
+.bordered-bottom-small {
+	&:after {
+		padding-bottom: $smallSpace !important;
+		border-bottom: $spacerBorder !important;
+		@extend %bordered;
+	}
+}
+
+.bordered-bottom-normal {
+	&:after {
+		padding-bottom: $mediumSpace !important;
+		border-bottom: $spacerBorder;
+		@extend %bordered;
+	}
+}
+
+.bordered-top-normal {
+	&:before {
+		@extend %bordered;
+		padding-top: $mediumSpace !important;
+		border-top: $spacerBorder;
+	}
+}
+
+.bordered-top-small {
+	&:before {
+		@extend %bordered;
+		content: "";
+		padding-top: $smallSpace !important;
+		border-top: $spacerBorder;
+	}
+}
+
+.bordered-bottom-large {
+	&:after {
+		content: "";
+		padding-bottom: $largeSpace !important;
+		border-bottom: $spacerBorder;
+		@extend %bordered;
+	}
+}
+
+.bordered-top-large {
+	&:before {
+		@extend %bordered;
+		padding-top: $largeSpace !important;
+		border-top: $spacerBorder;
+	}
+}

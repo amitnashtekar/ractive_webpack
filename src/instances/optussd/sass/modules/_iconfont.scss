@@ -1,0 +1,1558 @@
+/*********************************************************
+
+ BASE ICONS
+ These icon classes can only be used in CSS, not in the HTML
+
+ Refer to modules/_icons.scss for usable classes
+
+**********************************************************/
+
+%ico-base-copyright {
+	&:before {
+		content: "\e6e6";
+	}
+}
+
+%ico-base-currency-dollar {
+	&:before {
+		content: "\e6e7";
+	}
+}
+
+%ico-base-happy-face {
+	&:before {
+		content: "\e6e8";
+	}
+}
+
+%ico-base-australia-map-outline {
+	&:before {
+		content: "\e6e9";
+	}
+}
+
+%ico-base-facebook {
+	&:before {
+		content: "\e606";
+	}
+}
+
+%ico-base-facebook-bg {
+	&:after {
+		content: "\e67f";
+	}
+}
+
+%ico-base-google {
+	&:before {
+		content: "\e605";
+	}
+}
+
+%ico-base-google-bg {
+	&:after {
+		content: "\e67e";
+	}
+}
+
+%ico-base-linked-in {
+	&:before {
+		content: "\e604";
+	}
+}
+
+%ico-base-linked-in-bg {
+	&:after {
+		content: "\e67d";
+	}
+}
+
+%ico-base-twitter {
+	&:before {
+		content: "\e602";
+	}
+}
+
+%ico-base-twitter-bg {
+	&:after {
+		content: "\e67b";
+	}
+}
+
+%ico-base-youtube {
+	&:before {
+		content: "\e601";
+	}
+}
+
+%ico-base-youtube-bg {
+	&:after {
+		content: "\e67a";
+	}
+}
+
+%ico-base-android {
+	&:before {
+		content: "\e600";
+	}
+}
+
+%ico-base-pinterest {
+	&:before {
+		content: "\e603";
+	}
+}
+
+%ico-base-pinterest-bg {
+	&:after {
+		content: "\e67c";
+	}
+}
+
+%ico-base-close {
+	&:before {
+		content: "\e60f";
+	}
+}
+
+%ico-base-dropdown {
+	&:before {
+		content: "\e60e";
+	}
+}
+
+%ico-base-arrow-up {
+	&:before {
+		content: "\e680";
+	}
+}
+
+%ico-base-arrow-left {
+	&:before {
+		content: "\e682";
+	}
+}
+
+%ico-base-arrow-right {
+	&:before {
+		content: "\e681";
+	}
+}
+
+%ico-base-equals {
+	&:before {
+		content: "\e60d";
+	}
+}
+
+%ico-base-minus {
+	&:before {
+		content: "\e608";
+	}
+}
+
+%ico-base-play {
+	&:before {
+		content: "\e614";
+	}
+}
+
+%ico-base-plus {
+	&:before {
+		content: "\e613";
+	}
+}
+
+%ico-base-profile {
+	&:before {
+		content: "\e612";
+	}
+}
+
+%ico-base-pullout-bar {
+	&:before {
+		content: "\e609";
+	}
+}
+
+%ico-base-search {
+	&:before {
+		content: "\e611";
+	}
+}
+
+%ico-base-search-small {
+	&:before {
+		content: "\e610";
+	}
+}
+
+%ico-base-tick {
+	&:before {
+		content: "\e607";
+	}
+}
+
+%ico-base-camera {
+	&:before {
+		content: "\e62b";
+	}
+}
+
+%ico-base-clever-plans {
+	&:before {
+		content: "\e62a";
+	}
+}
+
+%ico-base-dashboard {
+	&:before {
+		content: "\e670";
+	}
+}
+
+%ico-base-dashboard-2 {
+	&:before {
+		content: "";
+	}
+}
+
+%ico-base-desktop-computer {
+	&:before {
+		content: "\e629";
+	}
+}
+
+%ico-base-internet {
+	&:before {
+		content: "\e626";
+	}
+}
+
+%ico-base-laptop {
+	&:before {
+		content: "\e625";
+	}
+}
+
+%ico-base-latest-tech {
+	&:before {
+		content: "\e624";
+	}
+}
+
+%ico-base-micro-sim {
+	&:before {
+		content: "\e623";
+	}
+}
+
+%ico-base-mobile {
+	&:before {
+		content: "\e622";
+	}
+}
+
+%ico-base-modem {
+	&:before {
+		content: "\e621";
+	}
+}
+
+%ico-base-mouse {
+	&:before {
+		content: "\e679";
+	}
+}
+
+%ico-base-music {
+	&:before {
+		content: "\e678";
+	}
+}
+
+%ico-base-nanosim {
+	&:before {
+		content: "\e677";
+	}
+}
+
+%ico-base-network {
+	&:before {
+		content: "\e676";
+	}
+}
+
+%ico-base-optus-office-apps {
+	&:before {
+		content: "\e675";
+	}
+}
+
+%ico-base-fixed-line {
+	&:before {
+		content: "\e627";
+	}
+}
+
+%ico-base-print {
+	&:before {
+		content: "\e674";
+	}
+}
+
+%ico-base-reliable-network {
+	&:before {
+		content: "\e673";
+	}
+}
+
+%ico-base-settings {
+	&:before {
+		content: "\e620";
+	}
+}
+
+%ico-base-sound-1 {
+	&:before {
+		content: "\e61f";
+	}
+}
+
+%ico-base-sound-2 {
+	&:before {
+		content: "\e61e";
+	}
+}
+
+%ico-base-sound-3 {
+	&:before {
+		content: "\e61d";
+	}
+}
+
+%ico-base-sound-mute {
+	&:before {
+		content: "\e61c";
+	}
+}
+
+%ico-base-speed {
+	&:before {
+		content: "\e61b";
+	}
+}
+
+%ico-base-tablet {
+	&:before {
+		content: "\e61a";
+	}
+}
+
+%ico-base-tools {
+	&:before {
+		content: "\e619";
+	}
+}
+
+%ico-base-tv {
+	&:before {
+		content: "\e618";
+	}
+}
+
+%ico-base-usb {
+	&:before {
+		content: "\e617";
+	}
+}
+
+%ico-base-email {
+	&:before {
+		content: "\e628";
+	}
+}
+
+%ico-base-wifi-1 {
+	&:before {
+		content: "\e616";
+	}
+}
+
+%ico-base-wifi-2 {
+	&:before {
+		content: "\e615";
+	}
+}
+
+%ico-base-activate-service {
+	&:before {
+		content: "\e637";
+	}
+}
+
+%ico-base-expert-advice {
+	&:before {
+		content: "\e635";
+	}
+}
+
+%ico-base-headphones {
+	&:before {
+		content: "\e634";
+	}
+}
+
+%ico-base-help-support {
+	&:before {
+		content: "\e633";
+	}
+}
+
+%ico-base-home {
+	&:before {
+		content: "\e60c";
+	}
+}
+
+%ico-base-international {
+	&:before {
+		content: "\e632";
+	}
+}
+
+%ico-base-livechat {
+	&:before {
+		content: "";
+	}
+}
+
+%ico-base-member-services {
+	&:before {
+		content: "\e631";
+	}
+}
+
+%ico-base-myoptus-community {
+	&:before {
+		content: "\e630";
+	}
+}
+
+%ico-base-safe-secure {
+	&:before {
+		content: "\e62f";
+	}
+}
+
+%ico-base-satisfaction {
+	&:before {
+		content: "\e62e";
+	}
+}
+
+%ico-base-support {
+	&:before {
+		content: "\e62d";
+	}
+}
+
+%ico-base-bill-settings {
+	&:before {
+		content: "\e640";
+	}
+}
+
+%ico-base-cheap-value {
+	&:before {
+		content: "\e63f";
+	}
+}
+
+%ico-base-credit-transfer {
+	&:before {
+		content: "\e63e";
+	}
+}
+
+%ico-base-online-payment-1 {
+	&:before {
+		content: "\e63d";
+	}
+}
+
+%ico-base-online-payment-2 {
+	&:before {
+		content: "";
+	}
+}
+
+%ico-base-pay-bills {
+	&:before {
+		content: "\e63c";
+	}
+}
+
+%ico-base-plans-pricing {
+	&:before {
+		content: "\e63b";
+	}
+}
+
+%ico-base-recharge {
+	&:before {
+		content: "\e63a";
+	}
+}
+
+%ico-base-rollover {
+	&:before {
+		content: "\e639";
+	}
+}
+
+%ico-base-view-my-bill {
+	&:before {
+		content: "\e638";
+	}
+}
+
+%ico-base-addons-purchases {
+	&:before {
+		content: "\e64e";
+	}
+}
+
+%ico-base-bundles {
+	&:before {
+		content: "\e64d";
+	}
+}
+
+%ico-base-business-solutions {
+	&:before {
+		content: "\e64c";
+	}
+}
+
+%ico-base-checkout {
+	&:before {
+		content: "\e64b";
+	}
+}
+
+%ico-base-concierge {
+	&:before {
+		content: "\e64a";
+	}
+}
+
+%ico-base-convenient-returns {
+	&:before {
+		content: "\e649";
+	}
+}
+
+%ico-base-enjoy-free-delivery {
+	&:before {
+		content: "\e648";
+	}
+}
+
+%ico-base-faq {
+	&:before {
+		content: "\e647";
+	}
+}
+
+%ico-base-industry-insights {
+	&:before {
+		content: "\e646";
+	}
+}
+
+%ico-base-my-community {
+	&:before {
+		content: "\e645";
+	}
+}
+
+%ico-base-solutions {
+	&:before {
+		content: "\e644";
+	}
+}
+
+%ico-base-tailor {
+	&:before {
+		content: "\e643";
+	}
+}
+
+%ico-base-wishlist {
+	&:before {
+		content: "\e641";
+	}
+}
+
+%ico-base-address-book {
+	&:before {
+		content: "\e660";
+	}
+}
+
+%ico-base-case-studies {
+	&:before {
+		content: "\e65e";
+	}
+}
+
+%ico-base-download {
+	&:before {
+		content: "\e65d";
+	}
+}
+
+%ico-base-download-pdf {
+	&:before {
+		content: "\e65c";
+	}
+}
+
+%ico-base-future-bus-reports {
+	&:before {
+		content: "\e65b";
+	}
+}
+
+%ico-base-news-weather {
+	&:before {
+		content: "\e65a";
+	}
+}
+
+%ico-base-paperless-bills {
+	&:before {
+		content: "\e658";
+	}
+}
+
+%ico-base-pencil-edit {
+	&:before {
+		content: "\e657";
+	}
+}
+
+%ico-base-store-locator {
+	&:before {
+		content: "\e656";
+	}
+}
+
+%ico-base-subscribe-1 {
+	&:before {
+		content: "\e655";
+	}
+}
+
+%ico-base-subscribe-2 {
+	&:before {
+		content: "\e654";
+	}
+}
+
+%ico-base-summary {
+	&:before {
+		content: "\e653";
+	}
+}
+
+%ico-base-track-order {
+	&:before {
+		content: "\e652";
+	}
+}
+
+%ico-base-update {
+	&:before {
+		content: "\e651";
+	}
+}
+
+%ico-base-upload {
+	&:before {
+		content: "\e650";
+	}
+}
+
+%ico-base-usage {
+	&:before {
+		content: "\e64f";
+	}
+}
+
+%ico-base-enterprise-govt {
+	&:before {
+		content: "\e663";
+	}
+}
+
+%ico-base-small-medium-business {
+	&:before {
+		content: "\e662";
+	}
+}
+
+%ico-base-wholesale {
+	&:before {
+		content: "\e661";
+	}
+}
+
+%ico-base-3g {
+	&:before {
+		content: "";
+	}
+}
+
+%ico-base-4g {
+	&:before {
+		content: "";
+	}
+}
+
+%ico-base-4gplus {
+	&:before {
+		content: "";
+	}
+}
+
+%ico-base-optus-rewards {
+	&:before {
+		content: "\e664";
+	}
+}
+
+%ico-base-24seven {
+	&:before {
+		content: "\e669";
+	}
+}
+
+%ico-base-clock {
+	&:before {
+		content: "\e667";
+	}
+}
+
+%ico-base-instore-appointment {
+	&:before {
+		content: "\e666";
+	}
+}
+
+/*** NEW **********************************/
+
+%ico-base-logout {
+	&:before {
+		content: "\e60a";
+	}
+}
+
+%ico-base-login {
+	&:before {
+		content: "\e60b";
+	}
+}
+
+%ico-base-backup-storage {
+	&:before {
+		content: "\e62c";
+	}
+}
+
+%ico-base-chat-bubble {
+	&:before {
+		content: "\e636";
+	}
+}
+
+%ico-base-tools2 {
+	&:before {
+		content: "\e642";
+	}
+}
+
+%ico-base-optus-business-reports {
+	&:before {
+		content: "\e659";
+	}
+}
+
+%ico-base-business-thinking {
+	&:before {
+		content: "\e65f";
+	}
+}
+
+%ico-base-movie-ticket {
+	&:before {
+		content: "\e665";
+	}
+}
+
+%ico-base-calendar {
+	&:before {
+		content: "\e668";
+	}
+}
+
+%ico-base-shared-service {
+	&:before {
+		content: "\e66a";
+	}
+}
+
+%ico-base-prepay-mobile {
+	&:before {
+		content: "\e66b";
+	}
+}
+
+%ico-base-prepay-broadband {
+	&:before {
+		content: "\e66c";
+	}
+}
+
+%ico-base-other-services {
+	&:before {
+		content: "\e66d";
+	}
+}
+
+%ico-base-mobile-broadband {
+	&:before {
+		content: "\e66e";
+	}
+}
+
+%ico-base-games {
+	&:before {
+		content: "\e66f";
+	}
+}
+
+%ico-base-valid {
+	&:before {
+		content: "\e671";
+	}
+}
+
+%ico-base-error {
+	&:before {
+		content: "\e672";
+	}
+}
+
+%ico-base-hash {
+	&:before {
+		content: "\e683";
+	}
+}
+
+%ico-base-mobile-bg {
+	&:after {
+		content: "\e686";
+	}
+}
+
+%ico-base-tablet-bg {
+	&:after {
+		content: "\e685";
+	}
+}
+
+%ico-base-broadband-bg {
+	&:after {
+		content: "\e687";
+	}
+}
+
+%ico-base-contact-us-bg {
+	&:after {
+		content: "\e688";
+	}
+}
+
+%ico-base-bundles-bg {
+	&:after {
+		content: "\e689";
+	}
+}
+
+%ico-base-tv-bg {
+	&:after {
+		content: "\e684";
+	}
+}
+
+%ico-base-mobile-devices {
+	&:before {
+		content: "\e68f";
+	}
+}
+
+%ico-base-internet-data {
+	&:before {
+		content: "\e68b";
+	}
+}
+
+%ico-base-instagram {
+	&:before {
+		content: "\e68c";
+	}
+}
+
+%ico-base-instagram-bg {
+	&:after {
+		content: "\e68d";
+	}
+}
+
+%ico-base-cloud-data {
+	&:before {
+		content: "\e68e";
+	}
+}
+
+%ico-base-voice {
+	&:before {
+		content: "\e68a";
+	}
+}
+
+%ico-base-arrow-right-organic {
+	&:before {
+		content: "\e694";
+	}
+}
+
+%ico-base-healthcare {
+	&:before {
+		content: "\e695";
+	}
+}
+
+%ico-base-education {
+	&:before {
+		content: "\e696";
+	}
+}
+
+%ico-base-banking-finance {
+	&:before {
+		content: "\e697";
+	}
+}
+
+%ico-base-arrow-down-organic {
+	&:before {
+		content: "\e698";
+	}
+}
+
+%ico-base-link-service {
+	&:before {
+		content: "\e699";
+	}
+}
+
+%ico-base-premium-service {
+	&:before {
+		content: "\e6a5";
+	}
+}
+
+%ico-base-my-account {
+	&:before {
+		content: "\e6a7";
+	}
+}
+
+%ico-base-business-portal {
+	&:before {
+		content: "\e6a6";
+	}
+}
+
+%ico-base-desktop-computer {
+	&:before {
+		content: "\e6a8";
+	}
+}
+
+%ico-base-shared-data {
+	&:before {
+		content: "\e6aa";
+	}
+}
+
+%ico-base-shared-data-bg {
+	&:after {
+		content: "\e6a9";
+	}
+}
+
+%ico-base-mobile-plans {
+	&:before {
+		content: "\e6ac";
+	}
+}
+
+%ico-base-mobile-plans-bg {
+	&:after {
+		content: "\e6ab";
+	}
+}
+
+%ico-base-ruler {
+	&:before {
+		content: "\e6ae";
+	}
+}
+
+%ico-base-hourglass {
+	&:before {
+		content: "\e6ad";
+	}
+}
+
+%ico-base-mobile-tablet-devices {
+	&:before {
+		content: "\e6b0";
+	}
+}
+
+%ico-base-mobile-tablet-devices-bg {
+	&:after {
+		content: "\e6af";
+	}
+}
+
+%ico-base-wan {
+	&:before {
+		content: "\e6b1";
+	}
+}
+
+%ico-base-handshake {
+	&:before {
+		content: "\e6b2";
+	}
+}
+
+%ico-base-outbound {
+	&:before {
+		content: "\e6b3";
+	}
+}
+
+%ico-base-monitoring {
+	&:before {
+		content: "\e6b4";
+	}
+}
+
+%ico-base-managed-services {
+	&:before {
+		content: "\e6b5";
+	}
+}
+
+%ico-base-ipphone {
+	&:before {
+		content: "\e6b6";
+	}
+}
+
+%ico-base-inbound {
+	&:before {
+		content: "\e6b7";
+	}
+}
+
+%ico-base-satellite {
+	&:before {
+		content: "\e6b8";
+	}
+}
+
+%ico-base-filtering {
+	&:before {
+		content: "\e6b9";
+	}
+}
+
+%ico-base-warning {
+	&:before {
+		content: "\e6ba";
+	}
+}
+
+%ico-base-fibre-connectivity {
+	&:before {
+		content: "\e6bb";
+	}
+}
+
+%ico-base-conferencing {
+	&:before {
+		content: "\e6bc";
+	}
+}
+
+%ico-base-aeroplane {
+	&:before {
+		content: "\e69e";
+	}
+}
+
+%ico-base-machine-to-machine {
+	&:before {
+		content: "\e69b";
+	}
+}
+
+%ico-base-extras {
+	&:before {
+		content: "\e69c";
+	}
+}
+
+%ico-base-email-bg {
+	&:after {
+		content: "\e69f";
+	}
+}
+
+%ico-base-building {
+	&:before {
+		content: "\e69d";
+	}
+}
+
+%ico-base-bell {
+	&:before {
+		content: "\e6a4";
+	}
+}
+
+%ico-base-bell-bg {
+	&:after {
+		content: "\e6a3";
+	}
+}
+
+%ico-base-dollar-magnify {
+	&:before {
+		content: "\e6a2";
+	}
+}
+
+%ico-base-dollar-magnify-bg {
+	&:after {
+		content: "\e6a1";
+	}
+}
+
+%ico-base-mobile-email {
+	&:before {
+		content: "\e6a0";
+	}
+}
+
+%ico-base-mobile-email-bg {
+	&:after {
+		content: "\e69f";
+	}
+}
+
+%ico-base-mobile-share {
+	&:before {
+		content: "\e6a5";
+	}
+}
+
+%ico-upgrade-your-contract {
+	&:before {
+		content: "\e6bd";
+	}
+}
+
+%ico-upgrade-your-contract-bg {
+	&:after {
+		content: "\e6be";
+	}
+}
+
+%ico-tablet-usb {
+	&:before {
+		content: "\e6bf";
+	}
+}
+
+%ico-tablet-usb-bg {
+	&:after {
+		content: "\e6c0";
+	}
+}
+
+%ico-summary {
+	&:before {
+		content: "\e6c1";
+	}
+}
+
+%ico-summary-bg {
+	&:after {
+		content: "\e6c2";
+	}
+}
+
+%ico-router {
+	&:before {
+		content: "\e6c3";
+	}
+}
+
+%ico-router-bg {
+	&:after {
+		content: "\e6c4";
+	}
+}
+
+%ico-profile {
+	&:before {
+		content: "\e6c5";
+	}
+}
+
+%ico-profile-bg {
+	&:after {
+		content: "\e6c6";
+	}
+}
+
+%ico-network {
+	&:before {
+		content: "\e6c7";
+	}
+}
+
+%ico-network-bg {
+	&:after {
+		content: "\e6c8";
+	}
+}
+
+%ico-mobile-share {
+	&:before {
+		content: "\e6c9";
+	}
+}
+
+%ico-mobile-share-bg {
+	&:after {
+		content: "\e6ca";
+	}
+}
+
+%ico-house-my-medium-team {
+	&:before {
+		content: "\e6cb";
+	}
+}
+
+%ico-house-my-medium-team-bg {
+	&:after {
+		content: "\e6cc";
+	}
+}
+
+%ico-hosting {
+	&:before {
+		content: "\e6cd";
+	}
+}
+
+%ico-hosting-bg {
+	&:after {
+		content: "\e6ce";
+	}
+}
+
+%ico-direct-fiber {
+	&:before {
+		content: "\e6cf";
+	}
+}
+
+%ico-direct-fiber-bg {
+	&:after {
+		content: "\e6d0";
+	}
+}
+
+%ico-billing-services-tailored-services {
+	&:before {
+		content: "\e6d1";
+	}
+}
+
+%ico-billing-services-tailored-services-bg {
+	&:after {
+		content: "\e6d2";
+	}
+}
+
+%ico-arrow-up-left-organic-small {
+	&:before {
+		content: "\e6d3";
+	}
+}
+
+%ico-arrow-up-left-organic-small-bg {
+	&:after {
+		content: "\e6d4";
+	}
+}
+
+%ico-arrow-down-right-organic-small {
+	&:before {
+		content: "\e6d5";
+	}
+}
+
+%ico-arrow-down-right-organic-small-bg {
+	&:after {
+		content: "\e6d6";
+	}
+}
+
+%ico-add-a-second-plan {
+	&:before {
+		content: "\e6d7";
+	}
+}
+
+%ico-add-a-second-plan-bg {
+	&:after {
+		content: "\e6d8";
+	}
+}
+
+%ico-seven {
+	&:before {
+		content: "\e6d9";
+	}
+}
+
+%ico-seven-bg {
+	&:after {
+		content: "\e6da";
+	}
+}
+
+%ico-delivery-bg {
+	&:after {
+		content: "\e6dc";
+	}
+}
+
+%ico-handshake-bg {
+	&:after {
+		content: "\e6db";
+	}
+}
+
+%ico-billing-bg {
+	&:after {
+		content: "\e6dd";
+	}
+}
+
+%ico-tooltip-question-mark {
+	&:after {
+		content: "\e6de";
+	}
+}
+
+%ico-info {
+	&:after {
+		content: "\e6df";
+	}
+}
+
+%ico-tradein {
+	&:after {
+		content: "\e6e0";
+	}
+}
+
+%ico-phone-search {
+	&:after {
+		content: "\e6e1";
+	}
+}
+
+%ico-phone-satchel {
+	&:after {
+		content: "\e6e2";
+	}
+}
+
+%ico-eligible {
+	&:after {
+		content: "\e6e3";
+	}
+}
+
+%ico-claim-credit {
+	&:after {
+		content: "\e6e4";
+	}
+}
+
+%ico-speech-bubble {
+	&:after {
+		content: "\e6e5";
+	}
+}
+
+%ico-4gplus {
+	&:after {
+		content: "\e6ea";
+	}
+}
+
+%ico-3g4g {
+	&:after {
+		content: "\e6eb";
+	}
+}
+
+%ico-coveragemaps {
+	&:after {
+		content: "\e6ec";
+	}
+}
+
+%ico-reliablenetwork-bg {
+	&:after {
+		content: "\e6ed";
+	}
+}
+
+%ico-reliablenetwork {
+	&:before {
+		content: "\e6ee";
+	}
+}
+
+%ico-speed-bg {
+	&:after {
+		content: "\e6ef";
+	}
+}
+
+%ico-speed {
+	&:before {
+		content: "\e6f0";
+	}
+}
+
+%ico-mobile-tablet-app {
+	&:after {
+		content: "\e6f1";
+	}
+}
+
+%ico-world-globe {
+	&:after {
+		content: "\e6f2";
+	}
+}
+
+%icon-instore-appointment-bg {
+	&:after {
+		content: "\e6fc";
+	}
+}
+
+%icon-modem-bg {
+	&:after {
+		content: "\e6fe";
+	}
+}
+
+%icon-valid2-bg {
+	&:after {
+		content: "\e700";
+	}
+}
+
+%icon-valid2 {
+	&:before {
+		content: "\e701";
+	}
+}
+
+%ico-battery-empty {
+	&:before {
+		content: "\e6f3";
+	}
+}
+
+%ico-battery-bg {
+	&:after {
+		content: "\e6f4";
+	}
+}
+
+%ico-battery-full {
+	&:before {
+		content: "\e6f5";
+	}
+}
+
+%ico-battery-bg {
+	&:after {
+		content: "\e6f6";
+	}
+}
+
+%ico-business-sharing {
+	&:before {
+		content: "\e6f7";
+	}
+}
+
+%ico-business-sharing-bg {
+	&:after {
+		content: "\e6f8";
+	}
+}
+
+%ico-family-sharing {
+	&:before {
+		content: "\e6f9";
+	}
+}
+
+%ico-family-sharing-bg {
+	&:after {
+		content: "\e6fa";
+	}
+}

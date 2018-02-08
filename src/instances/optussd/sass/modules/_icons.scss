@@ -1,0 +1,1214 @@
+/****************************************
+
+	Refer to typography/_iconfont.scss for base setup
+	Use these classes in the HTML
+
+****************************************/
+.ico {
+	font-family: $optus-icons-font-family;
+
+	&:before {
+		font-family: $optus-icons-font-family;
+	}
+
+	&:after {
+		font-family: $optus-icons-font-family;
+	}
+
+	// Created for content-icon-panel pattern
+	&.ico-tile-header {
+		text-indent: 0;
+		color: $black;
+		font-size: emCalc(100px);
+		position: relative;
+		margin-bottom: 15px;
+		@media only screen and (min-width: $small-screen) {
+			font-size: emCalc(94px);
+			margin-bottom: 26px;
+		}
+
+		&:before {
+			position: relative;
+			z-index: 2;
+		}
+
+		&:after {
+			position: absolute;
+			color: $yellow;
+			display: block; // Forces position
+			top: 0;
+			left: 0;
+			right: 0;
+			text-align: center; // Fix for IE8 positioning
+			z-index: 1;
+		}
+	}
+	&.ico-mobile-plans-bg,
+	&.ico-shared-data-bg,
+	&.ico-mobile-tablet-devices-bg {
+		&:after {
+			position: absolute;
+			color: #ffd100;
+			display: block;
+			top: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+			z-index: 1
+		}
+	}
+
+	&.ico-with-background {
+		text-indent: 0;
+		color: $black;
+		position: relative;
+
+		&:before {
+			position: relative;
+			z-index: 2;
+		}
+
+		&:after {
+			position: absolute;
+			color: $yellow;
+			display: block; // Forces position
+			top: 0;
+			left: 0;
+			right: 0;
+			text-align: center; // Fix for IE8 positioning
+			z-index: 1;
+		}
+	}
+
+	&.ico-small {
+		font-size: emCalc(30px);
+	}
+	&.ico-medium {
+		font-size: emCalc(60px);
+	}
+
+}
+
+.ico-pay-bill /* deprecated */
+,
+.ico-billing /* use this */
+,
+.ico-category-billing,
+.ico-login-business-reports {
+	@extend %ico-base-pay-bills;
+}
+
+.ico-view-bill {
+	@extend %ico-base-view-my-bill;
+}
+
+.ico-recharge {
+	@extend %ico-base-recharge;
+}
+
+.ico-usage {
+	@extend %ico-base-usage;
+}
+
+.ico-track-order {
+	@extend %ico-base-track-order;
+}
+
+.ico-activate-sim {
+	@extend %ico-base-micro-sim;
+}
+
+.ico-support {
+	@extend %ico-base-help-support;
+}
+
+.ico-app /* use this */
+,
+.ico-mobile /* use this */
+,
+.ico-personal_mobile /* deprecated */
+,
+.ico-optus-app /* deprecated */
+,
+.ico-category-mobile /* deprecated */
+{
+	@extend %ico-base-mobile;
+
+	&.ico-bg {
+		@extend %ico-base-mobile-bg;
+	}
+
+}
+
+.ico-tablet /* use this */
+,
+.ico-personal_tablet /* deprecated */
+,
+.ico-category-tablet /* deprecated */
+,
+.ico-support.ico-category-tablet {
+	@extend %ico-base-tablet;
+}
+
+.ico-internet /* use this */
+,
+.ico-personal_internet /* deprecated */
+,
+.ico-roaming /* deprecated */
+,
+.ico-category-internet /* deprecated */
+,
+.ico-personal_internet /* deprecated */
+,
+.ico-broadband /* deprecated */
+,
+.ico-support.ico-category-internet,
+.ico-international {
+	@extend %ico-base-internet;
+}
+
+.ico-contact-us /* use this */
+,
+.ico-personal_home-phone /* deprecated */
+,
+.ico-homephone /* deprecated */
+,
+.ico-category-phone /* deprecated */
+,
+.ico-support.ico-category-phone {
+	@extend %ico-base-fixed-line;
+}
+
+.ico-bundles /* use this */
+,
+.ico-personal_bundles /* deprecated */
+{
+	@extend %ico-base-bundles;
+}
+
+.ico-tv /* use this */
+,
+.ico-personal_tv /* deprecated */
+,
+.ico-category-tv /* deprecated */
+,
+.ico-support.ico-category-tv {
+	@extend %ico-base-tv;
+}
+
+.ico-customer-support /* use this */
+,
+.ico-personal_support /* deprecated */
+{
+	@extend %ico-base-support;
+}
+
+.ico-wholesale /* use this */
+,
+.ico-business_wholesale /* deprecated */
+{
+	@extend %ico-base-wholesale;
+}
+
+.ico-close {
+	@extend %ico-base-close;
+}
+
+//.ico-cross {
+//	@extend %ico-base-close;
+//}
+
+.ico-accounts_myaccount {
+	@extend %ico-base-dashboard;
+}
+
+.ico-personal_member-services,
+.ico-member-services {
+	@extend %ico-base-member-services;
+}
+
+.ico-personal_orders {
+	@extend %ico-base-track-order;
+}
+
+.ico-personal_profile,
+.ico-service-my-account,
+.ico-business-profile {
+	@extend %ico-base-profile;
+}
+
+.ico-personal_rewards,
+.ico-rewards,
+.ico-optus-rewards {
+	@extend %ico-base-optus-rewards;
+}
+
+.ico-personal_webmail,
+.ico-webmail {
+	@extend %ico-base-email;
+}
+
+.ico-facebook {
+	@extend %ico-base-facebook;
+}
+
+.ico-facebook-bg {
+	@extend %ico-base-facebook-bg;
+}
+
+.ico-twitter {
+	@extend %ico-base-twitter;
+}
+
+.ico-twitter-bg {
+	@extend %ico-base-twitter-bg;
+}
+
+.ico-optus-community,
+.ico-community,
+.ico-personal_optus-community,
+.ico-my-optus-community {
+	@extend %ico-base-myoptus-community;
+}
+
+.ico-my-community {
+	@extend %ico-base-my-community;
+}
+
+.ico-clever-plans {
+	@extend %ico-base-clever-plans;
+}
+
+.ico-network {
+	@extend %ico-base-international;
+}
+
+.ico-delivery {
+	@extend %ico-base-enjoy-free-delivery;
+}
+
+.ico-delivery-bg {
+	@extend %ico-delivery-bg;
+}
+
+.ico-officeapps {
+	@extend %ico-base-optus-office-apps;
+}
+
+.ico-reports {
+	@extend %ico-base-wifi-1;
+}
+
+.ico-returns {
+	@extend %ico-base-convenient-returns;
+}
+
+.ico-secure-payments,
+.ico-security {
+	@extend %ico-base-safe-secure;
+}
+
+.ico-yes {
+
+}
+
+//.ico-search {
+//	@extend %ico-base-search-small;
+//}
+
+.ico-arrow-down {
+	@extend %ico-base-dropdown;
+}
+
+.ico-arrow-up {
+	@extend %ico-base-arrow-up;
+}
+
+.ico-arrow-left {
+	@extend %ico-base-arrow-left;
+}
+
+.ico-arrow-right {
+	@extend %ico-base-arrow-right;
+}
+
+.ico-cart {
+	@extend %ico-base-checkout;
+}
+
+.ico-fav {
+
+}
+
+.ico-form-error {
+	@extend %ico-base-error;
+}
+
+.ico-form-success {
+	@extend %ico-base-valid;
+}
+
+.ico-login {
+	@extend %ico-base-login;
+}
+
+.ico-scroll-down {
+	@extend %ico-base-arrow-down-organic;
+}
+
+.ico-advice {
+	@extend %ico-base-expert-advice;
+}
+
+.ico-24-hour /* use this */
+,
+.ico-tech-support /* deprecated */
+{
+	@extend %ico-base-24seven;
+}
+
+.ico-mobile-broadband {
+	@extend %ico-base-mobile-broadband;
+}
+
+.ico-other /* deprecated */
+,
+.ico-services-other {
+	@extend %ico-base-other-services;
+}
+
+.ico-paid {
+
+}
+
+.ico-download {
+	@extend %ico-base-download;
+}
+
+.ico-pdf {
+	@extend %ico-base-download-pdf;
+}
+
+.ico-prepaid {
+	@extend %ico-base-prepay-mobile;
+}
+
+.ico-prepaid-broadband {
+	@extend %ico-base-prepay-broadband;
+}
+
+.ico-share-services {
+	@extend %ico-base-shared-service;
+}
+
+.ico-backup-storage {
+	@extend %ico-base-backup-storage;
+}
+
+.ico-logout {
+	@extend %ico-base-logout;
+}
+
+.ico-link-service {
+
+}
+
+.ico-activate-service {
+	@extend %ico-base-activate-service;
+}
+
+.ico-bill-settings {
+	@extend %ico-base-bill-settings;
+}
+
+.ico-tick {
+	@extend %ico-base-tick;
+}
+
+//.ico-minus {
+//	@extend %ico-base-minus;
+//}
+
+.ico-menu {
+	@extend %ico-base-pullout-bar;
+}
+
+.ico-home {
+	@extend %ico-base-home;
+}
+
+.ico-equals {
+	@extend %ico-base-equals;
+}
+
+//.ico-search-large {
+//	@extend %ico-base-search;
+//}
+
+.ico-add {
+	@extend %ico-base-plus;
+}
+
+.ico-play {
+	@extend %ico-base-play;
+}
+
+.ico-wifi {
+	@extend %ico-base-wifi-2;
+}
+
+.ico-usb {
+	@extend %ico-base-usb;
+}
+
+.ico-tools {
+	@extend %ico-base-tools;
+}
+
+.ico-speed {
+	@extend %ico-base-speed;
+}
+
+.ico-mute {
+	@extend %ico-base-sound-mute;
+}
+
+.ico-sound-level-3 {
+	@extend %ico-base-sound-3;
+}
+
+.ico-sound-level-2 {
+	@extend %ico-base-sound-2;
+}
+
+.ico-sound-level-1 {
+	@extend %ico-base-sound-1;
+}
+
+.ico-settings {
+	@extend %ico-base-settings;
+}
+
+.ico-modem {
+	@extend %ico-base-modem;
+}
+
+.ico-latest-tech {
+	@extend %ico-base-latest-tech;
+}
+
+.ico-laptop {
+	@extend %ico-base-laptop;
+}
+
+.ico-desktop-computer {
+	@extend %ico-base-desktop-computer;
+}
+
+.ico-camera {
+	@extend %ico-base-camera;
+}
+
+.ico-satisfaction {
+	@extend %ico-base-satisfaction;
+}
+
+.ico-headphones {
+	@extend %ico-base-headphones;
+}
+
+.ico-chat-bubble {
+	@extend %ico-base-chat-bubble;
+}
+
+.ico-rollover {
+	@extend %ico-base-rollover;
+}
+
+.ico-plans-pricing {
+	@extend %ico-base-plans-pricing;
+}
+
+.ico-online-payment-1 {
+	@extend %ico-base-online-payment-1;
+}
+
+.ico-credit-transfer {
+	@extend %ico-base-credit-transfer;
+}
+
+.ico-cheap-value {
+	@extend %ico-base-cheap-value;
+}
+
+.ico-wishlist {
+	@extend %ico-base-wishlist;
+}
+
+.ico-tools-2 {
+	@extend %ico-base-tools2;
+}
+
+.ico-tailor {
+	@extend %ico-base-tailor;
+}
+
+.ico-solutions {
+	@extend %ico-base-solutions;
+}
+
+.ico-industry-insights {
+	@extend %ico-base-industry-insights;
+}
+
+.ico-faq {
+	@extend %ico-base-faq;
+}
+
+.ico-concierge {
+	@extend %ico-base-concierge;
+}
+
+.ico-business-solutions {
+	@extend %ico-base-business-solutions;
+}
+
+.ico-addons-purchases {
+	@extend %ico-base-addons-purchases;
+}
+
+.ico-upload {
+	@extend %ico-base-upload;
+}
+
+.ico-update {
+	@extend %ico-base-update;
+}
+
+.ico-summary {
+	@extend %ico-base-summary;
+}
+
+.ico-subscribe-2 {
+	@extend %ico-base-subscribe-2;
+}
+
+.ico-subscribe-1 {
+	@extend %ico-base-subscribe-1;
+}
+
+.ico-store-locator {
+	@extend %ico-base-store-locator;
+}
+
+.ico-edit {
+	@extend %ico-base-pencil-edit;
+}
+
+.ico-paperless {
+	@extend %ico-base-paperless-bills;
+}
+
+.ico-business-reports {
+	@extend %ico-base-optus-business-reports;
+}
+
+.ico-news-weather {
+	@extend %ico-base-news-weather;
+}
+
+.ico-future-bus-reports {
+	@extend %ico-base-future-bus-reports;
+}
+
+.ico-case-studies {
+	@extend %ico-base-case-studies;
+}
+
+.ico-business-think-tank {
+	@extend %ico-base-business-thinking;
+}
+
+.ico-address-book {
+	@extend %ico-base-address-book;
+}
+
+.ico-business_smallbusiness /* deprecated */
+,
+.ico-small-medium-business {
+	@extend %ico-base-small-medium-business;
+}
+
+.ico-business_enterprise /* deprecated */
+,
+.ico-enterprise-govt {
+	@extend %ico-base-enterprise-govt;
+}
+
+.ico-movie-ticket {
+	@extend %ico-base-movie-ticket;
+}
+
+.ico-instore-appointment {
+	@extend %ico-base-instore-appointment;
+}
+
+.ico-clock {
+	@extend %ico-base-clock;
+}
+
+.ico-calendar {
+	@extend %ico-base-calendar;
+}
+
+.ico-games {
+	@extend %ico-base-games;
+}
+
+.ico-reliable-network {
+	@extend %ico-base-reliable-network;
+}
+
+.ico-print {
+	@extend %ico-base-print;
+}
+
+.ico-coverage {
+	@extend %ico-base-network;
+}
+
+.ico-nano-sim {
+	@extend %ico-base-nanosim;
+}
+
+.ico-music {
+	@extend %ico-base-music;
+}
+
+.ico-mouse {
+	@extend %ico-base-mouse;
+}
+
+.ico-android {
+	@extend %ico-base-android;
+}
+
+.ico-youtube {
+	@extend %ico-base-youtube;
+}
+
+.ico-youtube-bg {
+	@extend %ico-base-youtube-bg;
+}
+
+.ico-pinterest {
+	@extend %ico-base-pinterest;
+}
+
+.ico-pinterest-bg {
+	@extend %ico-base-pinterest-bg;
+}
+
+.ico-twitter {
+	@extend %ico-base-twitter;
+}
+
+.ico-twitter-bg {
+	@extend %ico-base-twitter-bg;
+}
+
+.ico-linkedin {
+	@extend %ico-base-linked-in;
+}
+
+.ico-linkedin-bg {
+	@extend %ico-base-linked-in-bg;
+}
+
+.ico-googleplus {
+	@extend %ico-base-google;
+}
+
+.ico-googleplus-bg {
+	@extend %ico-base-google-bg;
+}
+
+.ico-register {
+	@extend %ico-base-subscribe-2;
+}
+
+.ico-hash {
+	@extend %ico-base-hash;
+}
+
+.ico-mobile-bg {
+	@extend %ico-base-mobile-bg;
+}
+
+.ico-tablet-bg {
+	@extend %ico-base-tablet-bg;
+}
+
+.ico-broadband-bg {
+	@extend %ico-base-broadband-bg;
+}
+
+.ico-contact-us-bg {
+	@extend %ico-base-contact-us-bg;
+}
+
+.ico-bundles-bg {
+	@extend %ico-base-bundles-bg;
+}
+
+.ico-tv-bg {
+	@extend %ico-base-tv-bg;
+}
+
+.ico-mobile-devices {
+	@extend %ico-base-mobile-devices;
+}
+
+.ico-internet-data {
+	@extend %ico-base-internet-data;
+}
+
+.ico-instagram {
+	@extend %ico-base-instagram;
+}
+
+.ico-instagram-bg {
+	@extend %ico-base-instagram-bg;
+}
+
+.ico-cloud-data {
+	@extend %ico-base-cloud-data;
+}
+
+.ico-voice {
+	@extend %ico-base-voice;
+}
+
+.ico-arrow-right-organic {
+	@extend %ico-base-arrow-right-organic;
+}
+
+.ico-healthcare {
+	@extend %ico-base-healthcare;
+}
+
+.ico-education {
+	@extend %ico-base-education;
+}
+
+.ico-banking-finance {
+	@extend %ico-base-banking-finance;
+}
+
+.ico-arrow-down-organic {
+	@extend %ico-base-arrow-down-organic;
+}
+
+.ico-link-service {
+	@extend %ico-base-link-service;
+}
+
+.ico-managed-services {
+	@extend %ico-base-managed-services;
+}
+
+.ico-bell {
+	@extend %ico-base-bell;
+}
+
+.ico-bell-bg {
+	@extend %ico-base-bell-bg;
+}
+
+.ico-dollar-magnify {
+	@extend %ico-base-dollar-magnify;
+}
+
+.ico-dollar-magnify-bg {
+	@extend %ico-base-dollar-magnify-bg;
+}
+
+.ico-mobile-email {
+	@extend %ico-base-mobile-email;
+}
+
+.ico-mobile-email-bg {
+	@extend %ico-base-mobile-email-bg;
+}
+
+.ico-mobile-share {
+	@extend %ico-base-mobile-share;
+}
+
+.ico-building {
+	@extend %ico-base-building;
+}
+
+.ico-aeroplane {
+	@extend %ico-base-aeroplane;
+}
+
+.ico-machine-to-machine {
+	@extend %ico-base-machine-to-machine;
+}
+
+.ico-extras {
+	@extend %ico-base-extras;
+}
+
+.ico-premium-service {
+	@extend %ico-base-premium-service;
+}
+
+.ico-my-account {
+	@extend %ico-base-my-account;
+}
+
+.ico-business-portal {
+	@extend %ico-base-business-portal;
+}
+
+.ico-desktop-computer {
+	@extend %ico-base-desktop-computer;
+}
+
+.ico-mobile-plans {
+	@extend %ico-base-mobile-plans;
+}
+
+.ico-mobile-plans-bg {
+	@extend %ico-base-mobile-plans-bg;
+}
+
+.ico-shared-data {
+	@extend %ico-base-shared-data;
+}
+
+.ico-shared-data-bg {
+	@extend %ico-base-shared-data-bg;
+}
+
+.ico-ruler {
+	@extend %ico-base-ruler;
+}
+
+.ico-hourglass {
+	@extend %ico-base-hourglass;
+}
+
+.ico-mobile-tablet-devices {
+	@extend %ico-base-mobile-tablet-devices;
+}
+
+.ico-mobile-tablet-devices-bg {
+	@extend %ico-base-mobile-tablet-devices-bg;
+}
+
+.ico-wan {
+	@extend %ico-base-wan;
+}
+
+.ico-handshake {
+	@extend %ico-base-handshake;
+}
+
+.ico-handshake-bg {
+	@extend %ico-handshake-bg;
+}
+
+.ico-outbound {
+	@extend %ico-base-outbound;
+}
+
+.ico-monitoring {
+	@extend %ico-base-monitoring;
+}
+
+.ico-managed-services {
+	@extend %ico-base-managed-services;
+}
+
+.ico-ipphone {
+	@extend %ico-base-ipphone;
+}
+
+.ico-inbound {
+	@extend %ico-base-inbound;
+}
+
+.ico-satellite {
+	@extend %ico-base-satellite;
+}
+
+.ico-filtering {
+	@extend %ico-base-filtering;
+}
+
+//.ico-warning {
+//	@extend %ico-base-warning;
+//}
+
+.ico-fibre-connectivity {
+	@extend %ico-base-fibre-connectivity;
+}
+
+.ico-conferencing {
+	@extend %ico-base-conferencing;
+}
+
+.ico-upgrade-your-contract {
+	@extend %ico-upgrade-your-contract;
+}
+
+.ico-upgrade-your-contract-bg {
+	@extend %ico-upgrade-your-contract-bg;
+}
+
+.ico-tablet-usb {
+	@extend %ico-tablet-usb;
+}
+
+.ico-tablet-usb-bg {
+	@extend %ico-tablet-usb-bg;
+}
+
+.ico-summary {
+	@extend %ico-summary;
+}
+
+.ico-summary-bg {
+	@extend %ico-summary-bg;
+}
+
+.ico-router {
+	@extend %ico-router;
+}
+
+.ico-router-bg {
+	@extend %ico-router-bg;
+}
+
+.ico-profile {
+	@extend %ico-profile;
+}
+
+.ico-profile-bg {
+	@extend %ico-profile-bg;
+}
+
+.ico-network {
+	@extend %ico-network;
+}
+
+.ico-network-bg {
+	@extend %ico-network-bg;
+}
+
+.ico-mobile-share {
+	@extend %ico-mobile-share;
+}
+
+.ico-mobile-share-bg {
+	@extend %ico-mobile-share-bg;
+}
+
+.ico-house-my-medium-team {
+	@extend %ico-house-my-medium-team;
+}
+
+.ico-house-my-medium-team-bg {
+	@extend %ico-house-my-medium-team-bg;
+}
+
+.ico-hosting {
+	@extend %ico-hosting;
+}
+
+.ico-hosting-bg {
+	@extend %ico-hosting-bg;
+}
+
+.ico-direct-fiber {
+	@extend %ico-direct-fiber;
+}
+
+.ico-direct-fiber-bg {
+	@extend %ico-direct-fiber-bg;
+}
+
+.ico-billing-services-tailored-services {
+	@extend %ico-billing-services-tailored-services;
+}
+
+.ico-billing-services-tailored-services-bg {
+	@extend %ico-billing-services-tailored-services-bg;
+}
+
+.ico-arrow-up-left-organic-small {
+	@extend %ico-arrow-up-left-organic-small;
+}
+
+.ico-arrow-up-left-organic-small-bg {
+	@extend %ico-arrow-up-left-organic-small-bg;
+}
+
+.ico-arrow-down-right-organic-small {
+	@extend %ico-arrow-down-right-organic-small;
+}
+
+.ico-arrow-down-right-organic-small-bg {
+	@extend %ico-arrow-down-right-organic-small-bg;
+}
+
+.ico-add-a-second-plan {
+	@extend %ico-add-a-second-plan;
+}
+
+.ico-add-a-second-plan-bg {
+	@extend %ico-add-a-second-plan-bg;
+}
+
+.ico-seven {
+	@extend %ico-seven;
+}
+
+.ico-seven-bg {
+	@extend %ico-seven-bg;
+}
+
+.ico-billing-bg {
+	@extend %ico-billing-bg;
+}
+
+.ico-tooltip-question-mark {
+	@extend %ico-tooltip-question-mark;
+}
+
+//.ico-info {
+//	@extend %ico-info;
+//}
+
+.ico-tradein {
+	@extend %ico-tradein;
+}
+
+.ico-phone-search {
+	@extend %ico-phone-search;
+}
+
+.ico-phone-satchel {
+	@extend %ico-phone-satchel;
+}
+
+.ico-eligible {
+	@extend %ico-eligible;
+}
+
+.ico-claim-credit {
+	@extend %ico-claim-credit;
+}
+
+.ico-speech-bubble {
+	@extend %ico-speech-bubble;
+}
+
+.ico-currency-dollar {
+	@extend %ico-base-currency-dollar;
+}
+
+.ico-happy-face {
+	@extend %ico-base-happy-face;
+}
+
+.ico-copyright {
+	@extend %ico-base-copyright;
+}
+
+.ico-australia-map-outline {
+	@extend %ico-base-australia-map-outline;
+}
+
+.ico-4gplus {
+	@extend %ico-4gplus;
+}
+
+.ico-3g4g {
+	@extend %ico-3g4g;
+}
+
+.ico-coveragemaps {
+	@extend %ico-coveragemaps;
+}
+
+.ico-reliablenetwork-bg {
+	@extend %ico-reliablenetwork-bg;
+}
+
+.ico-reliablenetwork {
+	@extend %ico-reliablenetwork;
+}
+
+.ico-speed-bg {
+	@extend %ico-speed-bg;
+}
+
+.ico-speed {
+	@extend %ico-speed;
+}
+
+.ico-mobile-tablet-app {
+	@extend %ico-mobile-tablet-app;
+}
+
+.ico-world-globe {
+	@extend %ico-world-globe;
+}
+
+.ico-instore-appointment-bg {
+	@extend %icon-instore-appointment-bg;
+}
+
+.ico-modem-bg {
+	@extend %icon-modem-bg;
+}
+
+.ico-valid2-bg {
+	@extend %icon-valid2-bg;
+}
+
+.ico-valid2 {
+	@extend %icon-valid2;
+}
+
+.ico-battery-empty {
+	@extend %ico-battery-empty;
+}
+
+.ico-battery-full {
+	@extend %ico-battery-full;
+}
+
+.ico-battery-bg {
+	@extend %ico-battery-bg;
+}
+
+.ico-business-sharing {
+	@extend %ico-business-sharing;
+}
+
+.ico-business-sharing-bg {
+	@extend %ico-business-sharing-bg;
+}
+
+.ico-family-sharing {
+	@extend %ico-family-sharing;
+}
+
+.ico-family-sharing-bg {
+	@extend %ico-family-sharing-bg;
+}

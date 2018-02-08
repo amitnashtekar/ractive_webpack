@@ -1,0 +1,193 @@
+.bg-gradient {
+
+    @mixin gradient($color1, $color2, $important:false, $pos:'right') {
+        $xPos: 75%;
+
+        @if $pos == 'left' {
+          $xPos: 25%;
+        }
+
+        @if $pos == 'center' {
+          $xPos: 55%;
+        }
+
+		@if $important {
+			background-color: $color1 !important;
+			background: radial-gradient(70% 70% at 50% 50%, $color1 20%, $color2 75%) !important;
+			@media only screen and (min-width: $medium-screen) {
+				background-color: $color1 !important;
+				background: radial-gradient(70% 70% at $xPos 50%, $color1 20%, $color2 75%) !important;
+			}
+		}
+		@else {
+			background-color: $color1 !important;
+			background: radial-gradient(70% 70% at 50% 50%, $color1 20%, $color2 75%);
+			@media only screen and (min-width: $medium-screen) {
+				background-color: $color1 !important;
+				background: radial-gradient(70% 70% at $xPos 50%, $color1 20%, $color2 75%);
+			}
+		}
+    }
+
+    @mixin contentColor ($color: $white, $hoverColor: $white, $textColor: $white) {
+     	A {
+			color: $color !important;
+     		&:hover {
+				color: $hoverColor !important;
+     		}
+     	}
+     	H1, H2, H3, H4, H5, H6, P, .header-subtitle {
+			color: $textColor !important;
+     	}
+     	&:before {
+     		color: $textColor;
+     	}
+     	.dot-separator {
+        	&:after {
+     			color: $color;
+			}
+		}
+        .icon {
+            color: $textColor;
+            &:before {
+                color: inherit !important;
+            }
+        }
+        .flex-container {
+            .ux-icon {
+                span {
+                    color: $textColor;
+                }
+            }
+        }
+    }
+
+    &.white-solid {
+        @include gradient(#FFFFFF, #FFFFFF);
+        @include contentColor($black, $black, $black);
+    }
+    &.white-gradient-left {
+        @include gradient(#FFFFFF, #FFFFFF, true, 'left');
+        @include contentColor($black, $black, $black);
+    }
+    &.white-gradient-right {
+        @include gradient(#FFFFFF, #FFFFFF, true, 'right');
+        @include contentColor($black, $black, $black);
+    }
+    &.white-gradient-center {
+        @include gradient(#FFFFFF, #FFFFFF, true, 'center');
+        @include contentColor($black, $black, $black);
+    }
+    &.teal-solid {
+        @include gradient(#00A3AD, #00A3AD);
+        @include contentColor($black, $black, $black);
+    }
+    &.teal-gradient-left {
+        @include gradient(#5CB5BA, #00A3AD, true, 'left');
+        @include contentColor($black, $black, $black);
+    }
+    &.teal-gradient-right {
+        @include gradient(#5CB5BA, #00A3AD, true, 'right');
+        @include contentColor($black, $black, $black);
+    }
+    &.teal-gradient-center {
+        @include gradient(#5CB5BA, #00A3AD, true, 'center');
+        @include contentColor($black, $black, $black);
+    }
+    &.yellow-solid {
+        @include gradient(#FDCC08, #FDCC08);
+        @include contentColor($black, $black, $black);
+    }
+    &.yellow-gradient-left {
+        @include gradient(#FDEA57, #FDCC08, true, 'left');
+        @include contentColor($black, $black, $black);
+    }
+    &.yellow-gradient-right {
+        @include gradient(#FDEA57, #FDCC08, true, 'right');
+        @include contentColor($black, $black, $black);
+    }
+    &.yellow-gradient-center {
+        @include gradient(#FDEA57, #FDCC08, true, 'center');
+        @include contentColor($black, $black, $black);
+    }
+    &.purple-solid {
+        @include gradient(#444292, #444292);
+        @include contentColor();
+    }
+    &.purple-gradient-left {
+        @include gradient(#6362A9, #444292, true, 'left');
+        @include contentColor();
+    }
+    &.purple-gradient-right {
+        @include gradient(#6362A9, #444292, true, 'right');
+        @include contentColor();
+    }
+    &.purple-gradient-center {
+        @include gradient(#6362A9, #444292, true, 'center');
+        @include contentColor();
+    }
+    &.navy-solid {
+        @include gradient(#172659,  #172659);
+        @include contentColor();
+    }
+    &.navy-gradient-left {
+        @include gradient(#34447A, #172659, true, 'left');
+        @include contentColor();
+    }
+    &.navy-gradient-right {
+        @include gradient(#34447A, #172659, true, 'right');
+        @include contentColor();
+    }
+    &.navy-gradient-center {
+        @include gradient(#34447A, #172659, true, 'center');
+        @include contentColor();
+    }
+    &.berry-solid {
+        @include gradient(#80276C, #80276C);
+        @include contentColor();
+    }
+    &.berry-gradient-left {
+        @include gradient(#A0448B, #80276C, true, 'left');
+        @include contentColor();
+    }
+    &.berry-gradient-right {
+        @include gradient(#A0448B, #80276C, true, 'right');
+        @include contentColor();
+    }
+    &.berry-gradient-center {
+        @include gradient(#A0448B, #80276C, true, 'center');
+        @include contentColor();
+    }
+    &.jade-solid {
+        @include gradient(#006280, #006280);
+        @include contentColor();
+    }
+    &.jade-gradient-left {
+        @include gradient(#25829F, #006280, true, 'left');
+        @include contentColor();
+    }
+    &.jade-gradient-right {
+        @include gradient(#25829F, #006280, true, 'right');
+        @include contentColor();
+    }
+    &.jade-gradient-center {
+        @include gradient(#25829F, #006280, true, 'center');
+        @include contentColor();
+    }
+    &.pink-solid {
+        @include gradient(#FF6E7E, #FF6E7E);
+        @include contentColor($black, $black, $black);
+    }
+    &.pink-gradient-left {
+        @include gradient(#F48F9a, #FF6E7E, true, 'left');
+        @include contentColor($black, $black, $black);
+    }
+    &.pink-gradient-right {
+        @include gradient(#F48F9a, #FF6E7E, true, 'right');
+        @include contentColor($black, $black, $black);
+    }
+    &.pink-gradient-center {
+        @include gradient(#F48F9a, #FF6E7E, true, 'center');
+        @include contentColor($black, $black, $black);
+    }
+}
