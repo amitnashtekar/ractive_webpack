@@ -3,15 +3,15 @@
 ### For development:
 
 #    npm install
-#    npm start
+#    npm run start1
 
-Open: [http://localhost:3000](http://localhost:3000)
+Open: [http://localhost:3001](http://localhost:3001)
 
 ### For production bundle:
 
-    npm run dist
+    npm run build1
 
 
-    npm start
-Open: [http://localhost:8000](http://localhost:8000)
+    
+
 
